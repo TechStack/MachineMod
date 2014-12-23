@@ -1,0 +1,8 @@
+package com.projectreddog.machinemod.com.projectreddog.machinemod;
+
+import cpw.mods.fml.common.Mod;
+
+@Mod (modid="MachineMod", name="MachineMod",version="1.7.10-1.0-Pre-ALPHA")
+public class MachineMod {
+
+}
