@@ -1,0 +1,7 @@
+package com.projectreddog.machinemod.reference;
+
+public class Reference {
+//common constants for our mod
+	//example: public static final string MOD_ID ="Blah";
+	public static final string MODID ="MachineMod"
+}

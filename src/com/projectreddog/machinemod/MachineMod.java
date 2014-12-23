@@ -1,15 +1,21 @@
 package com.projectreddog.machinemod;
 
+import com.projectreddog.machinemod.proxy.IProxy;
+import com.projectreddog.machinemod.reference.Reference;
+
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod (modid="MachineMod", name="MachineMod",version="1.7.10-1.0-Pre-ALPHA")
+@Mod (modid= Reference.MOD_ID, name= Reference.MOD_NAME,version=Reference.VERSION)
 public class MachineMod {
 
+	@SidedProxy(clientSide=Reference.CLIENT_PROXY_CLASS,serverSide=Reference.SERVER_PROXY_CLASS)
+	public static IProxy proxy;
 	
-	@Mod.Instance("MachineMod")
+	@Mod.Instance( Reference.MOD_ID)
 	public static MachineMod instance; // an instance back to this mod
 	
 	@Mod.EventHandler
