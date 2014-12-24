@@ -1,0 +1,5 @@
+package com.projectreddog.machinemod.client.gui;
+
+public class GuiConfig {
+
+}

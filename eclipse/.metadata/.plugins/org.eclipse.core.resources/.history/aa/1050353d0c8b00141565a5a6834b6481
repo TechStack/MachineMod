@@ -1,0 +1,7 @@
+package com.projectreddog.machinemod;
+
+import cpw.mods.fml.client.IModGuiFactory;
+
+public class GuiFactory implements IModGuiFactory{
+
+}

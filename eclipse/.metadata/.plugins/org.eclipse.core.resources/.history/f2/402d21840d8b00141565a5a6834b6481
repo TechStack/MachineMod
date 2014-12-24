@@ -1,0 +1,12 @@
+package com.projectreddog.machinemod.client.gui;
+
+import cpw.mods.fml.client.config.GuiConfig;
+
+import com.projectreddog.machinemod.handler.ConfigurationHandler;
+
+public class ModGuiConfig extends GuiConfig{
+	
+	super (guiScreen,
+			new ConfigElement( ConfigurationHandler
+
+}

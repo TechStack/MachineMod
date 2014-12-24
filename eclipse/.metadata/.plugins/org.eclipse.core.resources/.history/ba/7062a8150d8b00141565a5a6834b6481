@@ -1,0 +1,7 @@
+package com.projectreddog.machinemod.client.gui;
+
+import cpw.mods.fml.client.config.GuiConfig;
+
+public class ModGuiConfig extends GuiConfig{
+
+}
