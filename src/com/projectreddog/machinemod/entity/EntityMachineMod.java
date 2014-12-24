@@ -15,7 +15,6 @@ public class EntityMachineMod extends EntityBoat {
 	{
 		
 		super(world);
-		
 	}
 	
 	

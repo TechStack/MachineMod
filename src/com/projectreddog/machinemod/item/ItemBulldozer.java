@@ -13,24 +13,30 @@ import net.minecraft.world.World;
 
 public class ItemBulldozer extends ItemMachineMod {
 
-	 public ItemBulldozer(){
-		 super();
-		 this.setUnlocalizedName("bulldozer");
-		 this.maxStackSize =1;
-		 
-	 }
-	 
-	 @Override
-	    public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player){
-		 
-		 
-		 LogHelper.info("Right Click on Bulldozer!");
-		 EntityBulldozer entityBulldozer = new EntityBulldozer(world);
-		 boolean result = world.spawnEntityInWorld(entityBulldozer);
-		 LogHelper.info("Spawn entity resutl:" + result );
+	public ItemBulldozer(){
+		super();
+		this.setUnlocalizedName("bulldozer");
+		this.maxStackSize =1;
+
+	}
 
 
-         return itemStack;
 
-	 }
+	@Override
+	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float xOff, float yOff, float zOff)
+	{
+		boolean result = false;
+		
+		if (!world.isRemote)/// only run on server
+		{
+		LogHelper.info("Item used on Bulldozer!");
+
+
+		EntityBulldozer entityBulldozer = new EntityBulldozer(world);
+		entityBulldozer.setPosition(x+.5d,y+1.0d,z+.5d);
+		result = world.spawnEntityInWorld(entityBulldozer);
+		LogHelper.info("Spawn entity resutl:" + result );
+		}
+		return result;
+	}
 }

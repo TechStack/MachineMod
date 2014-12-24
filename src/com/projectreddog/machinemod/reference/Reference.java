@@ -9,7 +9,7 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "com.projectreddog.machinemod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.projectreddog.machinemod.proxy.ServerProxy";
 	public static final String GUI_FACTORY_CLASS = "com.projectreddog.machinemod.client.gui.GuiFactory";
-	
+	public static final String MODEL_BULLDOZER_TEXTURE_LOCATION = "/models/modelBulldozer.png";
 	
 	// config file settings
 	public static	boolean enableBulldozer=true;
