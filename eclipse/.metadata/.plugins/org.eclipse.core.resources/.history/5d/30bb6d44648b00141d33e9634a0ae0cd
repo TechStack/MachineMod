@@ -1,0 +1,11 @@
+package com.projectreddog.machinemod.init;
+
+import com.projectreddog.machinemod.block.BlockMachineAssemblyTable;
+
+public class ModBlocks {
+	public static final BlockMachineAssemblyTable = new BlockmachineAssemblyTable();
+	public static void init()
+	{
+		
+	}
+}

@@ -1,0 +1,13 @@
+package com.projectreddog.machinemod.init;
+
+import com.projectreddog.machinemod.block.BlockMachineAssemblyTable;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class ModBlocks {
+	public static final BlockMachineAssemblyTable blockMachineAssemblyTable= new BlockmachineAssemblyTable();
+	public static void init()
+	{
+		GameRegistry.registerBlock(blockMachineAssemblyTable, "machineassemblytable");
+	}
+}

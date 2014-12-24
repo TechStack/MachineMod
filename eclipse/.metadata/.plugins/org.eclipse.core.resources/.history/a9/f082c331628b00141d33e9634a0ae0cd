@@ -1,0 +1,17 @@
+package com.projectreddog.machinemod.block;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class BlockMachineMod  extends Block {
+
+	protected BlockMachineMod(Material material) {
+		super(material);
+
+	}
+	public BlockMachineMod() {
+		//Generic constructor (set to rock by default
+		this(Material.rock);
+	}
+
+}

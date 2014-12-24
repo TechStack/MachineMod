@@ -1,0 +1,11 @@
+package com.projectreddog.machinemod.block;
+
+public class BlockMachineAssemblyTable extends BlockMachineMod{
+
+	public BlockMachineAssemblyTable()
+	{
+		super();
+		this.setBlockName("machineassemblytable");
+		this.setBlockTextureName("machineassemblytable");
+	}
+}
