@@ -1,5 +1,6 @@
 package com.projectreddog.machinemod;
 
+import com.projectreddog.machinemod.configuration.ConfigurationHandler;
 import com.projectreddog.machinemod.proxy.IProxy;
 import com.projectreddog.machinemod.reference.Reference;
 
@@ -21,6 +22,8 @@ public class MachineMod {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 	//net handling mod config init items & blocks	
+		
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 	}
 	@Mod.EventHandler 
 	public void init(FMLInitializationEvent event){

@@ -1,0 +1,26 @@
+package com.projectreddog.machinemod.configuration;
+
+import java.io.File;
+
+import com.projectreddog.machinemod.utility.LogHelper;
+
+import net.minecraftforge.common.config.Configuration;
+
+public class ConfigurationHandler {
+
+	public static void init(File configFile)
+	{
+		// do everything related to loading the config etc..
+		Configuration configuration = new Configuration(configFile);
+		
+		try
+		{
+			configuration.load();
+			
+		}
+		catch (Exception e)
+		{
+			LogHelper.error(e);
+		}
+	}
+}
