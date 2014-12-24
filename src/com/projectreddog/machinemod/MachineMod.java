@@ -1,6 +1,7 @@
 package com.projectreddog.machinemod;
 
 import com.projectreddog.machinemod.handler.ConfigurationHandler;
+import com.projectreddog.machinemod.init.ModItems;
 import com.projectreddog.machinemod.proxy.IProxy;
 import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.utility.LogHelper;
@@ -27,7 +28,7 @@ public class MachineMod {
 		
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-		
+		ModItems.init();
 	}
 	@Mod.EventHandler 
 	public void init(FMLInitializationEvent event){

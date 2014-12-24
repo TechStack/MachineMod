@@ -1,8 +1,0 @@
-package com.projectreddog.machinemod;
-
-import cpw.mods.fml.common.Mod;
-
-@Mod
-public class MachineMod {
-
-}
