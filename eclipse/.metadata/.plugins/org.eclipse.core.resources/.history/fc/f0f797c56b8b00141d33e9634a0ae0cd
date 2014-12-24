@@ -1,0 +1,11 @@
+package com.projectreddog.machinemod.entity;
+
+import net.minecraft.world.World;
+
+public class EntityBulldozer extends EntityMachineMod {
+
+	
+	public EntityBulldozer(World world){
+		super(world);
+	}
+}

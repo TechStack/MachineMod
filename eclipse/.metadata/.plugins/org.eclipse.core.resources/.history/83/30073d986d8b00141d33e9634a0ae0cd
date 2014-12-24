@@ -1,0 +1,18 @@
+package com.projectreddog.machinemod.init;
+
+import com.projectreddog.machinemod.entity.EntityBulldozer;
+import com.projectreddog.machinemod.reference.Reference;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@GameRegistry.ObjectHolder(Reference.MOD_ID)
+
+public class ModEntities {
+
+	
+	public static final EntityBulldozer entityBulldozer= new EntityBulldozer();
+	public static void init()
+	{
+		GameRegistry.registerBlock(entityBulldozer, "entitybulldozer");
+	}
+}

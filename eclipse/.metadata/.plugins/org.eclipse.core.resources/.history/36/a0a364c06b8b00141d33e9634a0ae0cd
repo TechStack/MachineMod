@@ -1,0 +1,9 @@
+package com.projectreddog.machinemod.entity;
+
+public class EntityBulldozer extends EntityMachineMod {
+
+	
+	public EntityBulldozer(World world){
+		
+	}
+}

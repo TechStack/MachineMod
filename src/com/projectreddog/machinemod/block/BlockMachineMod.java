@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
+import com.projectreddog.machinemod.creativetab.CreativeTabMachineMod;
 import com.projectreddog.machinemod.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -13,6 +14,10 @@ public class BlockMachineMod  extends Block {
 
 	protected BlockMachineMod(Material material) {
 		super(material);
+
+		//can override later ;)
+		this.setCreativeTab(CreativeTabMachineMod.MACHINEMOD_TAB);
+
 
 	}
 	public BlockMachineMod() {

@@ -1,0 +1,8 @@
+package com.projectreddog.machinemod.entity;
+
+
+import com.sun.xml.internal.stream.Entity;
+
+public class EntityMachineMod extends EntityBoat {
+
+}

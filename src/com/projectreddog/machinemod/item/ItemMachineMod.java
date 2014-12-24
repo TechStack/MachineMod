@@ -1,5 +1,6 @@
 package com.projectreddog.machinemod.item;
 
+import com.projectreddog.machinemod.creativetab.CreativeTabMachineMod;
 import com.projectreddog.machinemod.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -15,6 +16,9 @@ public class ItemMachineMod extends Item {
 	public ItemMachineMod()
 	{
 		super();
+		//can override later ;)
+		this.setCreativeTab(CreativeTabMachineMod.MACHINEMOD_TAB);
+
 	}
 	
 	@Override

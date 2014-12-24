@@ -1,7 +1,14 @@
 package com.projectreddog.machinemod;
 
+import java.util.Map;
+
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.renderer.entity.RenderBiped;
+
+import com.projectreddog.machinemod.entity.EntityBulldozer;
 import com.projectreddog.machinemod.handler.ConfigurationHandler;
 import com.projectreddog.machinemod.init.ModBlocks;
+import com.projectreddog.machinemod.init.ModEntities;
 import com.projectreddog.machinemod.init.ModItems;
 import com.projectreddog.machinemod.proxy.IProxy;
 import com.projectreddog.machinemod.reference.Reference;
@@ -35,6 +42,8 @@ public class MachineMod {
 	@Mod.EventHandler 
 	public void init(FMLInitializationEvent event){
 		// register gui, tile entites , crafting recipies (general event hanlders)
+		ModEntities.init(this);
+		proxy.registerRenderers();
 	}
 	
 	@Mod.EventHandler
@@ -43,4 +52,9 @@ public class MachineMod {
 		
 		LogHelper.debug("Is Bulldozer Enabled: " + Reference.enableBulldozer);
 	}
+	
+	
+	
+	//testing
+	
 }

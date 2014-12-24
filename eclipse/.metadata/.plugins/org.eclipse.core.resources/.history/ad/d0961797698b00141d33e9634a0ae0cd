@@ -1,0 +1,9 @@
+package com.projectreddog.machinemod.entity;
+
+import scala.reflect.api.Internals.ReificationSupportApi.ImplicitParamsExtractor;
+
+import com.sun.xml.internal.stream.Entity;
+
+public class EntityBulldozer extends Entity implements IPathableEntity {
+
+}
