@@ -39,4 +39,6 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.ModelBulldozer"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
+<fullyQualifiedTypeName name="net.minecraftforge.client.model.IModelCustom"/>
 </qualifiedTypeNameHistroy>

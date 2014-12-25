@@ -11,89 +11,35 @@
 
 package com.projectreddog.machinemod.model;
 
+import com.projectreddog.machinemod.reference.Reference;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 
 public class ModelBulldozer extends ModelBase
 {
   //fields
-    ModelRenderer MainBody;
-    ModelRenderer Blade;
-    ModelRenderer RTrack;
-    ModelRenderer LTrack;
-    ModelRenderer Roof;
-    ModelRenderer RBpost;
-    ModelRenderer LBpost;
-    ModelRenderer Stack;
+	private IModelCustom myModel;
   
   public ModelBulldozer()
   {
-    textureWidth = 64;
-    textureHeight = 32;
-    
-      MainBody = new ModelRenderer(this, 0, 0);
-      MainBody.addBox(-2F, -5F, -4F, 9, 5, 8);
-      MainBody.setRotationPoint(0F, 0F, 0F);
-      MainBody.setTextureSize(64, 32);
-      MainBody.mirror = true;
-      setRotation(MainBody, 0F, 0F, 0F);
-      Blade = new ModelRenderer(this, 0, 21);
-      Blade.addBox(-3.586667F, -3.586667F, -3.5F, 0, 4, 7);
-      Blade.setRotationPoint(0F, 0F, 0F);
-      Blade.setTextureSize(64, 32);
-      Blade.mirror = true;
-      setRotation(Blade, 0F, 0F, 0.2443461F);
-      RTrack = new ModelRenderer(this, 14, 29);
-      RTrack.addBox(0F, 0F, 0F, 6, 2, 1);
-      RTrack.setRotationPoint(0F, -2F, 4F);
-      RTrack.setTextureSize(64, 32);
-      RTrack.mirror = true;
-      setRotation(RTrack, 0F, 0F, 0F);
-      LTrack = new ModelRenderer(this, 14, 29);
-      LTrack.addBox(0F, 0F, 0F, 6, 2, 1);
-      LTrack.setRotationPoint(0F, -2F, -5F);
-      LTrack.setTextureSize(64, 32);
-      LTrack.mirror = true;
-      setRotation(LTrack, 0F, 0F, 0F);
-      Roof = new ModelRenderer(this, 0, 0);
-      Roof.addBox(0F, 0F, -2.5F, 4, 0, 5);
-      Roof.setRotationPoint(2F, -8F, 0F);
-      Roof.setTextureSize(64, 32);
-      Roof.mirror = true;
-      setRotation(Roof, 0F, 0F, 0F);
-      RBpost = new ModelRenderer(this, 0, 0);
-      RBpost.addBox(0F, -2F, 2.5F, 0, 3, 0);
-      RBpost.setRotationPoint(6F, -6F, 0F);
-      RBpost.setTextureSize(64, 32);
-      RBpost.mirror = true;
-      setRotation(RBpost, 0F, 0F, 0F);
-      LBpost = new ModelRenderer(this, 0, 0);
-      LBpost.addBox(0F, -2F, -2.5F, 0, 3, 0);
-      LBpost.setRotationPoint(6F, -6F, 0F);
-      LBpost.setTextureSize(64, 32);
-      LBpost.mirror = true;
-      setRotation(LBpost, 0F, 0F, 0F);
-      Stack = new ModelRenderer(this, 20, 29);
-      Stack.addBox(0F, 0F, 0F, 1, 2, 1);
-      Stack.setRotationPoint(0F, -7F, -3F);
-      Stack.setTextureSize(64, 32);
-      Stack.mirror = true;
-      setRotation(Stack, 0F, 0F, 0F);
+		
+		 
+		 
+		 myModel = AdvancedModelLoader.loadModel(new ResourceLocation(   "machinemod", "/models/modelBulldozer.obj"));
+     // casinoTexture = new ResourceLocation("modid", "textures/casinoTexture.png");
+      
   }
   
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
-    setRotationAngles(f, f1, f2, f3, f4, f5,entity);
-    MainBody.render(f5);
-    Blade.render(f5);
-    RTrack.render(f5);
-    LTrack.render(f5);
-    Roof.render(f5);
-    RBpost.render(f5);
-    LBpost.render(f5);
-    Stack.render(f5);
+    myModel.renderAll();
+
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)

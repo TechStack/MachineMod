@@ -1,0 +1,22 @@
+package com.projectreddog.machinemod.entity;
+
+
+
+import net.minecraft.entity.Entity;
+import net.minecraft.world.World;
+
+public class EntityMachineMod extends Entity {
+
+	
+	
+
+
+	public EntityMachineMod(World world)
+	{
+		
+		super(world);
+	}
+	
+	
+
+}

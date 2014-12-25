@@ -50,7 +50,7 @@ public class RenderBulldozer extends Render {
 
 		if (f2 > 0.0F)
 		{
-			GL11.glRotatef(MathHelper.sin(f2) * f2 * f3 / 10.0F * (float)((EntityBulldozer) entity).getForwardDirection(), 1.0F, 0.0F, 0.0F);
+//			GL11.glRotatef(MathHelper.sin(f2) * f2 * f3 / 10.0F * (float)((EntityBulldozer) entity).getForwardDirection(), 1.0F, 0.0F, 0.0F);
 		}
 
 		float f4 = 0.75F;
@@ -59,6 +59,7 @@ public class RenderBulldozer extends Render {
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		this.modelBulldozer.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		
 		GL11.glPopMatrix();
 	}
 
