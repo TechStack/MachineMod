@@ -51,7 +51,7 @@ public class EntityMachineMod extends Entity {
 		}
 	  return true;
 	  }
-<<<<<<< HEAD
+
 	
 	  @Override
 	  public void moveEntity(double d, double d1, double d2)
@@ -97,8 +97,7 @@ public class EntityMachineMod extends Entity {
 
 	    }
 	  }
-=======
->>>>>>> origin/master
+
 	@Override
 	protected void readEntityFromNBT(NBTTagCompound p_70037_1_) {
 		// TODO Auto-generated method stub

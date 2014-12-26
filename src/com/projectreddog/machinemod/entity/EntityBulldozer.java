@@ -11,7 +11,6 @@ public class EntityBulldozer extends EntityMachineMod {
 	public EntityBulldozer(World world){
 		super(world);
 	}
-<<<<<<< HEAD
 	 
    @Override
    /**
@@ -21,10 +20,7 @@ public class EntityBulldozer extends EntityMachineMod {
    {
        return (double)this.height * 0.35D;
    }
-=======
-	
-	
->>>>>>> origin/master
+
 
 
 	
