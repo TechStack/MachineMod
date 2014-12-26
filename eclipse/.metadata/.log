@@ -5948,6 +5948,7 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.core.jobs 4 1 2014-12-24 22:05:36.283
 !MESSAGE Worker thread ended job: Refreshing workspace(10), but still holds rule: ThreadJob(Refreshing workspace(10),[F/Minecraft/eclipse/.metadata/.plugins/org.eclipse.core.resources/.history])
+<<<<<<< HEAD
 !SESSION 2014-12-26 08:16:33.628 -----------------------------------------------
 eclipse.buildId=4.4.1.M20140925-0400
 java.version=1.7.0_45
@@ -6090,3 +6091,5 @@ java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfigu
 	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
 	at java.util.TimerThread.mainLoop(Timer.java:555)
 	at java.util.TimerThread.run(Timer.java:505)
+=======
+>>>>>>> parent of d2c8b96... UV unwrapping on Bulldozer & some init code on riding
