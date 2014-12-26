@@ -11,6 +11,10 @@ public class Reference {
 	public static final String GUI_FACTORY_CLASS = "com.projectreddog.machinemod.client.gui.GuiFactory";
 	public static final String MODEL_BULLDOZER_TEXTURE_LOCATION = "/models/modelBulldozer2.png";
 	
+	
+	public static final String MODBLOCK_MACHINE_ASSEMBLY_TABLE ="machineassemblytable";
+	public static final String MODBLOCK_MACHINE_DRILLED_STONE ="machinedrilledstone";
+	
 	// config file settings
 	public static	boolean enableBulldozer=true;
 }

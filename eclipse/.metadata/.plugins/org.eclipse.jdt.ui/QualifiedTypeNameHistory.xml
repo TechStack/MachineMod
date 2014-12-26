@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.signature.Reference"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="net.minecraft.world.ChunkPosition"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineDrilledStone"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
+</qualifiedTypeNameHistroy>

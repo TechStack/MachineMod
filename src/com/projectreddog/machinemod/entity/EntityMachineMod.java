@@ -61,17 +61,17 @@ public class EntityMachineMod extends Entity {
 	      this.prevRotationYaw = this.rotationYaw = this.riddenByEntity.rotationYaw;
 	      this.rotationPitch = this.riddenByEntity.rotationPitch * 0.5F;
 	      this.setRotation(this.rotationYaw, this.rotationPitch);
-	      motionX += riddenByEntity.motionX * 1; // * 0.20000000000000001D;
-	      motionZ += riddenByEntity.motionZ * 1; // * 0.20000000000000001D;
+	      motionX += riddenByEntity.motionX * .05; // * 0.05000000000000001D;
+	      motionZ += riddenByEntity.motionZ * .05; // * 0.05000000000000001D;
 	     
-	      if (motionX > 2)
+	      if (motionX > 1)
 	      {
-	    	  motionX=2;
+	    	  motionX=1;
 	      }
 
-	      if (motionZ > 2)
+	      if (motionZ > 1)
 	      {
-	    	  motionZ=2;
+	    	  motionZ=1;
 	      }
 	      
 	      

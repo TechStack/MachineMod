@@ -3,6 +3,8 @@ package com.projectreddog.machinemod.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.world.Explosion;
+import net.minecraft.world.World;
 
 import com.projectreddog.machinemod.creativetab.CreativeTabMachineMod;
 import com.projectreddog.machinemod.reference.Reference;
@@ -42,6 +44,16 @@ public class BlockMachineMod  extends Block {
 	protected String getUnwrappedUnlocalizedName(String unlocalizedName)
 	{
 		return unlocalizedName.substring(unlocalizedName.indexOf(".")+1);
+	}
+	
+	@Override 
+	public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
+	{
+		
+	}
+	
+	@Override
+	public void onBlockDestroyedByExplosion(World world, int x, int y, int z, Explosion explosion){
 	}
 
 }
