@@ -66,7 +66,7 @@ public class RenderBulldozer extends Render {
 	@Override
 	protected ResourceLocation getEntityTexture(Entity entity)
 	{
-		return   new ResourceLocation(   "machinemod",Reference.MODEL_BULLDOZER_TEXTURE_LOCATION); 
+		return   new ResourceLocation(   "machinemod",Reference.MODEL_BULLDOZER_TEXTURE_LOCATION);
 	}
 
 }

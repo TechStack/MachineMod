@@ -83,7 +83,7 @@ public class EntityMachineMod extends Entity {
 	  }
 	  
 	  @Override
-	  public void onUpdate() 
+	  public void onUpdate()
 	  {
 	    super.onUpdate();
 	    if (riddenByEntity != null) //check if there is a rider

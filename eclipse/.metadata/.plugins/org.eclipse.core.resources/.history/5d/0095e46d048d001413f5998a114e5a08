@@ -11,7 +11,7 @@ public class EntityBulldozer extends EntityMachineMod {
 	public EntityBulldozer(World world){
 		super(world);
 	}
-	 
+	
    @Override
    /**
     * Returns the Y offset from the entity's position for any entity riding this one.
