@@ -11,6 +11,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 import com.projectreddog.machinemod.entity.EntityBulldozer;
+import com.projectreddog.machinemod.model.ModelBulldozer;
+import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.utility.LogHelper;
 
 public class RenderBulldozer extends Render {
@@ -24,7 +26,7 @@ public class RenderBulldozer extends Render {
 		
 		LogHelper.info("in RenderBuldozer constructor");
 		shadowSize = 1F;
-        this.modelBulldozer = new ModelBoat();
+        this.modelBulldozer = new ModelBulldozer();
 
 	}
 
@@ -34,7 +36,6 @@ public class RenderBulldozer extends Render {
 	public void doRender(Entity entity, double x, double y, double z, float yaw, float pitch)
 	{
 
-		LogHelper.info("IN Bulldozer renderer");
 
 		GL11.glPushMatrix();
 		GL11.glTranslatef((float)x, (float)y, (float)z);
@@ -49,7 +50,7 @@ public class RenderBulldozer extends Render {
 
 		if (f2 > 0.0F)
 		{
-			GL11.glRotatef(MathHelper.sin(f2) * f2 * f3 / 10.0F * (float)((EntityBulldozer) entity).getForwardDirection(), 1.0F, 0.0F, 0.0F);
+//			GL11.glRotatef(MathHelper.sin(f2) * f2 * f3 / 10.0F * (float)((EntityBulldozer) entity).getForwardDirection(), 1.0F, 0.0F, 0.0F);
 		}
 
 		float f4 = 0.75F;
@@ -58,13 +59,14 @@ public class RenderBulldozer extends Render {
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		this.modelBulldozer.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		
 		GL11.glPopMatrix();
 	}
 
 	@Override
 	protected ResourceLocation getEntityTexture(Entity entity)
 	{
-		return TextureMap.locationBlocksTexture;
+		return   new ResourceLocation(   "machinemod",Reference.MODEL_BULLDOZER_TEXTURE_LOCATION);
 	}
 
 }

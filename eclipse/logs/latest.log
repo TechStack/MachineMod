@@ -1,23 +1,31 @@
-[09:19:56] [main/INFO]: Setting user: Player46
-[09:19:57] [Client thread/INFO]: LWJGL Version: 2.9.1
-[09:20:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Machine Mod
-[09:20:01] [Sound Library Loader/INFO]: Sound engine started
-[09:20:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[09:20:02] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[09:20:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Machine Mod
-[09:20:02] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[09:20:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[09:20:03] [Sound Library Loader/INFO]: Sound engine started
-[09:20:07] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[09:20:07] [Server thread/INFO]: Generating keypair
-[09:20:07] [Server thread/INFO]: Preparing start region for level 0
-[09:20:08] [Server thread/INFO]: Changing view distance to 12, from 10
-[09:20:08] [Server thread/INFO]: Player46[local:E:07ec61ec] logged in with entity id 136 at (-1004.5072030291876, 4.0, -322.62506630065974)
-[09:20:08] [Server thread/INFO]: Player46 joined the game
-[09:23:36] [Client thread/INFO]: Stopping!
-[09:23:36] [Server thread/INFO]: Stopping server
-[09:23:36] [Server thread/INFO]: Saving players
-[09:23:36] [Server thread/INFO]: Saving worlds
-[09:23:36] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[09:23:36] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[09:23:36] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:34:18] [main/INFO]: Setting user: Player885
+[21:34:19] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:34:23] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Machine Mod
+[21:34:24] [Sound Library Loader/INFO]: Sound engine started
+[21:34:24] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:34:24] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:34:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Machine Mod
+[21:34:25] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:34:25] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:34:26] [Sound Library Loader/INFO]: Sound engine started
+[21:34:32] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:34:32] [Server thread/INFO]: Generating keypair
+[21:34:32] [Server thread/INFO]: Preparing start region for level 0
+[21:34:33] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:34:33] [Server thread/INFO]: Player885[local:E:44c42c24] logged in with entity id 191 at (-1001.5, 4.129999983310699, -354.5)
+[21:34:33] [Server thread/INFO]: Player885 joined the game
+[21:35:06] [Server thread/INFO]: Saving and pausing game...
+[21:35:06] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[21:35:06] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[21:35:06] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[21:36:01] [Server thread/INFO]: Saving and pausing game...
+[21:36:01] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[21:36:01] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[21:36:01] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[21:36:02] [Server thread/INFO]: Stopping server
+[21:36:02] [Server thread/INFO]: Saving players
+[21:36:02] [Server thread/INFO]: Saving worlds
+[21:36:02] [Server thread/INFO]: Saving chunks for level 'test world'/Overworld
+[21:36:02] [Server thread/INFO]: Saving chunks for level 'test world'/Nether
+[21:36:02] [Server thread/INFO]: Saving chunks for level 'test world'/The End
+[21:36:03] [Client thread/INFO]: Stopping!
