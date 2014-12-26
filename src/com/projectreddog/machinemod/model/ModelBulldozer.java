@@ -30,7 +30,7 @@ public class ModelBulldozer extends ModelBase
 		
 		 
 		 
-		 myModel = AdvancedModelLoader.loadModel(new ResourceLocation(   "machinemod", "/models/modelBulldozer2.obj"));
+		 myModel = AdvancedModelLoader.loadModel(new ResourceLocation(   "machinemod", "/models/modelBulldozer.obj"));
      // casinoTexture = new ResourceLocation("modid", "textures/casinoTexture.png");
       
   }
