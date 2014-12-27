@@ -4,3 +4,4 @@ item.machinemod:bulldozer.name=Bulldozer
 # Block Localizations
 tile.machinemod:machineassemblytable.name=Machine Assembly Table
 tile.machinemod:machinedrilledstone.name=Drilled Stone
+tile.machinemod:machineexplosivepackeddrilledstone.name=Explosive Packed Drilled Stone

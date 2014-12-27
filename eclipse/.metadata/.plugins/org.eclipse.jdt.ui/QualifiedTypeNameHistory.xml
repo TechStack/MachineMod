@@ -9,4 +9,7 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineDrilledStone"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineExplosivePackedDrilledStone"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IIconRegister"/>
+<fullyQualifiedTypeName name="net.minecraft.util.IIcon"/>
 </qualifiedTypeNameHistroy>
