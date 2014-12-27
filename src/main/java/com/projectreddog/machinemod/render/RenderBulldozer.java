@@ -24,7 +24,7 @@ public class RenderBulldozer extends Render {
 	public RenderBulldozer()
 	{
 		
-		LogHelper.info("in RenderBuldozer constructor");
+		
 		shadowSize = 1F;
         this.modelBulldozer = new ModelBulldozer();
 
@@ -66,6 +66,8 @@ public class RenderBulldozer extends Render {
 	@Override
 	protected ResourceLocation getEntityTexture(Entity entity)
 	{
+		
+		
 		return   new ResourceLocation(   "machinemod",Reference.MODEL_BULLDOZER_TEXTURE_LOCATION); 
 	}
 

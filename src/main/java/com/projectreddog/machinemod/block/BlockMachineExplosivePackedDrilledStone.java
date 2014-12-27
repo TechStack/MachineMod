@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 
 import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.utility.LogHelper;
+import com.projectreddog.machinemod.world.ModExplosion;
 public class BlockMachineExplosivePackedDrilledStone extends BlockMachineModManyTexture {
 	public BlockMachineExplosivePackedDrilledStone()
 	{
@@ -44,19 +45,37 @@ public class BlockMachineExplosivePackedDrilledStone extends BlockMachineModMany
 	{	
 
 
-		if (!world.isRemote){
+		//if (!world.isRemote){
 
 
-			Explosion explosion = world.createExplosion( (Entity)null, x,y,z, 4.0F, true );
+			ModExplosion explosion = newExplosion( world, x,y,z, 4.0F, false,true);
+			
+			//world.createExplosion(p_72876_1_, p_72876_2_, p_72876_4_, p_72876_6_, p_72876_8_, p_72876_9_)
 			//		explosion.affectedBlockPositions
 
 
 
-			world.setBlockToAir(x,y,z);
-		}
+			//world.setBlockToAir(x,y,z);
+		//}
 
 
 	}
+	
+	
+	//	(World p_i1948_1_, Entity p_i1948_2_, double p_i1948_3_, 			double p_i1948_5_, double p_i1948_7_, float size)
+	   /**
+     * returns a new explosion. Does initiation (at time of writing Explosion is not finished)
+     */
+    public ModExplosion newExplosion(World world, double x, double y, double z, float size, boolean flameing, boolean smoking)
+    {
+    	
+    	ModExplosion explosion = new ModExplosion( world,(Entity)null , x, y, z, size);
+        explosion.isFlaming = flameing;
+        explosion.isSmoking = smoking;
+        explosion.doExplosionA();
+        explosion.doExplosionB(true);
+        return explosion;
+    }
 
 
 }

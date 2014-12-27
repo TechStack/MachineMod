@@ -10,11 +10,11 @@
 :apiClasses UP-TO-DATE
 :sourceMainJava
 :compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
-Note: C:\All\All\Code\Minecraft\MachineMod\build\sources\java\com\projectreddog\machinemod\client\gui\ModGuiConfig.java uses unchecked or unsafe operations.
+Note: D:\ALL\Code\Minecraft\1.7\MachineMod\build\sources\java\com\projectreddog\machinemod\client\gui\ModGuiConfig.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 1 warning
 
-:processResources UP-TO-DATE
+:processResources
 :classes
 :jar
 :compileTestJava UP-TO-DATE
@@ -32,4 +32,4 @@ Note: Recompile with -Xlint:unchecked for details.
 
 BUILD SUCCESSFUL
 
-Total time: 11.576 secs
+Total time: 30.886 secs

@@ -6,10 +6,14 @@
 <fullyQualifiedTypeName name="net.minecraft.world.ChunkPosition"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineDrilledStone"/>
-<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineExplosivePackedDrilledStone"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IIconRegister"/>
 <fullyQualifiedTypeName name="net.minecraft.util.IIcon"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.ModelDrillingRig"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineModBlastedStone"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.world.ModExplosion"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModBlocks"/>
 </qualifiedTypeNameHistroy>
