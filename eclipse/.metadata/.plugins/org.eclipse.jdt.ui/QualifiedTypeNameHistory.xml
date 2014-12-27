@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.signature.Reference"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
@@ -12,4 +11,5 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineExplosivePackedDrilledStone"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IIconRegister"/>
 <fullyQualifiedTypeName name="net.minecraft.util.IIcon"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
 </qualifiedTypeNameHistroy>
