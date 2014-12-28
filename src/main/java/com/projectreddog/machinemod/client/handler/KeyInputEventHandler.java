@@ -2,7 +2,7 @@ package com.projectreddog.machinemod.client.handler;
 
 import com.projectreddog.machinemod.entity.EntityMachineModRideable;
 import com.projectreddog.machinemod.init.ModNetwork;
-import com.projectreddog.machinemod.network.MachineModMessage;
+import com.projectreddog.machinemod.network.MachineModMessageInputToServer;
 import com.projectreddog.machinemod.utility.LogHelper;
 
 import net.minecraft.client.Minecraft;
@@ -23,7 +23,9 @@ public class KeyInputEventHandler {
 			 sendPacket =true;
 			EntityMachineModRideable e =(EntityMachineModRideable)  Minecraft.getMinecraft().thePlayer.ridingEntity;
 
-			if (Minecraft.getMinecraft().gameSettings.keyBindForward.isPressed() ){
+			
+			
+			if (Minecraft.getMinecraft().gameSettings.keyBindForward.getIsKeyPressed() ){
 				// 	player pressed forward & is in my entity send network message to server
 				 e.isPlayerAccelerating=true; 		 
 			} else {
@@ -33,7 +35,7 @@ public class KeyInputEventHandler {
 			
 			
 
-			if (Minecraft.getMinecraft().gameSettings.keyBindBack.isPressed() ){
+			if (Minecraft.getMinecraft().gameSettings.keyBindBack.getIsKeyPressed() ){
 				// 	player pressed back & is in my entity send network message to server
 				 e.isPlayerBreaking=true;
 				 e.isPlayerAccelerating=false;// for cases where both accel & break are pressed
@@ -43,14 +45,14 @@ public class KeyInputEventHandler {
 			
 			
 			
-			if (Minecraft.getMinecraft().gameSettings.keyBindLeft.isPressed() ){
+			if (Minecraft.getMinecraft().gameSettings.keyBindLeft.getIsKeyPressed() ){
 				// 	player pressed left & is in my entity send network message to server
 				e.isPlayerTurningLeft=true;
 				e.isPlayerTurningRight =false;				 
 			} else{
 				e.isPlayerTurningLeft=false;
 			}
-			if (Minecraft.getMinecraft().gameSettings.keyBindRight.isPressed() ){
+			if (Minecraft.getMinecraft().gameSettings.keyBindRight.getIsKeyPressed() ){
 				// 	player pressed right & is in my entity send network message to server
 				
 				e.isPlayerTurningRight =true;
@@ -68,7 +70,8 @@ public class KeyInputEventHandler {
 			 
 			 LogHelper.info("NETWORKPACKET SENDING: ACC:" + e.isPlayerAccelerating + " BRAKE: " + e.isPlayerBreaking +" Left: "+ e.isPlayerTurningLeft +" RIght:"+e.isPlayerTurningRight);
 
-			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessage( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft));
+			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServer( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft));
+			 
 			}
 				
 		}

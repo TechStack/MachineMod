@@ -3,7 +3,7 @@ package com.projectreddog.machinemod.network;
 import io.netty.buffer.ByteBuf;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 
-public class MachineModMessage implements IMessage{
+public class MachineModMessageInputToServer implements IMessage{
 
 	public int entityid;
 
@@ -12,12 +12,12 @@ public class MachineModMessage implements IMessage{
 	public boolean isPlayerTurningRight=false;
 	public boolean isPlayerTurningLeft=false;
 	
-	public MachineModMessage()
+	public MachineModMessageInputToServer()
 	{
 		
 	}
 	
-	public MachineModMessage(int entityId, boolean isPlayerAccelerating, boolean isPlayerBreaking, boolean isPlayerTurningRight,boolean isPlayerTurningLeft ) {
+	public MachineModMessageInputToServer(int entityId, boolean isPlayerAccelerating, boolean isPlayerBreaking, boolean isPlayerTurningRight,boolean isPlayerTurningLeft ) {
 		super();
 		this.isPlayerAccelerating = isPlayerAccelerating;
 		this.isPlayerBreaking=isPlayerBreaking;

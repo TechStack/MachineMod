@@ -1,7 +1,9 @@
 package com.projectreddog.machinemod.init;
 
-import com.projectreddog.machinemod.network.MachineModMessage;
-import com.projectreddog.machinemod.network.MachineModMessageHandler;
+import com.projectreddog.machinemod.network.MachineModMessageEntityToClient;
+import com.projectreddog.machinemod.network.MachineModMessageEntityToClientHandler;
+import com.projectreddog.machinemod.network.MachineModMessageInputToServer;
+import com.projectreddog.machinemod.network.MachineModMessageInputToServerHandler;
 import com.projectreddog.machinemod.reference.Reference;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -14,6 +16,10 @@ public class ModNetwork {
 	
 	public static void init(){
 		simpleNetworkWrapper = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.MOD_ID);
-		simpleNetworkWrapper.registerMessage(MachineModMessageHandler.class, MachineModMessage.class, 0, Side.SERVER);// message to server
+		simpleNetworkWrapper.registerMessage(MachineModMessageInputToServerHandler.class, MachineModMessageInputToServer.class, 0, Side.SERVER);// message to server
+		
+		
+		simpleNetworkWrapper.registerMessage(MachineModMessageEntityToClientHandler.class, MachineModMessageEntityToClient.class, 1, Side.CLIENT);// message to server
+
 	}
 }

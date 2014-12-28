@@ -8,11 +8,11 @@ import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 
-public class MachineModMessageHandler  implements IMessageHandler<MachineModMessage,IMessage>{
+public class MachineModMessageInputToServerHandler  implements IMessageHandler<MachineModMessageInputToServer,IMessage>{
 
 
 	@Override
-	public IMessage onMessage(MachineModMessage message, MessageContext ctx) {
+	public IMessage onMessage(MachineModMessageInputToServer message, MessageContext ctx) {
 		
 	   Entity entity=	ctx.getServerHandler().playerEntity.worldObj.getEntityByID(message.entityid);
 		if (entity instanceof EntityMachineModRideable )
