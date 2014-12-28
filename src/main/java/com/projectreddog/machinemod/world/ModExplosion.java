@@ -133,12 +133,12 @@ public class ModExplosion extends Explosion {
               {
 				  
 				  //only spawn if its air above the block
-				  if (this.worldObj.isAirBlock(x,y+1, z)||this.worldObj.isAirBlock(x,y+2, z))
-				  {
-	                  EntityFallingBlock entityfallingblock = new EntityFallingBlock(this.worldObj, (double)((float)x + 0.5F), (double)((float)y + 0.7F), (double)((float)z + 0.5F), ModBlocks.machinemodblastesStone, 0);     
-	                  entityfallingblock.motionY=.6d;
-	                  this.worldObj.spawnEntityInWorld(entityfallingblock);
-				  }
+//				  if (this.worldObj.isAirBlock(x,y+1, z)||this.worldObj.isAirBlock(x,y+2, z))
+//				  {
+//	                  EntityFallingBlock entityfallingblock = new EntityFallingBlock(this.worldObj, (double)((float)x + 0.5F), (double)((float)y + 0.7F), (double)((float)z + 0.5F), ModBlocks.machinemodblastesStone, 0);     
+//	                  entityfallingblock.motionY=.6d;
+//	                  this.worldObj.spawnEntityInWorld(entityfallingblock);
+//				  }
     
   //              	 this.worldObj.setBlockToAir(x,y,z); 
 

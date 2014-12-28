@@ -9,8 +9,8 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "com.projectreddog.machinemod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.projectreddog.machinemod.proxy.ServerProxy";
 	public static final String GUI_FACTORY_CLASS = "com.projectreddog.machinemod.client.gui.GuiFactory";
-	public static final String MODEL_BULLDOZER_TEXTURE_LOCATION = "/models/modelBulldozer2.png";
-	public static final String MODEL_DRILLINGRIG_TEXTURE_LOCATION = "/models/drillingrig.png";
+	public static final String MODEL_BULLDOZER_TEXTURE_LOCATION = "models/modelbulldozer2.png";
+	public static final String MODEL_DRILLINGRIG_TEXTURE_LOCATION = "models/drillingrig.png";
 
 	
 	public static final String MODBLOCK_MACHINE_ASSEMBLY_TABLE ="machineassemblytable";
