@@ -16,6 +16,8 @@ public class ClientProxy extends CommonProxy {
 		LogHelper.info("in register Renderers");
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulldozer.class, new RenderBulldozer());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDrillingRig.class, new RenderDrillingRig());
-
+        
 	}
+	
+	
 }

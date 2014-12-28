@@ -5,11 +5,13 @@ import java.util.Map;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderBiped;
 
+import com.projectreddog.machinemod.client.handler.KeyInputEventHandler;
 import com.projectreddog.machinemod.entity.EntityBulldozer;
 import com.projectreddog.machinemod.handler.ConfigurationHandler;
 import com.projectreddog.machinemod.init.ModBlocks;
 import com.projectreddog.machinemod.init.ModEntities;
 import com.projectreddog.machinemod.init.ModItems;
+import com.projectreddog.machinemod.init.ModNetwork;
 import com.projectreddog.machinemod.proxy.IProxy;
 import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.utility.LogHelper;
@@ -38,11 +40,15 @@ public class MachineMod {
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 		ModItems.init();
 		ModBlocks.init();
+		
 	}
 	@Mod.EventHandler 
 	public void init(FMLInitializationEvent event){
 		// register gui, tile entites , crafting recipies (general event hanlders)
 		ModEntities.init(this);
+		ModNetwork.init();
+		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+
 		proxy.registerRenderers();
 	}
 	

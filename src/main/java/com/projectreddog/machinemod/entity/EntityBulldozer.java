@@ -4,7 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityBulldozer extends EntityMachineMod {
+public class EntityBulldozer extends EntityMachineModRideable {
 
 	
 	

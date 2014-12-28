@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.signature.Reference"/>
-<fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="net.minecraft.world.ChunkPosition"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
@@ -9,11 +8,28 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineExplosivePackedDrilledStone"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IIconRegister"/>
 <fullyQualifiedTypeName name="net.minecraft.util.IIcon"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.ModelDrillingRig"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineModBlastedStone"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.world.ModExplosion"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModBlocks"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineMod"/>
+<fullyQualifiedTypeName name="net.minecraft.util.AxisAlignedBB"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessageHandler"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.gameevent.InputEvent"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.gameevent.InputEvent.KeyInputEvent"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.eventhandler.SubscribeEvent"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.FMLCommonHandler"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.client.handler.KeyInputEventHandler"/>
+<fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessage"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModNetwork"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 </qualifiedTypeNameHistroy>

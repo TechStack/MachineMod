@@ -15,8 +15,8 @@ public class ModEntities {
 	//public static final EntityBulldozer entityBulldozer= new EntityBulldozer(new World);
 	public static void init(Object mod)
 	{
-		EntityRegistry.registerModEntity(EntityDrillingRig.class, "drillingrig", 1,mod , 64, 100, true);
-			EntityRegistry.registerModEntity(EntityBulldozer.class, "bulldozer",2 ,mod , 64, 100, true);
+		EntityRegistry.registerModEntity(EntityDrillingRig.class, "drillingrig", 1,mod , 80,3,  true);
+			EntityRegistry.registerModEntity(EntityBulldozer.class, "bulldozer",2 ,mod , 80,3, true);
 
 	}
 }
