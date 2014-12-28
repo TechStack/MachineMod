@@ -3,26 +3,26 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="-569" key="DIALOG_Y_ORIGIN"/>
-		<item value="380" key="DIALOG_HEIGHT"/>
 		<item value="647" key="DIALOG_X_ORIGIN"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="setBlock(" key="selection"/>
+		<item value="velocityY" key="selection"/>
 		<list key="findhistory">
-			<item value="setBlock("/>
-			<item value="setBlock"/>
-			<item value="onblockexplode"/>
-			<item value="isremote"/>
-			<item value="func_149831_e"/>
-			<item value="field_145809_g"/>
-			<item value="func_145806_a"/>
-			<item value="func_149829_a"/>
+			<item value="velocityY"/>
+			<item value="motionY"/>
+			<item value="attack"/>
+			<item value="collision"/>
+			<item value="splash"/>
+			<item value="init"/>
+			<item value="getf"/>
+			<item value="get"/>
 		</list>
 		<list key="replacehistory">
 		</list>
