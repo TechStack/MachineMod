@@ -10,7 +10,6 @@
 <fullyQualifiedTypeName name="net.minecraft.util.IIcon"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.ModelDrillingRig"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineModBlastedStone"/>
-<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.world.ModExplosion"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModBlocks"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineMod"/>
@@ -28,12 +27,17 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.client.handler.KeyInputEventHandler"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessage"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModNetwork"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry.TargetPoint"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
-<fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
 <fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.item.EntityFallingBlock"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.SidedProxy"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModFallingEntity"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderFallingBlock"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 </qualifiedTypeNameHistroy>

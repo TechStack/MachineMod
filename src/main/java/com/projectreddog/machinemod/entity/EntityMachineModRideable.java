@@ -201,7 +201,6 @@ public class EntityMachineModRideable extends Entity {
 		
 		//set position on both sides for visual (less jerky) on client & server
 		if (riddenByEntity != null){
-   LogHelper.info ("X: "+ posX +" Y: "+ posY + "Z " + posZ +" yaw:"+ yaw +" speedx:" + motionX + "speedZ: "+ motionZ);
 		}
 
 	}
