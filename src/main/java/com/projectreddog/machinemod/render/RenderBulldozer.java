@@ -38,7 +38,7 @@ public class RenderBulldozer extends Render {
 
 
 		GL11.glPushMatrix();
-		GL11.glTranslatef((float)x, (float)y, (float)z);
+		GL11.glTranslated(x, y, z);
 		GL11.glRotatef(180.0F - yaw, 0.0F, 1.0F, 0.0F);
 		float f2 =  pitch;
 		float f3 = pitch;

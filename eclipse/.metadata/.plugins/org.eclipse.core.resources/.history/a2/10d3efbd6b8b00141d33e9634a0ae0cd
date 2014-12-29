@@ -1,5 +1,0 @@
-package com.projectreddog.machinemod.entity;
-
-public class EntityBulldozer extends EntityMachineMod {
-
-}

@@ -7,7 +7,7 @@
 	import net.minecraft.util.DamageSource;
 	import net.minecraft.world.World;
 
-public class EntityDrillingRig extends EntityMachineMod {
+public class EntityDrillingRig extends EntityMachineModRideable {
 
 		
 		public EntityDrillingRig(World world){

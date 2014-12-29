@@ -18,7 +18,6 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessageHandler"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
@@ -27,10 +26,14 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.common.eventhandler.SubscribeEvent"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.FMLCommonHandler"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.client.handler.KeyInputEventHandler"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessage"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModNetwork"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry.TargetPoint"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
+<fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
 </qualifiedTypeNameHistroy>

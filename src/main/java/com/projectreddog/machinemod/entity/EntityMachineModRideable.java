@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.projectreddog.machinemod.init.ModNetwork;
@@ -11,6 +12,8 @@ import com.projectreddog.machinemod.network.MachineModMessageEntityToClient;
 import com.projectreddog.machinemod.utility.LogHelper;
 
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityMachineModRideable extends Entity {
 
@@ -36,7 +39,7 @@ public class EntityMachineModRideable extends Entity {
 
 	public double getMaxVelocity(){
 		// created as method so extending class can easily override to allow for different speeds per machine
-		return 0.4d;
+		return 0.2d;
 	}
 	@Override
 	public AxisAlignedBB getBoundingBox(){
@@ -75,18 +78,19 @@ public class EntityMachineModRideable extends Entity {
 	}
 	
 	
+	
 	public void updateServer() {
 		if ( isPlayerAccelerating){
-			this.velocity +=+.1d;
+			this.velocity += .1d;
 		}
 		if ( isPlayerBreaking){
 			this.velocity -= .1d;
 		}
 		if (isPlayerTurningRight){
-			yaw +=1;
+			yaw +=1.5d;
 		}
 		if (isPlayerTurningLeft){
-			yaw -=1;
+			yaw -=1.5d;
 		}
 		//end take user input
 		
@@ -96,11 +100,11 @@ public class EntityMachineModRideable extends Entity {
 		}else if(this.velocity < this.getMaxVelocity()*-1){
 			this.velocity=this.getMaxVelocity()*-1; 
 		}
-		if (this.velocity <.1d && this.velocity > 0.0d){
-			this.velocity=0;
+		if (this.velocity <0.0001d && this.velocity > 0.0d){
+			this.velocity=0d;
 			
-		}else if (this.velocity >-.1d && this.velocity < 0.0d){
-			this.velocity=0;
+		}else if (this.velocity >-0.0001d && this.velocity < 0.0d){
+			this.velocity=0d;
 		}
 		if (this.yaw>360 ){
 			this.yaw =this.yaw-360;
@@ -110,9 +114,13 @@ public class EntityMachineModRideable extends Entity {
 		//END Clamp values to max / min values as needed
 		
 		// calc x & Z offsets needed for the given rotation & velocity
-		double speedX =(velocity * Math.cos((yaw+90) * Math.PI / 180.0D));
-		double speedZ= (velocity * Math.sin((yaw+90)* Math.PI / 180.0D)); 
+		double speedX =(velocity * MathHelper.cos((float) ((yaw+90) * Math.PI / 180.0D)));
+		double speedZ= (velocity * MathHelper.sin((float) ((yaw+90)* Math.PI / 180.0D))); 
 		double speedY=0;
+		
+		motionY= speedY;
+		motionX = speedX;
+		motionZ = speedZ;
 		this.velocity*=.90;// apply friction
 		setRotation(this.yaw, this.rotationPitch);
 		if (worldObj.isAirBlock((int) posX, (int) posY -1, (int)posZ )){
@@ -120,60 +128,59 @@ public class EntityMachineModRideable extends Entity {
 		}else{
 			speedY =0;
 		}
-//		setPosition( posX+speedX,posY+motionY, posZ+speedZ);
-		moveEntity( speedX,motionY,  speedZ);
+		setPosition( posX+speedX,posY+motionY, posZ+speedZ);
+		//moveEntity( motionX,motionY,  motionZ);
+		
+		
+
+		
+		
         ModNetwork.simpleNetworkWrapper.sendToAllAround((new MachineModMessageEntityToClient( this.getEntityId(),this.posX,this.posY,this.posZ,this.yaw)), new TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 80));
 	}
 	
 	public void updateClient(){
-		
+		//updateServer();
 		
 		this.noClip = true;
 		this.motionX = 0;
 		this.motionY = 0;
 		this.motionZ = 0;
-		double yawSpeed = 0;
 		  
-		if (TargetposX !=posX )
-		{
-			MoveTickCount=3;
-		}
-		if (TargetposZ !=posZ )
-		{
-			MoveTickCount=3;
-			
-		}
-		if (TargetposY !=posY )
-		{
-			MoveTickCount=3;
-		}
+	
+//		
+//		if(TargetYaw!=yaw){
+//			YawTickCount=3;
+//		}
+//		
 		
-		if(TargetYaw!=yaw){
-			YawTickCount=3;
-		}
-		
-		if(MoveTickCount>0){
-			this.motionX = (TargetposX -this.posX )/(MoveTickCount);
-			this.motionY = (TargetposY -this.posY )/(MoveTickCount);
-			this.motionZ = (TargetposZ -this.posZ )/(MoveTickCount);
-		 MoveTickCount--;
-		}
-		if(MoveTickCount==0){
-			
-		}
+			this.motionX = (this.TargetposX -this.posX )/(3);
+			this.motionY = (this.TargetposY -this.posY )/(3);
+			this.motionZ = (this.TargetposZ -this.posZ )/(3);
+			setPosition( posX+motionX,posY+motionY, posZ+motionZ);
 
-		
-		if(YawTickCount>0){
-			
-			this.rotationYaw += (TargetYaw -yaw)/YawTickCount;
-			YawTickCount--;
-		}
-		if (YawTickCount==0){
-			this.rotationYaw=TargetYaw;
-		}
+//
+//		
+//		if(YawTickCount>0){
+//			
+//			this.rotationYaw += (TargetYaw -yaw)/YawTickCount;
+//			YawTickCount--;
+//		}
+//		if (YawTickCount==0){
+//			this.rotationYaw=TargetYaw;
+//		}
 	}
 	
-	
+	 @SideOnly(Side.CLIENT)
+	    public void setPositionAndRotation2(double p_70056_1_, double p_70056_3_, double p_70056_5_, float p_70056_7_, float p_70056_8_, int p_70056_9_)
+	    {
+		 
+	    }
+	 @SideOnly(Side.CLIENT)
+	    public void setPositionAndRotation(double p_70056_1_, double p_70056_3_, double p_70056_5_, float p_70056_7_, float p_70056_8_, int p_70056_9_)
+	    {
+		 
+	    }
+	 
 	
 	@Override
 	public void onUpdate(){
@@ -207,6 +214,7 @@ public class EntityMachineModRideable extends Entity {
 			double d0 = Math.cos((double)this.rotationYaw * Math.PI / 180.0D) * this.velocity;
 			double d1 = Math.sin((double)this.rotationYaw * Math.PI / 180.0D) * this.velocity;
 			this.riddenByEntity.setPosition(this.posX + d0, this.posY + this.getMountedYOffset() + this.riddenByEntity.getYOffset(), this.posZ + d1);
+			this.riddenByEntity.setRotationYawHead(this.yaw);
 		}
 	}
 
