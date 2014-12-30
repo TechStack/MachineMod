@@ -24,7 +24,7 @@ public class EntityMachineModRideable extends Entity {
 	public boolean isPlayerBreaking =false;
 	public boolean isPlayerTurningRight=false;
 	public boolean isPlayerTurningLeft=false;
-
+	public boolean isPlayerPushingSprintButton=false;
 	public double TargetposX;
 	public double TargetposY;
 	public double TargetposZ;
@@ -80,6 +80,16 @@ public class EntityMachineModRideable extends Entity {
 	
 	
 	public void updateServer() {
+		
+		//New for gravity
+		this.motionY -= 0.03999999910593033D;
+		if (onGround){
+
+            this.motionY *= -0.5D;
+
+		}
+		
+		// end New for gravity
 		if ( isPlayerAccelerating){
 			this.velocity += .1d;
 		}
@@ -141,7 +151,7 @@ public class EntityMachineModRideable extends Entity {
 	public void updateClient(){
 		//updateServer();
 		
-		this.noClip = true;
+		//this.noClip = true;
 		this.motionX = 0;
 		this.motionY = 0;
 		this.motionZ = 0;

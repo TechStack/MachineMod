@@ -35,6 +35,15 @@ public class KeyInputEventHandler {
 			
 			
 
+			if (Minecraft.getMinecraft().gameSettings.keyBindSprint.getIsKeyPressed() ){
+				// 	player pressed forward & is in my entity send network message to server
+				 e.isPlayerPushingSprintButton=true; 		 
+			} else {
+				 e.isPlayerPushingSprintButton=false; 	
+			}
+			
+			
+
 			if (Minecraft.getMinecraft().gameSettings.keyBindBack.getIsKeyPressed() ){
 				// 	player pressed back & is in my entity send network message to server
 				 e.isPlayerBreaking=true;
@@ -70,7 +79,7 @@ public class KeyInputEventHandler {
 			 
 			 LogHelper.info("NETWORKPACKET SENDING: ACC:" + e.isPlayerAccelerating + " BRAKE: " + e.isPlayerBreaking +" Left: "+ e.isPlayerTurningLeft +" RIght:"+e.isPlayerTurningRight);
 
-			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServer( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft));
+			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServer( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft,e.isPlayerPushingSprintButton));
 			 
 			}
 				

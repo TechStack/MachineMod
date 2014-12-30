@@ -11,19 +11,21 @@ public class MachineModMessageInputToServer implements IMessage{
 	public boolean isPlayerBreaking =false;
 	public boolean isPlayerTurningRight=false;
 	public boolean isPlayerTurningLeft=false;
+	public boolean isPlayerPushingSprintButton =false;
 	
 	public MachineModMessageInputToServer()
 	{
 		
 	}
 	
-	public MachineModMessageInputToServer(int entityId, boolean isPlayerAccelerating, boolean isPlayerBreaking, boolean isPlayerTurningRight,boolean isPlayerTurningLeft ) {
+	public MachineModMessageInputToServer(int entityId, boolean isPlayerAccelerating, boolean isPlayerBreaking, boolean isPlayerTurningRight,boolean isPlayerTurningLeft ,boolean isPlayerPushingSprintButton) {
 		super();
 		this.isPlayerAccelerating = isPlayerAccelerating;
 		this.isPlayerBreaking=isPlayerBreaking;
 		this.isPlayerTurningRight=isPlayerTurningRight;
 		this.isPlayerTurningLeft = isPlayerTurningLeft;
 		this.entityid =entityId;
+		this.isPlayerPushingSprintButton=isPlayerPushingSprintButton;
 	}
 
 	
@@ -35,6 +37,7 @@ public class MachineModMessageInputToServer implements IMessage{
         this.isPlayerBreaking =buf.readBoolean();
         this.isPlayerTurningRight=buf.readBoolean();
         this.isPlayerTurningLeft = buf.readBoolean();
+        this.isPlayerPushingSprintButton = buf.readBoolean();
 
 	}
 
@@ -45,6 +48,7 @@ public class MachineModMessageInputToServer implements IMessage{
         buf.writeBoolean(isPlayerBreaking);
         buf.writeBoolean(isPlayerTurningRight);
         buf.writeBoolean(isPlayerTurningLeft);
+        buf.writeBoolean(isPlayerPushingSprintButton);
 
         
 	}

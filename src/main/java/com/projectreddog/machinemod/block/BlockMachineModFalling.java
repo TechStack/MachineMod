@@ -2,6 +2,7 @@ package com.projectreddog.machinemod.block;
 
 import java.util.Random;
 
+import com.projectreddog.machinemod.init.ModBlocks;
 import com.projectreddog.machinemod.utility.LogHelper;
 
 import net.minecraft.block.Block;
@@ -34,6 +35,9 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 	public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
 	{
 		world.scheduleBlockUpdate(x, y, z, this, this.tickRate(world));
+		if (world.getBlock(x,y+1, z)== ModBlocks.machinemodblastesStone){
+			world.scheduleBlockUpdate(x, y+1, z, this, this.tickRate(world));
+		}
 	}
 
 
@@ -69,7 +73,7 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 					entityfallingblock.motionY+=this.motionY;
 					entityfallingblock.motionZ+=this.motionZ;
 				
-					world.setBlockToAir(x, y, z);
+					//world.setBlockToAir(x, y, z);
 
 
 					world.spawnEntityInWorld(entityfallingblock);
@@ -120,10 +124,12 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 						if (block2== Blocks.air ||block2 == Blocks.fire)
 						{
 
-							this.motionX =i*1f;
-							this.motionZ =j*1f;
-							this.motionY =1f;
-							return true;
+//							this.motionX =i*1f;
+//							this.motionZ =j*1f;
+//							this.motionY =1f;
+							world.setBlockToAir(x, y, z);
+							world.setBlock(x+i, y-1, z+j, this);
+							return false;
 						}		
 					}
 				}
