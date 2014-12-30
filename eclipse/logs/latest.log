@@ -1,9 +1,9 @@
-[09:59:17] [main/INFO]: Setting user: Player672
-[09:59:18] [Client thread/INFO]: LWJGL Version: 2.9.1
-[09:59:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[09:59:23] [Sound Library Loader/INFO]: Sound engine started
-[09:59:23] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[09:59:23] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
+[10:30:04] [main/INFO]: Setting user: Player854
+[10:30:05] [Client thread/INFO]: LWJGL Version: 2.9.1
+[10:30:08] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[10:30:09] [Sound Library Loader/INFO]: Sound engine started
+[10:30:09] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[10:30:09] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
 java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -23,9 +23,9 @@ java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[09:59:23] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[09:59:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[09:59:24] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
+[10:30:09] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[10:30:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[10:30:10] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
 java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -48,29 +48,39 @@ java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[09:59:24] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[09:59:24] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[09:59:25] [Sound Library Loader/INFO]: Sound engine started
-[09:59:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[09:59:30] [Server thread/INFO]: Generating keypair
-[09:59:31] [Server thread/INFO]: Preparing start region for level 0
-[09:59:32] [Server thread/INFO]: Changing view distance to 12, from 10
-[09:59:32] [Server thread/INFO]: Player672[local:E:ff7646cf] logged in with entity id 566 at (-1063.6806833872618, 2.0, -334.69157968238187)
-[09:59:32] [Server thread/INFO]: Player672 joined the game
-[09:59:34] [Server thread/INFO]: Player672 has just earned the achievement [Taking Inventory]
-[09:59:34] [Client thread/INFO]: [CHAT] Player672 has just earned the achievement [Taking Inventory]
-[10:00:16] [Server thread/INFO]: Saving and pausing game...
-[10:00:16] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[10:00:16] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[10:00:16] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[10:00:27] [Server thread/INFO]: Saving and pausing game...
-[10:00:27] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[10:00:27] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[10:00:27] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[10:00:27] [Server thread/INFO]: Stopping server
-[10:00:27] [Server thread/INFO]: Saving players
-[10:00:27] [Server thread/INFO]: Saving worlds
-[10:00:27] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[10:00:27] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[10:00:27] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[10:00:28] [Client thread/INFO]: Stopping!
+[10:30:10] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[10:30:10] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[10:30:11] [Sound Library Loader/INFO]: Sound engine started
+[10:30:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[10:30:30] [Server thread/INFO]: Generating keypair
+[10:30:31] [Server thread/INFO]: Preparing start region for level 0
+[10:30:31] [Server thread/INFO]: Changing view distance to 12, from 10
+[10:30:32] [Server thread/INFO]: Player854[local:E:effd1039] logged in with entity id 490 at (-1074.114872776118, 4.0, -338.6685517393994)
+[10:30:32] [Server thread/INFO]: Player854 joined the game
+[10:31:31] [Server thread/INFO]: Saving and pausing game...
+[10:31:31] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[10:31:31] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[10:31:31] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[10:31:31] [Server thread/INFO]: Stopping server
+[10:31:31] [Server thread/INFO]: Saving players
+[10:31:31] [Server thread/INFO]: Saving worlds
+[10:31:31] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[10:31:31] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[10:31:31] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[10:31:33] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[10:31:33] [Server thread/INFO]: Generating keypair
+[10:31:33] [Server thread/INFO]: Preparing start region for level 0
+[10:31:34] [Server thread/INFO]: Changing view distance to 12, from 10
+[10:31:34] [Server thread/INFO]: Player854[local:E:fb471a83] logged in with entity id 317588 at (-1070.5300018412308, 6.11163302697389, -338.50520741156964)
+[10:31:34] [Server thread/INFO]: Player854 joined the game
+[10:32:23] [Server thread/INFO]: Saving and pausing game...
+[10:32:23] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[10:32:23] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[10:32:23] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[10:32:24] [Server thread/INFO]: Stopping server
+[10:32:24] [Server thread/INFO]: Saving players
+[10:32:24] [Server thread/INFO]: Saving worlds
+[10:32:24] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[10:32:24] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[10:32:24] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[10:32:24] [Client thread/INFO]: Stopping!

@@ -62,7 +62,7 @@ public class RenderDumpTruck extends Render {
 	@Override
 	protected ResourceLocation getEntityTexture(Entity entity)
 	{
-		return   new ResourceLocation(   "machinemod",Reference.MODEL_DRILLINGRIG_TEXTURE_LOCATION); 
+		return   new ResourceLocation(   "machinemod",Reference.MODEL_DUMPTRUCK_TEXTURE_LOCATION); 
 	}
 
 }
