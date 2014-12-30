@@ -25,7 +25,7 @@ public class ItemDrillingRig extends ItemMachineMod {
 		super();
 		this.setUnlocalizedName("drillingrig");
 		this.maxStackSize =1;
-
+		
 	}
 
 
@@ -42,6 +42,9 @@ public class ItemDrillingRig extends ItemMachineMod {
 
 			EntityDrillingRig entityDrillingRig = new EntityDrillingRig(world);
 			entityDrillingRig.setPosition(x+.5d,y+1.0d,z+.5d);
+			entityDrillingRig.prevPosX= x+.5d;
+			entityDrillingRig.prevPosY= y+.5d;
+			entityDrillingRig.prevPosZ= z+.5d;
 			result = world.spawnEntityInWorld(entityDrillingRig);
 			LogHelper.info("Spawn entity resutl:" + result );
 		}

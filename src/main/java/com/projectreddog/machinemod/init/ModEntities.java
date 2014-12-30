@@ -2,6 +2,7 @@ package com.projectreddog.machinemod.init;
 
 import com.projectreddog.machinemod.entity.EntityBulldozer;
 import com.projectreddog.machinemod.entity.EntityDrillingRig;
+import com.projectreddog.machinemod.entity.EntityDumpTruck;
 import com.projectreddog.machinemod.reference.Reference;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -17,6 +18,6 @@ public class ModEntities {
 	{
 		EntityRegistry.registerModEntity(EntityDrillingRig.class, "drillingrig", 1,mod , 80, 1,  true);
 	    EntityRegistry.registerModEntity(EntityBulldozer.class, "bulldozer", 2,mod , 80,1, true);
-
+	    EntityRegistry.registerModEntity(EntityDumpTruck.class, "dumptruck", 3,mod , 80,1, true);
 	}
 }

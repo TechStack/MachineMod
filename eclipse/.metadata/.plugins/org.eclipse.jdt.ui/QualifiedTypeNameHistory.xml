@@ -40,4 +40,6 @@
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityDumpTruck"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.item.ItemDumpTruck"/>
 </qualifiedTypeNameHistroy>
