@@ -82,14 +82,27 @@ public class EntityMachineModRideable extends Entity {
 	public void updateServer() {
 		
 		//New for gravity
-		this.motionY -= 0.03999999910593033D;
-		if (onGround){
-
-            this.motionY *= -0.5D;
-
-		}
+//		this.motionY -= 0.03999999910593033D;
+//		if (onGround){
+//
+//            this.motionY *= -0.5D;
+//
+//		}
+		
+		
+		if (worldObj.isAirBlock((int) (posX), (int) posY -1, (int)(posZ ))){
+		 this.motionY-= 0.03999999910593033D;
+	}else{
+		 this.motionY =0;
+	}
+	
+		
 		
 		// end New for gravity
+		
+		if (riddenByEntity != null){
+
+	
 		if ( isPlayerAccelerating){
 			this.velocity += .1d;
 		}
@@ -102,6 +115,9 @@ public class EntityMachineModRideable extends Entity {
 		if (isPlayerTurningLeft){
 			yaw -=1.5d;
 		}
+		
+		}
+		
 		//end take user input
 		
 		// Clamp values to max / min values as needed 
@@ -126,18 +142,18 @@ public class EntityMachineModRideable extends Entity {
 		// calc x & Z offsets needed for the given rotation & velocity
 		double speedX =(velocity * MathHelper.cos((float) ((yaw+90) * Math.PI / 180.0D)));
 		double speedZ= (velocity * MathHelper.sin((float) ((yaw+90)* Math.PI / 180.0D))); 
-		double speedY=0;
+		//double speedY=0;
 		
-		motionY= speedY;
+		
 		motionX = speedX;
 		motionZ = speedZ;
 		this.velocity*=.90;// apply friction
 		setRotation(this.yaw, this.rotationPitch);
-		if (worldObj.isAirBlock((int) posX, (int) posY -1, (int)posZ )){
-			speedY= -0.15;
-		}else{
-			speedY =0;
-		}
+
+	
+		
+		
+//		motionY= speedY;
 		setPosition( posX+speedX,posY+motionY, posZ+speedZ);
 		//moveEntity( motionX,motionY,  motionZ);
 		
@@ -166,6 +182,14 @@ public class EntityMachineModRideable extends Entity {
 			this.motionX = (this.TargetposX -this.posX )/(3);
 			this.motionY = (this.TargetposY -this.posY )/(3);
 			this.motionZ = (this.TargetposZ -this.posZ )/(3);
+			if (this.motionX > 1 || this.motionY> 1 || this.motionZ > 1){
+				// in cases of desync override the smoothing effect and just put the entity in place
+				// this resolves the issue of the entity jumping after placed.
+				this.motionX *=3;
+				this.motionY *=3;
+				this.motionZ *=3;
+			}
+			
 			setPosition( posX+motionX,posY+motionY, posZ+motionZ);
 
 //
@@ -194,23 +218,15 @@ public class EntityMachineModRideable extends Entity {
 	
 	@Override
 	public void onUpdate(){
-		if (riddenByEntity != null){
-			if(!worldObj.isRemote){
-				//server side
-				updateServer();
-			
-			}else{
-				// client
+	
+		if(!worldObj.isRemote){
+			//server side
+			updateServer();
+		
+		}else{
+			// client
 
-				updateClient();
-			}
-		
-		}
-		
-		
-		
-		//set position on both sides for visual (less jerky) on client & server
-		if (riddenByEntity != null){
+			updateClient();
 		}
 
 	}

@@ -48,7 +48,7 @@ public class EntityBulldozer extends EntityMachineModRideable {
 		
 		
 		int x =(int)(this.posX+bladeOffsetX-.5d);
-		int y = (int)this.posY +yOffset;
+		int y = (int)Math.round(this.posY +yOffset);
 		int z= (int)(this.posZ+bladeOffsetZ+.5);
 		if (worldObj.getBlock(x,y,z).getMaterial() == Material.grass || worldObj.getBlock(x,y,z).getMaterial() == Material.ground || worldObj.getBlock(x,y,z).getMaterial() == Material.sand ){
 			worldObj.getBlock(x,y,z).dropBlockAsItem(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z) , 0);

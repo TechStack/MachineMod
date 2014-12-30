@@ -35,9 +35,9 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModFallingEntity"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderFallingBlock"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModBlocks"/>
 <fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 </qualifiedTypeNameHistroy>

@@ -34,6 +34,9 @@ public class ItemBulldozer extends ItemMachineMod {
 
 		EntityBulldozer entityBulldozer = new EntityBulldozer(world);
 		entityBulldozer.setPosition(x+.5d,y+1.0d,z+.5d);
+		entityBulldozer.prevPosX= x+.5d;
+		entityBulldozer.prevPosY= y+.5d;
+		entityBulldozer.prevPosZ= z+.5d;
 		result = world.spawnEntityInWorld(entityBulldozer);
 		LogHelper.info("Spawn entity resutl:" + result );
 		}
