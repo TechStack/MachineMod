@@ -1,9 +1,0 @@
-package com.projectreddog.machinemod.configuration;
-
-public class ConfigurationHandler {
-
-	public static void init(File configFile)
-	{
-		
-	}
-}

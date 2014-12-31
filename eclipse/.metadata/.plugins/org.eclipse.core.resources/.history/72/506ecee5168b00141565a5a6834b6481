@@ -1,7 +1,0 @@
-package com.projectreddog.machinemod.item;
-
-import net.minecraft.item.Item;
-
-public class ItemMachineMod extends Item {
-
-}

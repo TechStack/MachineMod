@@ -25,7 +25,7 @@ public class MachineModMessageInputToServerHandler  implements IMessageHandler<M
 				( (EntityMachineModRideable) entity).isPlayerTurningLeft = message.isPlayerTurningLeft;
 				( (EntityMachineModRideable) entity).isPlayerTurningRight = message.isPlayerTurningRight;
 				( (EntityMachineModRideable) entity).isPlayerPushingSprintButton = message.isPlayerPushingSprintButton;
-				
+				( (EntityMachineModRideable) entity).isPlayerPushingJumpButton = message.isPlayerPushingJumpButton;
 			}
 		}
 		

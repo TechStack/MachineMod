@@ -32,6 +32,11 @@ public class KeyInputEventHandler {
 				 e.isPlayerAccelerating=false; 	
 			}
 				
+			if (Minecraft.getMinecraft().gameSettings.keyBindJump.getIsKeyPressed()){
+				e.isPlayerPushingJumpButton=true;
+			}else{
+				e.isPlayerPushingJumpButton=false;
+			}
 			
 			
 
@@ -79,7 +84,7 @@ public class KeyInputEventHandler {
 			 
 			 LogHelper.info("NETWORKPACKET SENDING: ACC:" + e.isPlayerAccelerating + " BRAKE: " + e.isPlayerBreaking +" Left: "+ e.isPlayerTurningLeft +" RIght:"+e.isPlayerTurningRight);
 
-			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServer( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft,e.isPlayerPushingSprintButton));
+			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServer( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft,e.isPlayerPushingSprintButton,e.isPlayerPushingJumpButton));
 			 
 			}
 				

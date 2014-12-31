@@ -1,5 +1,0 @@
-package com.projectreddog.machinemod;
-
-public class GuiFactory implements IModGuiFactory{
-
-}

@@ -45,6 +45,10 @@ public class EntityBulldozer extends EntityMachineModRideable {
 		if (this.riddenByEntity != null && this.isPlayerPushingSprintButton){
 			yOffset=-1;
 		}
+
+		if (this.riddenByEntity != null && this.isPlayerPushingJumpButton){
+			yOffset=+1;
+		}
 		
 		
 		int x =(int)(this.posX+bladeOffsetX-.5d);

@@ -1,5 +1,0 @@
-package com.projectreddog.machinemod.proxy;
-
-public class CommonProxy implements IProxy {
-
-}

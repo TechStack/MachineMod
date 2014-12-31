@@ -1,9 +1,0 @@
-package com.projectreddog.machinemod.init;
-
-import com.projectreddog.machinemod.item.ItemBulldozer;
-
-public class ModItems {
-
-	public static final ItemMachineMod bulldozer = new ItemBulldozer();
-	
-}

@@ -25,6 +25,7 @@ public class EntityMachineModRideable extends Entity {
 	public boolean isPlayerTurningRight=false;
 	public boolean isPlayerTurningLeft=false;
 	public boolean isPlayerPushingSprintButton=false;
+	public boolean isPlayerPushingJumpButton=false;
 	public double TargetposX;
 	public double TargetposY;
 	public double TargetposZ;
@@ -88,13 +89,19 @@ public class EntityMachineModRideable extends Entity {
 //            this.motionY *= -0.5D;
 //
 //		}
+		if (posY<0){
+			this.setDead();
+		}
 		
-		
-		if (worldObj.isAirBlock((int) (posX), (int) posY -1, (int)(posZ ))){
+		if (worldObj.isAirBlock((int) (posX-.5d), (int) posY , (int)(posZ-.5d )) ){
+			// in air block so fall i'll actually park the entity inside the block below just a little bit.
 		 this.motionY-= 0.03999999910593033D;
-	}else{
+	
+		}else{
+		
 		 this.motionY =0;
-	}
+		 this.posY =(int) this.posY+1;
+		}
 	
 		
 		
@@ -218,7 +225,7 @@ public class EntityMachineModRideable extends Entity {
 	
 	@Override
 	public void onUpdate(){
-	
+	 super.onUpdate();
 		if(!worldObj.isRemote){
 			//server side
 			updateServer();

@@ -1,9 +1,0 @@
-package com.projectreddog.machinemod.reference;
-
-public class Reference {
-//common constants for our mod
-	//example: public static final string MOD_ID ="Blah";
-	public static final string MODID ="MachineMod";
-	public static final string CLIENT_PROXY_CLASS = "com.projectreddog.machinemod.proxy.ClientProxy";
-	public static final string CLIENT_PROXY_CLASS = "com.projectreddog.machinemod.proxy.ServerProxy";
-}
