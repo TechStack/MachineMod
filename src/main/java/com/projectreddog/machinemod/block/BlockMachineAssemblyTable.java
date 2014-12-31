@@ -8,7 +8,7 @@ public class BlockMachineAssemblyTable extends BlockMachineMod{
 	{
 		super();
 		// 1.8
-//		this.setBlockName(Reference.MODBLOCK_MACHINE_ASSEMBLY_TABLE);
+		this.setUnlocalizedName(Reference.MODBLOCK_MACHINE_ASSEMBLY_TABLE);
 //		this.setBlockTextureName(Reference.MODBLOCK_MACHINE_ASSEMBLY_TABLE);
 		this.setHardness(15f);// not sure on the hardness
 		this.setStepSound(soundTypeMetal);

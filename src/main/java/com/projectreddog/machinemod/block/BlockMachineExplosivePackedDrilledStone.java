@@ -7,13 +7,14 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
+import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.world.ModExplosion;
 public class BlockMachineExplosivePackedDrilledStone extends BlockMachineModManyTexture {
 	public BlockMachineExplosivePackedDrilledStone()
 	{
 		super();
 		// 1.8
-//		this.setBlockName(Reference.MODBLOCK_MACHINE_EXPLOSIVE_PACKED_DRILLED_STONE);
+		this.setUnlocalizedName(Reference.MODBLOCK_MACHINE_EXPLOSIVE_PACKED_DRILLED_STONE);
 //		this.setBlockTextureName(Reference.MODBLOCK_MACHINE_EXPLOSIVE_PACKED_DRILLED_STONE);
 		//this.setHardness(15f);// not sure on the hardness
 		this.setStepSound(soundTypeStone);
