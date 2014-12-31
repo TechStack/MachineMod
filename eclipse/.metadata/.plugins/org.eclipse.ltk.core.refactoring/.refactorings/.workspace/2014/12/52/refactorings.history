@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 0 source folders to &apos;assets&apos;&#x0D;&#x0A;- Destination element: &apos;assets&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move source folders" flags="6" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveRoots" roots="0" stamp="1419389913606" target="/Minecraft/assets" version="1.0"/>
-</session>
