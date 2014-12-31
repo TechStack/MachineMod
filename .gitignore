@@ -1,1 +1,15 @@
 /bin/
+/eclipse/
+*
+!src
+!gradle/
+!gradlew
+!gradlew.bat
+!README.md
+!LICENSE
+!build.gradle
+!.project
+!.gitignore
+#3d models
+!blender/
+!techne files/
