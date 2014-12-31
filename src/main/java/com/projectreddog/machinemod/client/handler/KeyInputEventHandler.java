@@ -1,13 +1,13 @@
 package com.projectreddog.machinemod.client.handler;
 
+import net.minecraft.client.Minecraft;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.InputEvent;
+
 import com.projectreddog.machinemod.entity.EntityMachineModRideable;
 import com.projectreddog.machinemod.init.ModNetwork;
 import com.projectreddog.machinemod.network.MachineModMessageInputToServer;
 import com.projectreddog.machinemod.utility.LogHelper;
-
-import net.minecraft.client.Minecraft;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.InputEvent;
 
 public class KeyInputEventHandler {
 

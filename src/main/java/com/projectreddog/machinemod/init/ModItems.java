@@ -1,12 +1,12 @@
 package com.projectreddog.machinemod.init;
 
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
 import com.projectreddog.machinemod.item.ItemBulldozer;
 import com.projectreddog.machinemod.item.ItemDrillingRig;
 import com.projectreddog.machinemod.item.ItemDumpTruck;
 import com.projectreddog.machinemod.item.ItemMachineMod;
 import com.projectreddog.machinemod.reference.Reference;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)

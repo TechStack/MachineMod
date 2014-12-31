@@ -2,9 +2,10 @@ package com.projectreddog.machinemod.model.advanced.obj;
 
 
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.util.Vec3;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Face
 {
@@ -26,9 +27,13 @@ public class Face
         {
             faceNormal = this.calculateFaceNormal();
         }
-
-        tessellator.setNormal(faceNormal.x, faceNormal.y, faceNormal.z);
-
+        
+        
+        // 1.8 Specific removed setting normals from tessellator
+       WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+//        worldrenderer.set
+//        tessellator.setNormal(faceNormal.x, faceNormal.y, faceNormal.z);
+//        
         float averageU = 0F;
         float averageV = 0F;
 
@@ -63,21 +68,22 @@ public class Face
                     offsetV = -offsetV;
                 }
 
-                tessellator.addVertexWithUV(vertices[i].x, vertices[i].y, vertices[i].z, textureCoordinates[i].u + offsetU, textureCoordinates[i].v + offsetV);
+                worldrenderer.addVertexWithUV(vertices[i].x, vertices[i].y, vertices[i].z, textureCoordinates[i].u + offsetU, textureCoordinates[i].v + offsetV);
             }
             else
             {
-                tessellator.addVertex(vertices[i].x, vertices[i].y, vertices[i].z);
+            	worldrenderer.addVertex(vertices[i].x, vertices[i].y, vertices[i].z);
             }
         }
     }
 
     public Vertex calculateFaceNormal()
     {
-        Vec3 v1 = Vec3.createVectorHelper(vertices[1].x - vertices[0].x, vertices[1].y - vertices[0].y, vertices[1].z - vertices[0].z);
-        Vec3 v2 = Vec3.createVectorHelper(vertices[2].x - vertices[0].x, vertices[2].y - vertices[0].y, vertices[2].z - vertices[0].z);
+    	// 1.8 cast doubles and removed vector helper 
+        Vec3 v1 = new Vec3((double)vertices[1].x - vertices[0].x,(double) vertices[1].y - vertices[0].y,(double) vertices[1].z - vertices[0].z);
+        Vec3 v2 = new Vec3((double)vertices[2].x - vertices[0].x,(double) vertices[2].y - vertices[0].y,(double) vertices[2].z - vertices[0].z);
         Vec3 normalVector = null;
-
+        
         normalVector = v1.crossProduct(v2).normalize();
 
         return new Vertex((float) normalVector.xCoord, (float) normalVector.yCoord, (float) normalVector.zCoord);

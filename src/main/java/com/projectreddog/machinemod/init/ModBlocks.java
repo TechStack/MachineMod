@@ -1,13 +1,13 @@
 package com.projectreddog.machinemod.init;
 
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
 import com.projectreddog.machinemod.block.BlockMachineAssemblyTable;
 import com.projectreddog.machinemod.block.BlockMachineDrilledStone;
 import com.projectreddog.machinemod.block.BlockMachineExplosivePackedDrilledStone;
 import com.projectreddog.machinemod.block.BlockMachineMod;
 import com.projectreddog.machinemod.block.BlockMachineModBlastedStone;
 import com.projectreddog.machinemod.reference.Reference;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)

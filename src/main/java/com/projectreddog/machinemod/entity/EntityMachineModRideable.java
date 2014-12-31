@@ -3,17 +3,15 @@ package com.projectreddog.machinemod.entity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.projectreddog.machinemod.init.ModNetwork;
 import com.projectreddog.machinemod.network.MachineModMessageEntityToClient;
-import com.projectreddog.machinemod.utility.LogHelper;
-
-import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityMachineModRideable extends Entity {
 
@@ -42,20 +40,24 @@ public class EntityMachineModRideable extends Entity {
 		// created as method so extending class can easily override to allow for different speeds per machine
 		return 0.2d;
 	}
-	@Override
-	public AxisAlignedBB getBoundingBox(){
-		return boundingBox;
-	}
+	
+	//1.8
+//	@Override
+//	public AxisAlignedBB getBoundingBox(){
+//		return boundingBox;
+//	}
 
-	@Override 
-	public AxisAlignedBB getCollisionBox(Entity entity){
-		if (entity != riddenByEntity){
-			return entity.boundingBox; 
-		}
-		else{
-			return null;// do not colide with the rider
-		}
-	}
+	
+	//1.8
+//	@Override 
+//	public AxisAlignedBB getCollisionBox(Entity entity){
+//		if (entity != riddenByEntity){
+//			return entity.boundingBox; 
+//		}
+//		else{
+//			return null;// do not colide with the rider
+//		}
+//	}
 
 	@Override 
 	public boolean canBeCollidedWith(){
@@ -93,7 +95,7 @@ public class EntityMachineModRideable extends Entity {
 			this.setDead();
 		}
 		
-		if (worldObj.isAirBlock((int) (posX-.5d), (int) posY , (int)(posZ-.5d )) ){
+		if (worldObj.isAirBlock(new BlockPos((int) (posX-.5d), (int) posY , (int)(posZ-.5d ))) ){
 			// in air block so fall i'll actually park the entity inside the block below just a little bit.
 		 this.motionY-= 0.03999999910593033D;
 	
@@ -168,7 +170,7 @@ public class EntityMachineModRideable extends Entity {
 
 		
 		
-        ModNetwork.simpleNetworkWrapper.sendToAllAround((new MachineModMessageEntityToClient( this.getEntityId(),this.posX,this.posY,this.posZ,this.yaw)), new TargetPoint(worldObj.provider.dimensionId, posX, posY, posZ, 80));
+        ModNetwork.simpleNetworkWrapper.sendToAllAround((new MachineModMessageEntityToClient( this.getEntityId(),this.posX,this.posY,this.posZ,this.yaw)), new TargetPoint(worldObj.provider.getDimensionId(), posX, posY, posZ, 80));
 	}
 	
 	public void updateClient(){

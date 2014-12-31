@@ -1,8 +1,7 @@
 package com.projectreddog.machinemod.entity;
 
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.DamageSource;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -54,9 +53,10 @@ public class EntityBulldozer extends EntityMachineModRideable {
 		int x =(int)(this.posX+bladeOffsetX-.5d);
 		int y = (int)Math.round(this.posY +yOffset);
 		int z= (int)(this.posZ+bladeOffsetZ+.5);
-		if (worldObj.getBlock(x,y,z).getMaterial() == Material.grass || worldObj.getBlock(x,y,z).getMaterial() == Material.ground || worldObj.getBlock(x,y,z).getMaterial() == Material.sand ){
-			worldObj.getBlock(x,y,z).dropBlockAsItem(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z) , 0);
-			worldObj.setBlockToAir(x,y,z);
+		BlockPos bp = new BlockPos(x, y, z);
+		if (worldObj.getBlockState(bp).getBlock().getMaterial() == Material.grass ||worldObj.getBlockState(bp).getBlock().getMaterial() == Material.ground || worldObj.getBlockState(bp).getBlock().getMaterial() == Material.sand ){
+			worldObj.getBlockState(bp).getBlock().dropBlockAsItem(worldObj, bp,worldObj.getBlockState(bp)  , 0);
+			worldObj.setBlockToAir(bp);
 		}
 		
 
@@ -65,17 +65,18 @@ public class EntityBulldozer extends EntityMachineModRideable {
 	  
 		x =(int)(this.posX+bladeOffsetX+bladeOffsetX2-.5d );
 		z= (int)(this.posZ+bladeOffsetZ+bladeOffsetZ2+.5);
-		if (worldObj.getBlock(x,y,z).getMaterial() == Material.grass ||worldObj.getBlock(x,y,z).getMaterial() == Material.ground|| worldObj.getBlock(x,y,z).getMaterial() == Material.sand){
-			worldObj.getBlock(x,y,z).dropBlockAsItem(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z) , 0);
-			worldObj.setBlockToAir(x,y,z);
+		bp = new BlockPos(x, y, z);
+		if (worldObj.getBlockState(bp).getBlock().getMaterial() == Material.grass ||worldObj.getBlockState(bp).getBlock().getMaterial() == Material.ground || worldObj.getBlockState(bp).getBlock().getMaterial() == Material.sand ){
+			worldObj.getBlockState(bp).getBlock().dropBlockAsItem(worldObj, bp,worldObj.getBlockState(bp)  , 0);
+			worldObj.setBlockToAir(bp);
 		}
 		x =(int)(this.posX+bladeOffsetX-bladeOffsetX2-.5d);
 		 z= (int)(this.posZ+bladeOffsetZ-bladeOffsetZ2+.5);
-		if (worldObj.getBlock(x,y,z).getMaterial() == Material.grass|| worldObj.getBlock(x,y,z).getMaterial() == Material.ground|| worldObj.getBlock(x,y,z).getMaterial() == Material.sand){
-			worldObj.getBlock(x,y,z).dropBlockAsItem(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z) , 0);
-
-			worldObj.setBlockToAir(x,y,z);
-		}
+		 bp = new BlockPos(x, y, z);
+			if (worldObj.getBlockState(bp).getBlock().getMaterial() == Material.grass ||worldObj.getBlockState(bp).getBlock().getMaterial() == Material.ground || worldObj.getBlockState(bp).getBlock().getMaterial() == Material.sand ){
+				worldObj.getBlockState(bp).getBlock().dropBlockAsItem(worldObj, bp,worldObj.getBlockState(bp)  , 0);
+				worldObj.setBlockToAir(bp);
+			}
 		
   }
   
@@ -110,38 +111,7 @@ public class EntityBulldozer extends EntityMachineModRideable {
 	  }
   }
   
-  public void digMethodB()
-  {
-	  
-	  setBladePosFromYaw();
-	  
-		
-		
-		int x =BladePos1X;
-		int y =(int) posY;
-		int z= BladePos1Z;
-		if (worldObj.getBlock(x,y,z).getMaterial() == Material.grass || worldObj.getBlock(x,y,z).getMaterial() == Material.ground || worldObj.getBlock(x,y,z).getMaterial() == Material.sand ){
-			worldObj.getBlock(x,y,z).dropBlockAsItem(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z) , 0);
-			worldObj.setBlockToAir(x,y,z);
-		}
-		
-		x =BladePos2X;
-		 y =(int) posY;
-		 z= BladePos2Z;
-		if (worldObj.getBlock(x,y,z).getMaterial() == Material.grass ||worldObj.getBlock(x,y,z).getMaterial() == Material.ground|| worldObj.getBlock(x,y,z).getMaterial() == Material.sand){
-			worldObj.getBlock(x,y,z).dropBlockAsItem(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z) , 0);
-			worldObj.setBlockToAir(x,y,z);
-		}
-		x =BladePos3X;
-		 y =(int) posY;
-		 z= BladePos3Z;
-		if (worldObj.getBlock(x,y,z).getMaterial() == Material.grass|| worldObj.getBlock(x,y,z).getMaterial() == Material.ground|| worldObj.getBlock(x,y,z).getMaterial() == Material.sand){
-			worldObj.getBlock(x,y,z).dropBlockAsItem(worldObj, x, y, z, worldObj.getBlockMetadata(x, y, z) , 0);
-
-			worldObj.setBlockToAir(x,y,z);
-		}
-		
-  }
+  
 	
 //	  /**
 //     * Sets the forward direction of the entity.

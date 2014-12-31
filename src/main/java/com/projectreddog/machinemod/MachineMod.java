@@ -1,12 +1,13 @@
 package com.projectreddog.machinemod;
 
-import java.util.Map;
-
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.renderer.entity.RenderBiped;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.projectreddog.machinemod.client.handler.KeyInputEventHandler;
-import com.projectreddog.machinemod.entity.EntityBulldozer;
 import com.projectreddog.machinemod.handler.ConfigurationHandler;
 import com.projectreddog.machinemod.init.ModBlocks;
 import com.projectreddog.machinemod.init.ModEntities;
@@ -15,13 +16,6 @@ import com.projectreddog.machinemod.init.ModNetwork;
 import com.projectreddog.machinemod.proxy.IProxy;
 import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.utility.LogHelper;
-
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod (modid= Reference.MOD_ID, name= Reference.MOD_NAME,version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class MachineMod {

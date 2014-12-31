@@ -11,16 +11,16 @@ import java.util.regex.Pattern;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.resources.IResource;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
 import com.projectreddog.machinemod.model.advanced.IModelCustom;
 import com.projectreddog.machinemod.model.advanced.ModelFormatException;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  *  Wavefront Object importer
@@ -176,15 +176,15 @@ public class WavefrontObject implements IModelCustom
     @SideOnly(Side.CLIENT)
     public void renderAll()
     {
-        Tessellator tessellator = Tessellator.instance;
-
+        Tessellator tessellator = Tessellator.getInstance();
+        WorldRenderer worldRenderer =tessellator.getWorldRenderer();
         if (currentGroupObject != null)
         {
-            tessellator.startDrawing(currentGroupObject.glDrawingMode);
+        	worldRenderer.startDrawing(currentGroupObject.glDrawingMode);
         }
         else
         {
-            tessellator.startDrawing(GL11.GL_TRIANGLES);
+        	worldRenderer.startDrawing(GL11.GL_TRIANGLES);
         }
         tessellateAll(tessellator);
 

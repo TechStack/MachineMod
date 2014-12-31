@@ -2,6 +2,7 @@ package com.projectreddog.machinemod.render;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
@@ -17,8 +18,11 @@ public class RenderDumpTruck extends Render {
 	protected ModelBase  modelDumpTruck ;
 
 
-	public RenderDumpTruck()
+
+	public RenderDumpTruck(RenderManager renderManager)
 	{
+		
+		super(renderManager);
 		
 		LogHelper.info("in RenderDumpTruck constructor");
 		shadowSize = 1F;
