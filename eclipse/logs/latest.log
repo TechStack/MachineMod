@@ -1,9 +1,9 @@
-[07:33:14] [main/INFO]: Setting user: Player747
-[07:33:15] [Client thread/INFO]: LWJGL Version: 2.9.1
-[07:33:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[07:33:20] [Sound Library Loader/INFO]: Sound engine started
-[07:33:22] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[07:33:22] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
+[12:25:38] [main/INFO]: Setting user: Player32
+[12:25:38] [Client thread/INFO]: LWJGL Version: 2.9.1
+[12:25:43] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[12:25:44] [Sound Library Loader/INFO]: Sound engine started
+[12:25:47] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[12:25:47] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
 java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -23,9 +23,9 @@ java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[07:33:22] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[07:33:23] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[07:33:23] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
+[12:25:47] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[12:25:48] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[12:25:48] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
 java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -48,33 +48,7 @@ java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[07:33:23] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[07:33:23] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[07:33:24] [Sound Library Loader/INFO]: Sound engine started
-[07:33:28] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[07:33:28] [Server thread/INFO]: Generating keypair
-[07:33:29] [Server thread/INFO]: Preparing start region for level 0
-[07:33:29] [Server thread/INFO]: Changing view distance to 12, from 10
-[07:33:29] [Server thread/INFO]: Player747[local:E:e4418502] logged in with entity id 504 at (-1008.2777303005643, 2.7100000083446503, -219.638385643574)
-[07:33:29] [Server thread/INFO]: Player747 joined the game
-[07:37:39] [Server thread/INFO]: [Player747: Set the time to 0]
-[07:37:39] [Client thread/INFO]: [CHAT] Set the time to 0
-[07:46:37] [Server thread/INFO]: [Player747: Set game difficulty to Peaceful]
-[07:46:37] [Client thread/INFO]: [CHAT] Set game difficulty to Peaceful
-[07:46:43] [Server thread/INFO]: [Player747: Set own game mode to Survival Mode]
-[07:46:43] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[07:48:34] [Server thread/INFO]: Player747 has just earned the achievement [Taking Inventory]
-[07:48:34] [Client thread/INFO]: [CHAT] Player747 has just earned the achievement [Taking Inventory]
-[07:48:38] [Server thread/INFO]: [Player747: Set own game mode to Creative Mode]
-[07:48:38] [Client thread/INFO]: [CHAT] Your game mode has been updated
-[07:49:26] [Server thread/INFO]: Saving and pausing game...
-[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[07:49:26] [Server thread/INFO]: Stopping server
-[07:49:26] [Server thread/INFO]: Saving players
-[07:49:26] [Server thread/INFO]: Saving worlds
-[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[07:49:30] [Client thread/INFO]: Stopping!
+[12:25:48] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[12:25:48] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[12:25:49] [Sound Library Loader/INFO]: Sound engine started
+[12:26:17] [Client thread/INFO]: Stopping!
