@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.signature.Reference"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="net.minecraft.world.ChunkPosition"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineDrilledStone"/>
@@ -47,4 +46,13 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.ModelFormatException"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.AdvancedModelLoader"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustom"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.gameevent.InputEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.simpleimpl.MessageContext"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.WorldRenderer"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="net.minecraftforge.fml.client.registry.RenderingRegistry"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="net.minecraft.util.EnumParticleTypes"/>
+<fullyQualifiedTypeName name="net.minecraft.util.BlockPos"/>
 </qualifiedTypeNameHistroy>
