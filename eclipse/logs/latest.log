@@ -1,9 +1,9 @@
-[21:57:23] [main/INFO]: Setting user: Player488
-[21:57:24] [Client thread/INFO]: LWJGL Version: 2.9.1
-[21:57:27] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[21:57:28] [Sound Library Loader/INFO]: Sound engine started
-[21:57:29] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[21:57:29] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
+[07:33:14] [main/INFO]: Setting user: Player747
+[07:33:15] [Client thread/INFO]: LWJGL Version: 2.9.1
+[07:33:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[07:33:20] [Sound Library Loader/INFO]: Sound engine started
+[07:33:22] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[07:33:22] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
 java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -23,9 +23,9 @@ java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[21:57:29] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[21:57:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[21:57:30] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
+[07:33:22] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[07:33:23] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[07:33:23] [Client thread/ERROR]: Using missing texture, unable to load machinemod:textures/items/dumptruck.png
 java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -48,70 +48,33 @@ java.io.FileNotFoundException: machinemod:textures/items/dumptruck.png
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[21:57:30] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[21:57:30] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[21:57:31] [Sound Library Loader/INFO]: Sound engine started
-[21:57:33] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[21:57:33] [Server thread/INFO]: Generating keypair
-[21:57:34] [Server thread/INFO]: Preparing start region for level 0
-[21:57:35] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:57:35] [Server thread/INFO]: Player488[local:E:1283241b] logged in with entity id 113 at (-440.4908285332914, 67.67000000923872, 46.04852901859341)
-[21:57:35] [Server thread/INFO]: Player488 joined the game
-[21:58:08] [Server thread/INFO]: Player488 has just earned the achievement [Taking Inventory]
-[21:58:08] [Client thread/INFO]: [CHAT] Player488 has just earned the achievement [Taking Inventory]
-[21:58:27] [Server thread/INFO]: Saving and pausing game...
-[21:58:27] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[21:58:28] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[21:58:28] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[21:58:28] [Server thread/INFO]: Stopping server
-[21:58:28] [Server thread/INFO]: Saving players
-[21:58:28] [Server thread/INFO]: Saving worlds
-[21:58:28] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[21:58:28] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[21:58:28] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[21:58:31] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[21:58:31] [Server thread/INFO]: Generating keypair
-[21:58:31] [Server thread/INFO]: Preparing start region for level 0
-[21:58:31] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:58:31] [Server thread/INFO]: Player488[local:E:9ff5c697] logged in with entity id 25002 at (-440.26322723690885, 73.49064318920136, 37.579328420394624)
-[21:58:31] [Server thread/INFO]: Player488 joined the game
-[21:58:49] [Server thread/INFO]: Saving and pausing game...
-[21:58:49] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[21:58:49] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[21:58:49] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[21:58:50] [Server thread/INFO]: Stopping server
-[21:58:50] [Server thread/INFO]: Saving players
-[21:58:50] [Server thread/INFO]: Saving worlds
-[21:58:50] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[21:58:50] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[21:58:50] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[21:58:53] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[21:58:53] [Server thread/INFO]: Generating keypair
-[21:58:53] [Server thread/INFO]: Preparing start region for level 0
-[21:58:53] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:58:53] [Server thread/INFO]: Player488[local:E:8e14b41d] logged in with entity id 25779 at (-442.69999998807907, 68.43076775716294, 44.81675285829671)
-[21:58:53] [Server thread/INFO]: Player488 joined the game
-[21:59:05] [Server thread/INFO]: Saving and pausing game...
-[21:59:05] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[21:59:05] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[21:59:05] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[21:59:13] [Server thread/INFO]: Saving and pausing game...
-[21:59:13] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[21:59:13] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[21:59:14] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[22:00:02] [Server thread/INFO]: Saving and pausing game...
-[22:00:02] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[22:00:02] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[22:00:02] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[22:01:08] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 26697ms behind, skipping 533 tick(s)
-[22:02:11] [Server thread/INFO]: Saving and pausing game...
-[22:02:11] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[22:02:11] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[22:02:11] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[22:02:12] [Server thread/INFO]: Stopping server
-[22:02:12] [Server thread/INFO]: Saving players
-[22:02:12] [Server thread/INFO]: Saving worlds
-[22:02:12] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Overworld
-[22:02:12] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/Nether
-[22:02:12] [Server thread/INFO]: Saving chunks for level 'nonsuperflat'/The End
-[22:02:14] [Client thread/INFO]: Stopping!
+[07:33:23] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[07:33:23] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[07:33:24] [Sound Library Loader/INFO]: Sound engine started
+[07:33:28] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[07:33:28] [Server thread/INFO]: Generating keypair
+[07:33:29] [Server thread/INFO]: Preparing start region for level 0
+[07:33:29] [Server thread/INFO]: Changing view distance to 12, from 10
+[07:33:29] [Server thread/INFO]: Player747[local:E:e4418502] logged in with entity id 504 at (-1008.2777303005643, 2.7100000083446503, -219.638385643574)
+[07:33:29] [Server thread/INFO]: Player747 joined the game
+[07:37:39] [Server thread/INFO]: [Player747: Set the time to 0]
+[07:37:39] [Client thread/INFO]: [CHAT] Set the time to 0
+[07:46:37] [Server thread/INFO]: [Player747: Set game difficulty to Peaceful]
+[07:46:37] [Client thread/INFO]: [CHAT] Set game difficulty to Peaceful
+[07:46:43] [Server thread/INFO]: [Player747: Set own game mode to Survival Mode]
+[07:46:43] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[07:48:34] [Server thread/INFO]: Player747 has just earned the achievement [Taking Inventory]
+[07:48:34] [Client thread/INFO]: [CHAT] Player747 has just earned the achievement [Taking Inventory]
+[07:48:38] [Server thread/INFO]: [Player747: Set own game mode to Creative Mode]
+[07:48:38] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[07:49:26] [Server thread/INFO]: Saving and pausing game...
+[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[07:49:26] [Server thread/INFO]: Stopping server
+[07:49:26] [Server thread/INFO]: Saving players
+[07:49:26] [Server thread/INFO]: Saving worlds
+[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[07:49:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[07:49:30] [Client thread/INFO]: Stopping!

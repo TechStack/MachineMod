@@ -42,4 +42,9 @@
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModBlocks"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.obj.ObjModelLoader"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustomLoader"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.ModelFormatException"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.AdvancedModelLoader"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustom"/>
 </qualifiedTypeNameHistroy>

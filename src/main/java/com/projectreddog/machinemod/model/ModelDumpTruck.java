@@ -1,14 +1,15 @@
 	package com.projectreddog.machinemod.model;
 
-	import com.projectreddog.machinemod.reference.Reference;
-	import com.projectreddog.machinemod.utility.LogHelper;
-
 	import net.minecraft.client.model.ModelBase;
-	import net.minecraft.client.model.ModelRenderer;
-	import net.minecraft.entity.Entity;
-	import net.minecraft.util.ResourceLocation;
-	import net.minecraftforge.client.model.AdvancedModelLoader;
-	import net.minecraftforge.client.model.IModelCustom;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
+
+import com.projectreddog.machinemod.model.advanced.AdvancedModelLoader;
+import com.projectreddog.machinemod.model.advanced.IModelCustom;
+import com.projectreddog.machinemod.reference.Reference;
+import com.projectreddog.machinemod.utility.LogHelper;
+
 public class ModelDumpTruck  extends ModelBase
 	{
 	  //fields

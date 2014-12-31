@@ -1,7 +1,0 @@
-package com.projectreddog.machinemod.creativetab;
-
-import net.minecraft.creativetab.CreativeTabs;
-
-public class CreativeTabMachineMod extends CreativeTabs {
-//all creative tabls should define icon & name
-}
