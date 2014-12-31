@@ -1,1 +1,13 @@
 /bin/
+*
+!src
+!gradle/
+!gradlew
+!gradlew.bat
+!README.md
+!LICENSE
+!build.gradle
+!.project
+#3d models
+!blender/
+!techne files/
