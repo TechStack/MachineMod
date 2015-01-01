@@ -42,7 +42,6 @@ public class MachineMod {
 		ModEntities.init(this);
 		ModNetwork.init();
 		FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
-		ModBlocks.initBlockRender();
 		proxy.registerRenderers();
 	}
 	
