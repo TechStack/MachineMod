@@ -48,7 +48,6 @@
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.simpleimpl.MessageContext"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.WorldRenderer"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.relauncher.Side"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.client.registry.RenderingRegistry"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="net.minecraft.util.EnumParticleTypes"/>
@@ -57,4 +56,6 @@
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="net.minecraft.client.resources.model.ModelResourceLocation"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModItems"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>
