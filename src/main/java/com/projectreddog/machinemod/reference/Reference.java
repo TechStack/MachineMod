@@ -14,7 +14,7 @@ public class Reference {
 	public static final String MODEL_DUMPTRUCK_TEXTURE_LOCATION = "models/dumptruck.png";
 	
 
-	
+	 
 	public static final String MODBLOCK_MACHINE_ASSEMBLY_TABLE ="machineassemblytable";
 	public static final String MODBLOCK_MACHINE_DRILLED_STONE ="machinedrilledstone";
 	public static final String MODBLOCK_MACHINE_BLASTED_STONE ="machineblastedstone";

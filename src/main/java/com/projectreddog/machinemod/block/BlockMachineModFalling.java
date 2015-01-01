@@ -3,6 +3,7 @@ package com.projectreddog.machinemod.block;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
@@ -24,7 +25,14 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 		super();
 
 	}
-
+	
+	
+    public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+    {
+    	onBlockAdded(worldIn, pos.getX(), pos.getY(), pos.getZ());
+    }
+    
+    /// my 1.7 version 
 	public void onBlockAdded(World world, int x, int y, int z)
 	{
 		world.scheduleUpdate(new BlockPos( x, y, z), this, this.tickRate(world));
@@ -34,7 +42,14 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
 	 * their own) Args: x, y, z, neighbor Block
 	 */
-	public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
+	
+    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
+    {
+    	onNeighborBlockChange( worldIn, pos.getX(), pos.getY(), pos.getZ(),  neighborBlock);
+    }
+    
+    /// my 1.7 version     
+    public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
 	{
 		world.scheduleUpdate(new BlockPos( x, y, z), this, this.tickRate(world));
 		
@@ -50,6 +65,13 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
+    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    {
+    	updateTick(worldIn, pos.getX(), pos.getY(), pos.getZ(),  rand);
+
+    }
+    
+    // my 1.7 version
 	public void updateTick(World world, int x, int y, int z, Random p_149674_5_)
 	{
 		if (!world.isRemote)

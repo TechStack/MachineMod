@@ -28,7 +28,7 @@ public class MachineModMessageEntityToClientHandler implements IMessageHandler<M
 				( (EntityMachineModRideable) entity).rotationYaw  =  message.yaw;
 
 
-				LogHelper.info("RECIEVED ENTITY PACKET FROM SERVER" );
+			//	LogHelper.info("RECIEVED ENTITY PACKET FROM SERVER" );
 			}
 		}	
 

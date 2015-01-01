@@ -15,7 +15,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerRenderers()
 	{
-		
+		 
 		LogHelper.info("in register Renderers");
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulldozer.class, new RenderBulldozer(Minecraft.getMinecraft().getRenderManager()));

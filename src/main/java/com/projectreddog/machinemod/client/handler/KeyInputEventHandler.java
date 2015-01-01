@@ -15,7 +15,7 @@ public class KeyInputEventHandler {
 
 	@SubscribeEvent
 	public void handleKeyInputevent(InputEvent.KeyInputEvent event){
-		 LogHelper.info("Called KB Event");
+		 //LogHelper.info("Called KB Event");
 
 		boolean sendPacket =false;
 		if (Minecraft.getMinecraft().thePlayer.ridingEntity instanceof EntityMachineModRideable){
