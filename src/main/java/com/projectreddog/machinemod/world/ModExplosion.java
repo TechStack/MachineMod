@@ -148,7 +148,7 @@ public class ModExplosion extends Explosion {
     
   //              	 this.worldObj.setBlockToAir(x,y,z); 
 
-                 this.worldObj.setBlockState(new BlockPos(x, y,z), ModBlocks.machinemodblastesStone.getDefaultState()); 
+                 this.worldObj.setBlockState(new BlockPos(x, y,z), ModBlocks.machinemodblastedstone.getDefaultState()); 
                   
               }
 			  

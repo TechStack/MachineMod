@@ -55,7 +55,7 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 		
 		
 		
-		if (world.getBlockState(new BlockPos( x, y+1, z)).getBlock()== ModBlocks.machinemodblastesStone){
+		if (world.getBlockState(new BlockPos( x, y+1, z)).getBlock()== ModBlocks.machinemodblastedstone){
 			world.scheduleUpdate(new BlockPos( x, y+1, z), this, this.tickRate(world));
 		}
 	}

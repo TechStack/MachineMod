@@ -1,5 +1,8 @@
 package com.projectreddog.machinemod.init;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.projectreddog.machinemod.item.ItemBulldozer;
@@ -7,7 +10,6 @@ import com.projectreddog.machinemod.item.ItemDrillingRig;
 import com.projectreddog.machinemod.item.ItemDumpTruck;
 import com.projectreddog.machinemod.item.ItemMachineMod;
 import com.projectreddog.machinemod.reference.Reference;
-
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems {
@@ -22,6 +24,12 @@ public class ModItems {
 		GameRegistry.registerItem(drillingrig,"drillingrig");
 		GameRegistry.registerItem(dumptruck,"dumptruck");
 
-
+	}
+	
+	public static void initItemRender() {
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(bulldozer, 0, new ModelResourceLocation (Reference.MOD_ID + ":"+ "bulldozer", "inventory")   );
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(drillingrig , 0, new ModelResourceLocation (Reference.MOD_ID + ":"+ "drillingrig", "inventory")   );
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(dumptruck, 0, new ModelResourceLocation (Reference.MOD_ID + ":"+ "dumptruck", "inventory")   );
+	
 	}
 }
