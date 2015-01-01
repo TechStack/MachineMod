@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="this.worldObj.getBlock(i, j, k)"/>\r\n<expression enabled\="true" text\="worldObj.isAirBlock((int) (posX), (int) posY -1, (int)(posZ ))"/>\r\n<expression enabled\="true" text\="worldObj.getBlock((int)posX,(int)posY,(int)posZ);"/>\r\n</watchExpressions>\r\n

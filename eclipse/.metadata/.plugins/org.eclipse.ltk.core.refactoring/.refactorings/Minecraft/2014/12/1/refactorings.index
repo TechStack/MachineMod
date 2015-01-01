@@ -1,0 +1,19 @@
+1419729759788	Rename field 'boatY'
+1419729766277	Rename field 'boatZ'
+1419729779081	Rename field 'boatYaw'
+1419729803081	Rename field 'boatPitch'
+1419775555432	Delete element
+1419795718954	Rename type 'MachineModMessage'
+1419795869969	Rename type 'MachineModMessageHandler'
+1419813708135	Rename type 'EntityMachineMod'
+1419860623109	Rename local variable 'p_i45319_4_'
+1419860628088	Rename local variable 'p_i45319_6_'
+1419860645174	Rename local variable 'p_i45319_9_'
+1419865234953	Rename local variable 'p_149831_0_'
+1419894503494	Delete element
+1419894510305	Delete element
+1419950686655	Rename type 'ModleDumpTruck'
+1420028490638	Move compilation unit
+1420028667782	Rename compilation unit 'IModelCutomLoader.java'
+1420034273788	Delete element
+1420036324763	Rename local variable 'p_i1948_9_'
