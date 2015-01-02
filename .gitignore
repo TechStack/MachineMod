@@ -1,2 +1,5 @@
 /bin/
-
+/eclipse/saves/
+/eclipse/logs/
+/eclipse/.metadata/.plugins/org.eclipse.jdt.core/
+/eclipse/.recommenders/index/http___download_eclipse_org_recommenders_models_luna_/
