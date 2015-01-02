@@ -2,9 +2,12 @@
 	
 	package com.projectreddog.machinemod.entity;
 
-	import net.minecraft.entity.player.EntityPlayer;
-	import net.minecraft.util.DamageSource;
-	import net.minecraft.world.World;
+	import com.projectreddog.machinemod.init.ModItems;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
 
 public class EntityDumpTruck extends EntityMachineModRideable {
 
@@ -23,7 +26,12 @@ public class EntityDumpTruck extends EntityMachineModRideable {
 	   }
 
 
-	
+
+	   @Override
+	   public Item getItemToBeDropped()
+	   {
+		   return ModItems.dumptruck;
+	   }
 	
 }
 

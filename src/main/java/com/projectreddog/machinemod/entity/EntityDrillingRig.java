@@ -4,10 +4,12 @@
 	package com.projectreddog.machinemod.entity;
 
 	import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
 import com.projectreddog.machinemod.init.ModBlocks;
+import com.projectreddog.machinemod.init.ModItems;
 import com.projectreddog.machinemod.utility.LogHelper;
 
 public class EntityDrillingRig extends EntityMachineModRideable {
@@ -34,7 +36,12 @@ public class EntityDrillingRig extends EntityMachineModRideable {
 					
 			  }
 		  }
-	   
+
+	   @Override
+	   public Item getItemToBeDropped()
+	   {
+		   return ModItems.drillingrig;
+	   }
 	   public void digMethodA(){
 		   if ( this.isPlayerPushingSprintButton ){
 			   int i = 0;

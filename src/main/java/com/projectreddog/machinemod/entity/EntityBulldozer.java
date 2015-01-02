@@ -1,6 +1,9 @@
 package com.projectreddog.machinemod.entity;
 
+import com.projectreddog.machinemod.init.ModItems;
+
 import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -22,7 +25,11 @@ public class EntityBulldozer extends EntityMachineModRideable {
        return (double)this.height * 0.35D;
    }
 
-   
+   @Override
+   public Item getItemToBeDropped()
+   {
+	   return ModItems.bulldozer;
+   }
   
   @Override
   public void onUpdate(){

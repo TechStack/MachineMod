@@ -2,6 +2,7 @@ package com.projectreddog.machinemod.entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
@@ -63,13 +64,27 @@ public class EntityMachineModRideable extends Entity {
 	public boolean canBeCollidedWith(){
 		return !isDead;
 	}
+	
+ public Item getItemToBeDropped()
+ {
+	 return null;
+ }
 
 	@Override
 	public boolean interactFirst(EntityPlayer player) // should be proper class
 	{
 		if (!worldObj.isRemote && riddenByEntity==null){
 			// server side and no rider
+			
+			if (player.isSneaking()){
+				if ( getItemToBeDropped()!= null ){
+					this.dropItem(getItemToBeDropped(), 1);
+					this.setDead();
+				}
+			
+			}else{
 			player.mountEntity(this);
+			}
 		}
 		return true;
 	}
