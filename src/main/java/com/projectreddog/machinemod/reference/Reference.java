@@ -13,7 +13,7 @@ public class Reference {
 	public static final String MODEL_DRILLINGRIG_TEXTURE_LOCATION = "models/drillingrig.png";
 	public static final String MODEL_DUMPTRUCK_TEXTURE_LOCATION = "models/dumptruck.png";
 	
-
+	public static final int GUI_DUMP_TRUCK  = 0;
 	 
 	public static final String MODBLOCK_MACHINE_ASSEMBLY_TABLE ="machineassemblytable";
 	public static final String MODBLOCK_MACHINE_DRILLED_STONE ="machinedrilledstone";

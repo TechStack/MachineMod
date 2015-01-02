@@ -1,5 +1,7 @@
 package com.projectreddog.machinemod.render;
 
+import net.minecraft.block.state.BlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -8,6 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import com.projectreddog.machinemod.entity.EntityDumpTruck;
 import com.projectreddog.machinemod.model.ModelDumpTruck;
 import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.utility.LogHelper;
@@ -59,7 +62,14 @@ public class RenderDumpTruck extends Render {
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		this.modelDumpTruck.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		EntityDumpTruck edt =((EntityDumpTruck) entity);
 		
+		for (int i =0; i< edt.getSizeInventory() ; i++){
+			if (edt.getStackInSlot(i)!= null  ){
+				//TODO TS- ADD RENDERING Of items in dumptruck
+				
+			}
+		}
 		GL11.glPopMatrix();
 	}
 

@@ -4,6 +4,8 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 
+import com.projectreddog.machinemod.MachineMod;
+import com.projectreddog.machinemod.client.gui.GuiHandler;
 import com.projectreddog.machinemod.network.MachineModMessageEntityToClient;
 import com.projectreddog.machinemod.network.MachineModMessageEntityToClientHandler;
 import com.projectreddog.machinemod.network.MachineModMessageInputToServer;
@@ -20,6 +22,6 @@ public class ModNetwork {
 		
 		
 		simpleNetworkWrapper.registerMessage(MachineModMessageEntityToClientHandler.class, MachineModMessageEntityToClient.class, 1, Side.CLIENT);// message to server
-
+		NetworkRegistry.INSTANCE.registerGuiHandler(MachineMod.instance, new GuiHandler());
 	}
 }

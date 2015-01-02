@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -31,6 +32,7 @@ public class EntityMachineModRideable extends Entity {
 	public float TargetYaw;
     public int MoveTickCount;
 	public int YawTickCount;
+	public AxisAlignedBB BoundingBox;
 	public EntityMachineModRideable(World world){
 		super(world);
 		setSize (1.5F , 0.6F); // should be overridden in Extened version.
@@ -45,7 +47,7 @@ public class EntityMachineModRideable extends Entity {
 	//1.8
 //	@Override
 //	public AxisAlignedBB getBoundingBox(){
-//		return boundingBox;
+//		return this.BoundingBox;
 //	}
 
 	
