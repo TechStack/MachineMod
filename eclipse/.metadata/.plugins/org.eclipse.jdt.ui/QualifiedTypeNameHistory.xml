@@ -53,9 +53,11 @@
 <fullyQualifiedTypeName name="net.minecraft.util.EnumParticleTypes"/>
 <fullyQualifiedTypeName name="net.minecraft.util.BlockPos"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="net.minecraft.client.resources.model.ModelResourceLocation"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModItems"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModItems"/>
+<fullyQualifiedTypeName name="net.minecraft.inventory.IInventory"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
 </qualifiedTypeNameHistroy>

@@ -79,3 +79,12 @@ java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 [21:42:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
 [21:42:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
 [21:42:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:44:19] [Server thread/INFO]: Stopping server
+[21:44:19] [Server thread/INFO]: Saving players
+[21:44:19] [Server thread/INFO]: Saving worlds
+[21:44:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:44:20] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:44:20] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:55:24] [Client thread/INFO]: Stopping!
+[21:55:24] [Client thread/INFO]: SoundSystem shutting down...
+[21:55:24] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

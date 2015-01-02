@@ -3335,3 +3335,27 @@
 [21:41:41] [Client thread/INFO] [MachineMod/]: NETWORKPACKET SENDING: ACC:false BRAKE: false Left: false RIght:false
 [21:42:04] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save New World
 [21:42:48] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save New World
+[21:44:19] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStoppingEvent to mod mcp
+[21:44:19] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStoppingEvent to mod mcp
+[21:44:19] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStoppingEvent to mod FML
+[21:44:19] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStoppingEvent to mod FML
+[21:44:19] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStoppingEvent to mod Forge
+[21:44:19] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStoppingEvent to mod Forge
+[21:44:19] [Server thread/TRACE] [machinemod/machinemod]: Sending event FMLServerStoppingEvent to mod machinemod
+[21:44:19] [Server thread/TRACE] [machinemod/machinemod]: Sent event FMLServerStoppingEvent to mod machinemod
+[21:44:19] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save New World
+[21:44:20] [Server thread/INFO] [FML/]: Unloading dimension 0
+[21:44:20] [Server thread/INFO] [FML/]: Unloading dimension -1
+[21:44:20] [Server thread/INFO] [FML/]: Unloading dimension 1
+[21:44:20] [Server thread/DEBUG] [FML/]: Reverting to frozen data state.
+[21:44:20] [Server thread/INFO] [FML/]: Applying holder lookups
+[21:44:20] [Server thread/WARN] [FML/]: Unable to lookup machinemod:machinemodblastedstone for public static com.projectreddog.machinemod.block.BlockMachineMod com.projectreddog.machinemod.init.ModBlocks.machinemodblastedstone. Is there something wrong with the registry?
+[21:44:21] [Server thread/INFO] [FML/]: Holder lookups applied
+[21:44:21] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStoppedEvent to mod mcp
+[21:44:21] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStoppedEvent to mod mcp
+[21:44:21] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStoppedEvent to mod FML
+[21:44:21] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStoppedEvent to mod FML
+[21:44:21] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStoppedEvent to mod Forge
+[21:44:21] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStoppedEvent to mod Forge
+[21:44:21] [Server thread/TRACE] [machinemod/machinemod]: Sending event FMLServerStoppedEvent to mod machinemod
+[21:44:21] [Server thread/TRACE] [machinemod/machinemod]: Sent event FMLServerStoppedEvent to mod machinemod
