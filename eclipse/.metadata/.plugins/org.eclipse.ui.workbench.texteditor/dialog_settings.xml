@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="305" key="DIALOG_WIDTH"/>
-		<item value="284" key="DIALOG_Y_ORIGIN"/>
-		<item value="442" key="DIALOG_HEIGHT"/>
-		<item value="9" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="700" key="DIALOG_Y_ORIGIN"/>
+		<item value="246" key="DIALOG_X_ORIGIN"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="mount" key="selection"/>
+		<item value="getBoundingBox" key="selection"/>
 		<list key="findhistory">
-			<item value="mount"/>
-			<item value="drillingrig"/>
-			<item value="getModel"/>
-			<item value="drilledstone"/>
-			<item value="machineassemblytable"/>
-			<item value="assembly"/>
-			<item value="loghelper"/>
-			<item value="explode"/>
+			<item value="getboundingbox"/>
+			<item value="itemstack"/>
+			<item value="item stack"/>
+			<item value="colide"/>
+			<item value="setSize"/>
+			<item value="setEntityBoundingBox"/>
+			<item value="boundingBox"/>
+			<item value="field_174836_a"/>
 		</list>
 		<list key="replacehistory">
 			<item value="writeDouble"/>
