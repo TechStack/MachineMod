@@ -13,6 +13,8 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.collect.Lists;
 import com.projectreddog.machinemod.init.ModBlocks;
@@ -31,9 +33,9 @@ public class ModExplosion extends Explosion {
     private List affectedBlockPositions;
     public boolean isSmoking;
 
-    
 	public ModExplosion(World world, Entity exploder, double explosionX,	double explosionY, double explosionZ, float explosionSize) {
-		super(world, exploder, explosionX, explosionY, explosionZ, explosionSize,  Lists.newArrayList());
+		super(world, exploder, explosionX, explosionY, explosionZ, explosionSize,  false,true );
+
 		worldObj=world;
 		
 		
@@ -46,7 +48,7 @@ public class ModExplosion extends Explosion {
         this.isSmoking = true;
 	}
 	
-	
+
 	@Override
 	 public void doExplosionB(boolean p_77279_1_)
 	    {

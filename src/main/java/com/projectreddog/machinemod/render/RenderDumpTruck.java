@@ -27,7 +27,7 @@ private RenderItem itemRenderer;
 
 		super(renderManager);
 
-		LogHelper.info("in RenderDumpTruck constructor");
+		//LogHelper.info("in RenderDumpTruck constructor");
 		shadowSize = 1F;
 		this.modelDumpTruck = new ModelDumpTruck();
 		 itemRenderer = Minecraft.getMinecraft().getRenderItem();

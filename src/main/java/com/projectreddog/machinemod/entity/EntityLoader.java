@@ -133,7 +133,7 @@ public class EntityLoader extends EntityMachineModRideable implements IInventory
 	{
 
 		super.interactFirst(player);
-		LogHelper.info("TEST");
+		//LogHelper.info("TEST");
 		player.openGui(MachineMod.instance, Reference.GUI_LOADER, worldObj, (int) this.getEntityId(), (int) 0,(int) 0);
 		return true;
 	}

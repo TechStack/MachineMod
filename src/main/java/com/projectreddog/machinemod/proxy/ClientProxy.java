@@ -20,7 +20,7 @@ public class ClientProxy extends CommonProxy {
 	public void registerRenderers()
 	{
 		 
-		LogHelper.info("in register Renderers");
+		//LogHelper.info("in register Renderers");
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityBulldozer.class, new RenderBulldozer(Minecraft.getMinecraft().getRenderManager()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityDrillingRig.class, new RenderDrillingRig(Minecraft.getMinecraft().getRenderManager()));

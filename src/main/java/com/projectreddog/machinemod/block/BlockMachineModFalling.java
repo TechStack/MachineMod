@@ -92,7 +92,7 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 				if (!world.isRemote)
 				{
 					
-					LogHelper.info("X:" + this.motionX + " Y:" + this.motionY + " Z:"+ this.motionZ);
+					//LogHelper.info("X:" + this.motionX + " Y:" + this.motionY + " Z:"+ this.motionZ);
 					EntityFallingBlock entityfallingblock = new EntityFallingBlock(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), this.getDefaultState());
 					//TS removed
 					// this.func_149829_a(entityfallingblock);

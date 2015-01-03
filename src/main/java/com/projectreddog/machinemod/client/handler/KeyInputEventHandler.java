@@ -80,9 +80,9 @@ public class KeyInputEventHandler {
 			
 			
 			if (sendPacket){
-			 LogHelper.info("NETWORKPACKET SENDING: VEL:" + e.velocity +" Yaw: " + e.yaw);
+			// LogHelper.info("NETWORKPACKET SENDING: VEL:" + e.velocity +" Yaw: " + e.yaw);
 			 
-			 LogHelper.info("NETWORKPACKET SENDING: ACC:" + e.isPlayerAccelerating + " BRAKE: " + e.isPlayerBreaking +" Left: "+ e.isPlayerTurningLeft +" RIght:"+e.isPlayerTurningRight);
+			// LogHelper.info("NETWORKPACKET SENDING: ACC:" + e.isPlayerAccelerating + " BRAKE: " + e.isPlayerBreaking +" Left: "+ e.isPlayerTurningLeft +" RIght:"+e.isPlayerTurningRight);
 
 			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServer( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft,e.isPlayerPushingSprintButton,e.isPlayerPushingJumpButton));
 			 

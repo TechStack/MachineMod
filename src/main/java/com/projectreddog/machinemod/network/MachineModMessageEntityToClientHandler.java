@@ -26,6 +26,7 @@ public class MachineModMessageEntityToClientHandler implements IMessageHandler<M
 				( (EntityMachineModRideable) entity).TargetposY = message.posY;
 				( (EntityMachineModRideable) entity).TargetposZ = message.posZ;
 				( (EntityMachineModRideable) entity).rotationYaw  =  message.yaw;
+				( (EntityMachineModRideable) entity).Attribute1  =  message.Attribute1;
 
 
 			//	LogHelper.info("RECIEVED ENTITY PACKET FROM SERVER" );

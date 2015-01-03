@@ -33,6 +33,7 @@ public class EntityMachineModRideable extends Entity {
     public int MoveTickCount;
 	public int YawTickCount;
 	public AxisAlignedBB BoundingBox;
+	public float Attribute1;// multipurpose variable use defined in extended class controled by sprint & space (down / up)
 	public EntityMachineModRideable(World world){
 		super(world);
 		setSize (1.5F , 0.6F); // should be overridden in Extened version.
@@ -143,6 +144,11 @@ public class EntityMachineModRideable extends Entity {
 		}
 		
 		}
+		if ( isPlayerPushingJumpButton ){
+			Attribute1=Attribute1 + 1;
+		}else if (isPlayerPushingSprintButton){
+			Attribute1=Attribute1 - 1;
+		}
 		
 		//end take user input
 		
@@ -187,7 +193,7 @@ public class EntityMachineModRideable extends Entity {
 
 		
 		
-        ModNetwork.simpleNetworkWrapper.sendToAllAround((new MachineModMessageEntityToClient( this.getEntityId(),this.posX,this.posY,this.posZ,this.yaw)), new TargetPoint(worldObj.provider.getDimensionId(), posX, posY, posZ, 80));
+        ModNetwork.simpleNetworkWrapper.sendToAllAround((new MachineModMessageEntityToClient( this.getEntityId(),this.posX,this.posY,this.posZ,this.yaw,this.Attribute1)), new TargetPoint(worldObj.provider.getDimensionId(), posX, posY, posZ, 80));
 	}
 	
 	public void updateClient(){

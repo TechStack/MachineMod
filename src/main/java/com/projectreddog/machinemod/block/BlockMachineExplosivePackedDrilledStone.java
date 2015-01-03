@@ -1,5 +1,7 @@
 package com.projectreddog.machinemod.block;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -24,9 +26,11 @@ public class BlockMachineExplosivePackedDrilledStone extends BlockMachineModMany
 	//    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock) {}
 	public void onNeighborBlockChange(World world, BlockPos bp, IBlockState bs,Block neighborBlock)
 	{
-		if (world.isBlockPowered(bp) ){
-						detonate(world, bp.getX(), bp.getY(), bp.getZ());		
-		}
+		
+		
+		world.scheduleUpdate( bp, this, this.tickRate(world));
+
+		
 	}
 
 
@@ -38,7 +42,14 @@ public class BlockMachineExplosivePackedDrilledStone extends BlockMachineModMany
 		detonate(world, pos.getX(), pos.getY(), pos.getZ());		
 	}
 
-
+	
+	  public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	    {
+		  if (worldIn.isBlockPowered(pos) ){
+				detonate(worldIn, pos.getX(), pos.getY(), pos.getZ());
+			}
+	    }
+	
 	public void detonate(World world,int x,int y,int z)
 	{	
 

@@ -31,7 +31,7 @@ public class ItemBulldozer extends ItemMachineMod {
 		
 		if (!world.isRemote)/// only run on server
 		{
-		LogHelper.info("Item used on Bulldozer!");
+		//LogHelper.info("Item used on Bulldozer!");
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
@@ -42,7 +42,7 @@ public class ItemBulldozer extends ItemMachineMod {
 		entityBulldozer.prevPosY= y+.5d;
 		entityBulldozer.prevPosZ= z+.5d;
 		result = world.spawnEntityInWorld(entityBulldozer);
-		LogHelper.info("Spawn entity resutl:" + result );
+		//LogHelper.info("Spawn entity resutl:" + result );
 		}
 		return result;
 	}

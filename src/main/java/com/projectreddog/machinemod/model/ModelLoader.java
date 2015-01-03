@@ -19,7 +19,7 @@ public class ModelLoader  extends ModelBase
 	  {
 			
 			 
-			 LogHelper.info("LOADING dump truck MODEL!");
+			 //LogHelper.info("LOADING dump truck MODEL!");
 			 myModel = AdvancedModelLoader.loadModel(new ResourceLocation(  Reference.MOD_ID.toLowerCase(), "models/loader.obj"));
 	     // casinoTexture = new ResourceLocation("modid", "textures/casinoTexture.png");
 	      

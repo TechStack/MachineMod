@@ -27,7 +27,7 @@ public class ItemDumpTruck extends ItemMachineMod {
 		
 		if (!world.isRemote)/// only run on server
 		{
-		LogHelper.info("Item used on dumptruck!");
+		//LogHelper.info("Item used on dumptruck!");
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
@@ -38,7 +38,7 @@ public class ItemDumpTruck extends ItemMachineMod {
 		entityDumpTruck.prevPosY= y+.5d;
 		entityDumpTruck.prevPosZ= z+.5d;
 		result = world.spawnEntityInWorld(entityDumpTruck);
-		LogHelper.info("Spawn entity resutl:" + result );
+		//LogHelper.info("Spawn entity resutl:" + result );
 		}
 		return result;
 	}

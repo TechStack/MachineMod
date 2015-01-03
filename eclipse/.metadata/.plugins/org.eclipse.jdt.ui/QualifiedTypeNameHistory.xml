@@ -57,7 +57,7 @@
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderItem"/>
 <fullyQualifiedTypeName name="net.minecraft.client.resources.model.ModelManager"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityLoader"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustom"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityLoader"/>
 </qualifiedTypeNameHistroy>

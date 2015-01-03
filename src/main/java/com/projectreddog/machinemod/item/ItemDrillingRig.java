@@ -39,7 +39,7 @@ public class ItemDrillingRig extends ItemMachineMod {
 
 		if (!world.isRemote)/// only run on server
 		{
-			LogHelper.info("Item used on drillingrig!");
+			//LogHelper.info("Item used on drillingrig!");
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
@@ -50,7 +50,7 @@ public class ItemDrillingRig extends ItemMachineMod {
 			entityDrillingRig.prevPosY= y+.5d;
 			entityDrillingRig.prevPosZ= z+.5d;
 			result = world.spawnEntityInWorld(entityDrillingRig);
-			LogHelper.info("Spawn entity resutl:" + result );
+			//LogHelper.info("Spawn entity resutl:" + result );
 		}
 		return result;
 	}

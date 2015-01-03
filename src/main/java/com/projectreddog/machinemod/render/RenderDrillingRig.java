@@ -25,7 +25,7 @@ public class RenderDrillingRig extends Render {
 			
 			super(renderManager);
 		
-		LogHelper.info("in RenderDrillingRig constructor");
+	//	LogHelper.info("in RenderDrillingRig constructor");
 		shadowSize = 1F;
         this.modelDrillingRig = new ModelDrillingRig();
 

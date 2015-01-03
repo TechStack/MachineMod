@@ -49,7 +49,7 @@ public class EntityDrillingRig extends EntityMachineModRideable {
 					   worldObj.isAirBlock(new BlockPos( (int) (this.posX +.5d),(int) (this.posY-i), (int)(this.posZ+.5d))) ||
 					   worldObj.getBlockState(new BlockPos( (int) (this.posX +.5d),(int) (this.posY-i), (int)(this.posZ+.5d))).getBlock()== Blocks.dirt)
 			   {
-				   LogHelper.info("Drilling rig checked Y of:" + (int) (posY-i));
+				   //LogHelper.info("Drilling rig checked Y of:" + (int) (posY-i));
 				   ++i;
 				   
 			   }

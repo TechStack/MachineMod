@@ -11,7 +11,7 @@ public class MachineModMessageEntityToClient implements IMessage{
 	public double posY=0;
 	public double posZ=0;
 	public float yaw=0;
-	
+	public float Attribute1=0;
 	public MachineModMessageEntityToClient()
 	{
 		
@@ -22,13 +22,14 @@ public class MachineModMessageEntityToClient implements IMessage{
 	
 	
 	public MachineModMessageEntityToClient(int entityid, double posX,
-			double posY, double posZ, float yaw) {
+			double posY, double posZ, float yaw, float Attribute1) {
 		super();
 		this.entityid = entityid;
 		this.posX = posX;
 		this.posY = posY;
 		this.posZ = posZ;
 		this.yaw = yaw;
+		this.Attribute1 = Attribute1;
 	}
 
 
@@ -42,6 +43,7 @@ public class MachineModMessageEntityToClient implements IMessage{
         this.posY =buf.readDouble();
         this.posZ=buf.readDouble();
         this.yaw = buf.readFloat();
+        this.Attribute1 =buf.readFloat();
 
 	}
 
@@ -52,7 +54,7 @@ public class MachineModMessageEntityToClient implements IMessage{
         buf.writeDouble(posY);
         buf.writeDouble(posZ);
         buf.writeFloat(yaw);
-
+        buf.writeFloat(Attribute1);
         
 	}
 

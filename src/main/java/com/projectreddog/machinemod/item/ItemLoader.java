@@ -27,7 +27,7 @@ public class ItemLoader extends ItemMachineMod {
 		
 		if (!world.isRemote)/// only run on server
 		{
-		LogHelper.info("Item used on loader!");
+		//LogHelper.info("Item used on loader!");
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
@@ -38,7 +38,7 @@ public class ItemLoader extends ItemMachineMod {
 		entityLoader.prevPosY= y+.5d;
 		entityLoader.prevPosZ= z+.5d;
 		result = world.spawnEntityInWorld(entityLoader);
-		LogHelper.info("Spawn entity resutl:" + result );
+		//LogHelper.info("Spawn entity resutl:" + result );
 		}
 		return result;
 	}

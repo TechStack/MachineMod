@@ -12,22 +12,25 @@ public class MachineModMessageInputToServerHandler  implements IMessageHandler<M
 
 	@Override
 	public IMessage onMessage(MachineModMessageInputToServer message, MessageContext ctx) {
-		
-	   Entity entity=	ctx.getServerHandler().playerEntity.worldObj.getEntityByID(message.entityid);
-		if (entity instanceof EntityMachineModRideable )
-		{
-			if (( (EntityMachineModRideable) entity).riddenByEntity == ctx.getServerHandler().playerEntity)
+
+		Entity entity=	ctx.getServerHandler().playerEntity.worldObj.getEntityByID(message.entityid);
+
+		if (entity!= null ){
+
+			if (entity instanceof EntityMachineModRideable )
 			{
-				//its ridden by this player (avoid some hacks) 
-				( (EntityMachineModRideable) entity).isPlayerAccelerating= message.isPlayerAccelerating;
-				( (EntityMachineModRideable) entity).isPlayerBreaking = message.isPlayerBreaking;
-				( (EntityMachineModRideable) entity).isPlayerTurningLeft = message.isPlayerTurningLeft;
-				( (EntityMachineModRideable) entity).isPlayerTurningRight = message.isPlayerTurningRight;
-				( (EntityMachineModRideable) entity).isPlayerPushingSprintButton = message.isPlayerPushingSprintButton;
-				( (EntityMachineModRideable) entity).isPlayerPushingJumpButton = message.isPlayerPushingJumpButton;
+				if (( (EntityMachineModRideable) entity).riddenByEntity == ctx.getServerHandler().playerEntity)
+				{
+					//its ridden by this player (avoid some hacks) 
+					( (EntityMachineModRideable) entity).isPlayerAccelerating= message.isPlayerAccelerating;
+					( (EntityMachineModRideable) entity).isPlayerBreaking = message.isPlayerBreaking;
+					( (EntityMachineModRideable) entity).isPlayerTurningLeft = message.isPlayerTurningLeft;
+					( (EntityMachineModRideable) entity).isPlayerTurningRight = message.isPlayerTurningRight;
+					( (EntityMachineModRideable) entity).isPlayerPushingSprintButton = message.isPlayerPushingSprintButton;
+					( (EntityMachineModRideable) entity).isPlayerPushingJumpButton = message.isPlayerPushingJumpButton;
+				}
 			}
 		}
-		
 		return null;
 	}
 }

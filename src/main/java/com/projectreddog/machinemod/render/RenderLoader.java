@@ -10,6 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
+import com.projectreddog.machinemod.entity.EntityLoader;
 import com.projectreddog.machinemod.model.ModelLoader;
 import com.projectreddog.machinemod.model.advanced.IModelCustom;
 import com.projectreddog.machinemod.reference.Reference;
@@ -27,7 +28,7 @@ private RenderItem itemRenderer;
 
 		super(renderManager);
 
-		LogHelper.info("in RenderLoader constructor");
+		//LogHelper.info("in RenderLoader constructor");
 		shadowSize = 1F;
 		this.modelLoader = new ModelLoader();
 		 itemRenderer = Minecraft.getMinecraft().getRenderItem();
@@ -77,7 +78,7 @@ private RenderItem itemRenderer;
 		
 		
 		((ModelLoader) this.modelLoader).renderGroupObject("LoaderBody_Cube");
-		  GL11.glRotatef(90, 1,0, 0);
+		  GL11.glRotatef(((EntityLoader) entity).Attribute1, 1,0, 0);
 		    
 		    
 		((ModelLoader) this.modelLoader).renderGroupObject("Arm2_Cube.002");
