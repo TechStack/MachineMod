@@ -6,13 +6,10 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.projectreddog.machinemod.entity.EntityDumpTruck;
 import com.projectreddog.machinemod.model.ModelDumpTruck;
 import com.projectreddog.machinemod.reference.Reference;
 import com.projectreddog.machinemod.utility.LogHelper;
@@ -24,6 +21,7 @@ public class RenderDumpTruck extends Render {
 
 private RenderItem itemRenderer;
 
+
 	public RenderDumpTruck(RenderManager renderManager)
 	{
 
@@ -33,7 +31,7 @@ private RenderItem itemRenderer;
 		shadowSize = 1F;
 		this.modelDumpTruck = new ModelDumpTruck();
 		 itemRenderer = Minecraft.getMinecraft().getRenderItem();
-		 
+
 	}
 
 
@@ -65,16 +63,20 @@ private RenderItem itemRenderer;
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
 		this.modelDumpTruck.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-		EntityDumpTruck edt =((EntityDumpTruck) entity);
-		Item item;
-		Minecraft minecraft = Minecraft.getMinecraft();
-		for (int i =0; i< edt.getSizeInventory() ; i++){
-			if (edt.getStackInSlot(i)!= null  ){
-				//TODO TS- ADD RENDERING Of items in dumptruck
-				
-
-			}
-		}
+//		EntityDumpTruck edt =((EntityDumpTruck) entity);
+//		Item item;
+//		Minecraft minecraft = Minecraft.getMinecraft();
+//		
+		
+		
+//		
+//		for (int i =0; i< edt.getSizeInventory() ; i++){
+//			if (edt.getStackInSlot(i)!= null  ){
+//				//TODO TS- ADD RENDERING Of items in dumptruck
+//				
+//
+//			}
+//		}
 		GL11.glPopMatrix();
 	}
 

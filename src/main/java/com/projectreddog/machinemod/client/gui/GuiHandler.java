@@ -3,13 +3,13 @@ package com.projectreddog.machinemod.client.gui;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 
 import com.projectreddog.machinemod.container.ContainerDumpTruck;
+import com.projectreddog.machinemod.container.ContainerLoader;
 import com.projectreddog.machinemod.entity.EntityDumpTruck;
-import com.projectreddog.machinemod.entity.EntityMachineModRideable;
+import com.projectreddog.machinemod.entity.EntityLoader;
 import com.projectreddog.machinemod.reference.Reference;
 
 public class GuiHandler implements IGuiHandler {
@@ -28,6 +28,16 @@ public class GuiHandler implements IGuiHandler {
 					return new ContainerDumpTruck(player.inventory, (EntityDumpTruck) entity);
 				}
 			}
+		}else if (id == Reference.GUI_LOADER){
+
+			Entity entity = world.getEntityByID(x);
+			if (entity!= null){
+				if (entity instanceof EntityLoader){
+
+
+					return new ContainerLoader(player.inventory, (EntityLoader) entity);
+				}
+			}
 		}
 		return null;
 	}
@@ -43,6 +53,14 @@ public class GuiHandler implements IGuiHandler {
 			if (entity!= null){
 				if (entity instanceof EntityDumpTruck){
 					return new GuiDumpTruck(player.inventory, (EntityDumpTruck) entity);
+				}
+			}
+		}else if (id == Reference.GUI_LOADER){
+
+			Entity entity = world.getEntityByID(x);
+			if (entity!= null){
+				if (entity instanceof EntityLoader){
+					return new GuiLoader(player.inventory, (EntityLoader) entity);
 				}
 			}
 		}

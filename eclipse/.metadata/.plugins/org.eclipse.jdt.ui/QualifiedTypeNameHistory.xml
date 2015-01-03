@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.client.handler.KeyInputEventHandler"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessage"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModNetwork"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry.TargetPoint"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
@@ -20,7 +18,6 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustomLoader"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.ModelFormatException"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.AdvancedModelLoader"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustom"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.gameevent.InputEvent"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.simpleimpl.MessageContext"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.WorldRenderer"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderItem"/>
 <fullyQualifiedTypeName name="net.minecraft.client.resources.model.ModelManager"/>
 <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityLoader"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustom"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
 </qualifiedTypeNameHistroy>
