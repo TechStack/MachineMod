@@ -2,13 +2,11 @@ package com.projectreddog.machinemod.handler;
 
 import java.io.File;
 
-import com.projectreddog.machinemod.reference.Reference;
-import com.projectreddog.machinemod.utility.LogHelper;
-import com.typesafe.config.ConfigValue;
-
-import cpw.mods.fml.client.event.ConfigChangedEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import com.projectreddog.machinemod.reference.Reference;
 
 public class ConfigurationHandler {
 	

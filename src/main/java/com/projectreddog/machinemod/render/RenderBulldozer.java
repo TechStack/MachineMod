@@ -1,19 +1,15 @@
 package com.projectreddog.machinemod.render;
 
 import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelBoat;
 import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.projectreddog.machinemod.entity.EntityBulldozer;
 import com.projectreddog.machinemod.model.ModelBulldozer;
 import com.projectreddog.machinemod.reference.Reference;
-import com.projectreddog.machinemod.utility.LogHelper;
 
 public class RenderBulldozer extends Render {
 
@@ -21,10 +17,10 @@ public class RenderBulldozer extends Render {
 	protected ModelBase  modelBulldozer ;
 
 
-	public RenderBulldozer()
+	public RenderBulldozer(RenderManager renderManager)
 	{
 		
-		
+		super(renderManager);
 		shadowSize = 1F;
         this.modelBulldozer = new ModelBulldozer();
 

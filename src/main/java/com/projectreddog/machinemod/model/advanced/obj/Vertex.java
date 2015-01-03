@@ -1,8 +1,6 @@
 package com.projectreddog.machinemod.model.advanced.obj;
 
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class Vertex
 {

@@ -2,15 +2,13 @@ package com.projectreddog.machinemod.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.projectreddog.machinemod.creativetab.CreativeTabMachineMod;
 import com.projectreddog.machinemod.reference.Reference;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockMachineMod  extends Block {
 
@@ -33,27 +31,19 @@ public class BlockMachineMod  extends Block {
 		return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() +":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()) );
 	}
 
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister iconRegister)
-	{
-		blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".")+1));
-	}
-	
+// 1.8 not needed?	
+//	@Override
+//	@SideOnly(Side.CLIENT)
+//	public void registerBlockIcons(IIconRegister iconRegister)
+//	{
+//		blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".")+1));
+//	}
+//	
 	protected String getUnwrappedUnlocalizedName(String unlocalizedName)
 	{
 		return unlocalizedName.substring(unlocalizedName.indexOf(".")+1);
 	}
 	
-	@Override 
-	public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
-	{
-		
-	}
-	
-	@Override
-	public void onBlockDestroyedByExplosion(World world, int x, int y, int z, Explosion explosion){
-	}
+
 
 }

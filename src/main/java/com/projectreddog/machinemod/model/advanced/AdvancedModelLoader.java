@@ -7,13 +7,12 @@ import java.util.Map;
 
 import net.minecraft.util.ResourceLocation;
 //import net.minecraftforge.client.model.obj.ObjModelLoader;
+import net.minecraftforge.fml.common.FMLLog;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.collect.Maps;
 import com.projectreddog.machinemod.model.advanced.obj.ObjModelLoader;
-
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 /**
 * Common interface for advanced model loading from files, based on file suffix

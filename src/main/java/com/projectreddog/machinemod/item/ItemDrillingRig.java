@@ -7,6 +7,8 @@ package com.projectreddog.machinemod.item;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
 import com.projectreddog.machinemod.entity.EntityDrillingRig;
@@ -31,14 +33,16 @@ public class ItemDrillingRig extends ItemMachineMod {
 
 
 	@Override
-	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float xOff, float yOff, float zOff)
+	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, BlockPos pos, EnumFacing side,float xOff, float yOff, float zOff)
 	{
 		boolean result = false;
 
 		if (!world.isRemote)/// only run on server
 		{
-			LogHelper.info("Item used on drillingrig!");
-
+			//LogHelper.info("Item used on drillingrig!");
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
 
 			EntityDrillingRig entityDrillingRig = new EntityDrillingRig(world);
 			entityDrillingRig.setPosition(x+.5d,y+1.0d,z+.5d);
@@ -46,7 +50,7 @@ public class ItemDrillingRig extends ItemMachineMod {
 			entityDrillingRig.prevPosY= y+.5d;
 			entityDrillingRig.prevPosZ= z+.5d;
 			result = world.spawnEntityInWorld(entityDrillingRig);
-			LogHelper.info("Spawn entity resutl:" + result );
+			//LogHelper.info("Spawn entity resutl:" + result );
 		}
 		return result;
 	}

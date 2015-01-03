@@ -4,8 +4,9 @@ package com.projectreddog.machinemod.model.advanced.obj;
 import java.util.ArrayList;
 
 import net.minecraft.client.renderer.Tessellator;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.WorldRenderer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class GroupObject
 {
@@ -34,8 +35,9 @@ public class GroupObject
     {
         if (faces.size() > 0)
         {
-            Tessellator tessellator = Tessellator.instance;
-            tessellator.startDrawing(glDrawingMode);
+            Tessellator tessellator = Tessellator.getInstance();
+            WorldRenderer worldRenderer = tessellator.getWorldRenderer();
+            worldRenderer.startDrawing(glDrawingMode);
             render(tessellator);
             tessellator.draw();
         }

@@ -4,13 +4,11 @@ import org.apache.logging.log4j.Level;
 
 import com.projectreddog.machinemod.reference.Reference;
 
-import cpw.mods.fml.common.FMLLog;
-
 public class LogHelper {
 
 	public static void log(Level logLevel, Object object)
 	{
-		FMLLog.log(Reference.MOD_NAME, logLevel , String.valueOf(object));
+		net.minecraftforge.fml.common.FMLLog.log(Reference.MOD_NAME, logLevel , String.valueOf(object));
 		
 	}
 	public static void info (Object ojbect){ 

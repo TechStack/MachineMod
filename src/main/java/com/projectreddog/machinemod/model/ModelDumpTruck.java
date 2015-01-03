@@ -19,7 +19,7 @@ public class ModelDumpTruck  extends ModelBase
 	  {
 			
 			 
-			 LogHelper.info("LOADING dump truck MODEL!");
+			// LogHelper.info("LOADING dump truck MODEL!");
 			 myModel = AdvancedModelLoader.loadModel(new ResourceLocation(  Reference.MOD_ID.toLowerCase(), "models/dumptruck.obj"));
 	     // casinoTexture = new ResourceLocation("modid", "textures/casinoTexture.png");
 	      
@@ -29,6 +29,7 @@ public class ModelDumpTruck  extends ModelBase
 	  {
 	    super.render(entity, f, f1, f2, f3, f4, f5);
 	    myModel.renderAll();
+	    
 
 	  }
 	  

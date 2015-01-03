@@ -17,12 +17,12 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-1.0-Pre-ALPHA"
+version = "1.8-1.1-Pre-ALPHA"
 group= "com.projectreddog.machinemod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "MachineMod"
 
 minecraft {
-    version = "1.7.10-10.13.2.1230"
+    version = "1.8-11.14.0.1281-1.8"
     runDir = "eclipse"
 }
 

@@ -1,6 +1,8 @@
 # Item Localizations
 item.machinemod:bulldozer.name=Bulldozer
 item.machinemod:drillingrig.name=Drilling Rig
+item.machinemod:dumptruck.name=Dump Truck
+item.machinemod:loader.name=Loader
 
 # Block Localizations
 tile.machinemod:machineassemblytable.name=Machine Assembly Table

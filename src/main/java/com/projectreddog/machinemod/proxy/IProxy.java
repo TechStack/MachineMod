@@ -4,4 +4,4 @@ public interface IProxy {
 
 	void registerRenderers();
 	
-}
+} 

@@ -1,13 +1,13 @@
 package com.projectreddog.machinemod.client.handler;
 
+import net.minecraft.client.Minecraft;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.InputEvent;
+
 import com.projectreddog.machinemod.entity.EntityMachineModRideable;
 import com.projectreddog.machinemod.init.ModNetwork;
 import com.projectreddog.machinemod.network.MachineModMessageInputToServer;
 import com.projectreddog.machinemod.utility.LogHelper;
-
-import net.minecraft.client.Minecraft;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.InputEvent;
 
 public class KeyInputEventHandler {
 
@@ -15,7 +15,7 @@ public class KeyInputEventHandler {
 
 	@SubscribeEvent
 	public void handleKeyInputevent(InputEvent.KeyInputEvent event){
-		 LogHelper.info("Called KB Event");
+		 //LogHelper.info("Called KB Event");
 
 		boolean sendPacket =false;
 		if (Minecraft.getMinecraft().thePlayer.ridingEntity instanceof EntityMachineModRideable){
@@ -80,9 +80,9 @@ public class KeyInputEventHandler {
 			
 			
 			if (sendPacket){
-			 LogHelper.info("NETWORKPACKET SENDING: VEL:" + e.velocity +" Yaw: " + e.yaw);
+			// LogHelper.info("NETWORKPACKET SENDING: VEL:" + e.velocity +" Yaw: " + e.yaw);
 			 
-			 LogHelper.info("NETWORKPACKET SENDING: ACC:" + e.isPlayerAccelerating + " BRAKE: " + e.isPlayerBreaking +" Left: "+ e.isPlayerTurningLeft +" RIght:"+e.isPlayerTurningRight);
+			// LogHelper.info("NETWORKPACKET SENDING: ACC:" + e.isPlayerAccelerating + " BRAKE: " + e.isPlayerBreaking +" Left: "+ e.isPlayerTurningLeft +" RIght:"+e.isPlayerTurningRight);
 
 			 ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServer( e.getEntityId(),e.isPlayerAccelerating,e.isPlayerBreaking,e.isPlayerTurningRight, e.isPlayerTurningLeft,e.isPlayerPushingSprintButton,e.isPlayerPushingJumpButton));
 			 

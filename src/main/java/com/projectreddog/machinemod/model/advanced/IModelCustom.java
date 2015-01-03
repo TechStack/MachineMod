@@ -1,18 +1,18 @@
 package com.projectreddog.machinemod.model.advanced;
 
 
-import static cpw.mods.fml.relauncher.Side.CLIENT;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public interface IModelCustom
 {
     String getType();
-    @SideOnly(CLIENT)
+    @SideOnly(Side.CLIENT)
     void renderAll();
-    @SideOnly(CLIENT)
+    @SideOnly(Side.CLIENT)
     void renderOnly(String... groupNames);
-    @SideOnly(CLIENT)
+    @SideOnly(Side.CLIENT)
     void renderPart(String partName);
-    @SideOnly(CLIENT)
+    @SideOnly(Side.CLIENT)
     void renderAllExcept(String... excludedGroupNames);
 }

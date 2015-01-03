@@ -30,7 +30,7 @@ public class ModelDrillingRig extends ModelBase
   {
 		
 		 
-		 LogHelper.info("LOADING DRILLING RIG MODEL!");
+		 //LogHelper.info("LOADING DRILLING RIG MODEL!");
 		 myModel = AdvancedModelLoader.loadModel(new ResourceLocation(  Reference.MOD_ID.toLowerCase(), "models/drillingrig.obj"));
      // casinoTexture = new ResourceLocation("modid", "textures/casinoTexture.png");
       

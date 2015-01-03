@@ -1,18 +1,22 @@
 package com.projectreddog.machinemod.world;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MathHelper;
-import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.google.common.collect.Lists;
 import com.projectreddog.machinemod.init.ModBlocks;
 
 
@@ -21,30 +25,52 @@ public class ModExplosion extends Explosion {
 	
     private World worldObj;
     private Random explosionRNG = new Random();
+    private final double explosionX;
+    private final double explosionY;
+    private final double explosionZ;
+    private final Entity exploder;
+    private final float explosionSize;
+    private List affectedBlockPositions;
+    public boolean isSmoking;
 
-	public ModExplosion(World world, Entity p_i1948_2_, double p_i1948_3_,
-			double p_i1948_5_, double p_i1948_7_, float p_i1948_9_) {
-		super(world, p_i1948_2_, p_i1948_3_, p_i1948_5_, p_i1948_7_, p_i1948_9_);
+	public ModExplosion(World world, Entity exploder, double explosionX,	double explosionY, double explosionZ, float explosionSize) {
+		super(world, exploder, explosionX, explosionY, explosionZ, explosionSize,  false,true );
+
 		worldObj=world;
+		
+		
+        this.exploder = exploder;
+        this.affectedBlockPositions = Lists.newArrayList();
+		this.explosionX =explosionX;
+		this.explosionY = explosionY;
+		this.explosionZ = explosionZ;
+        this.explosionSize = explosionSize;
+        this.isSmoking = true;
 	}
 	
-	
+
 	@Override
 	 public void doExplosionB(boolean p_77279_1_)
 	    {
+
+		  this.affectedBlockPositions=super.func_180343_e();
 	        this.worldObj.playSoundEffect(this.explosionX, this.explosionY, this.explosionZ, "random.explode", 4.0F, (1.0F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.2F) * 0.7F);
 
 	        if (this.explosionSize >= 2.0F && this.isSmoking)
 	        {
-	            this.worldObj.spawnParticle("hugeexplosion", this.explosionX, this.explosionY, this.explosionZ, 1.0D, 0.0D, 0.0D);
+	        	this.worldObj.spawnParticle(EnumParticleTypes.EXPLOSION_HUGE, this.explosionX, this.explosionY, this.explosionZ, 1.0D, 0.0D, 0.0D,new int[0]);
+	            
+	            
+
 	        }
 	        else
 	        {
-	            this.worldObj.spawnParticle("largeexplode", this.explosionX, this.explosionY, this.explosionZ, 1.0D, 0.0D, 0.0D);
+	        	
+	            this.worldObj.spawnParticle(EnumParticleTypes.EXPLOSION_LARGE, this.explosionX, this.explosionY, this.explosionZ, 1.0D, 0.0D, 0.0D,new int[0]);
 	        }
 
 	        Iterator iterator;
-	        ChunkPosition chunkposition;
+	        BlockPos blockpos;
 	        int i;
 	        int j;
 	        int k;
@@ -56,11 +82,11 @@ public class ModExplosion extends Explosion {
 
 	            while (iterator.hasNext())
 	            {
-	                chunkposition = (ChunkPosition)iterator.next();
-	                i = chunkposition.chunkPosX;
-	                j = chunkposition.chunkPosY;
-	                k = chunkposition.chunkPosZ;
-	                block = this.worldObj.getBlock(i, j, k);
+	            	blockpos = (BlockPos)iterator.next();
+	                i = blockpos.getX();
+	                j = blockpos.getY();
+	                k = blockpos.getZ();
+	                block = this.worldObj.getBlockState(blockpos).getBlock();
 
 	                if (p_77279_1_)
 	                {
@@ -79,8 +105,8 @@ public class ModExplosion extends Explosion {
 	                    d3 *= d7;
 	                    d4 *= d7;
 	                    d5 *= d7;
-	                    this.worldObj.spawnParticle("explode", (d0 + this.explosionX * 1.0D) / 2.0D, (d1 + this.explosionY * 1.0D) / 2.0D, (d2 + this.explosionZ * 1.0D) / 2.0D, d3, d4, d5);
-	                    this.worldObj.spawnParticle("smoke", d0, d1, d2, d3, d4, d5);
+	                    this.worldObj.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, (d0 + this.explosionX * 1.0D) / 2.0D, (d1 + this.explosionY * 1.0D) / 2.0D, (d2 + this.explosionZ * 1.0D) / 2.0D, d3, d4, d5);
+	                    this.worldObj.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, d3, d4, d5);
 	                }
 
 	                if (block.getMaterial() != Material.air)
@@ -99,25 +125,7 @@ public class ModExplosion extends Explosion {
 	            }
 	        }
 
-	        if (this.isFlaming)
-	        {
-	            iterator = this.affectedBlockPositions.iterator();
-
-	            while (iterator.hasNext())
-	            {
-	                chunkposition = (ChunkPosition)iterator.next();
-	                i = chunkposition.chunkPosX;
-	                j = chunkposition.chunkPosY;
-	                k = chunkposition.chunkPosZ;
-	                block = this.worldObj.getBlock(i, j, k);
-	                Block block1 = this.worldObj.getBlock(i, j - 1, k);
-
-	                if (block.getMaterial() == Material.air && block1.func_149730_j() && this.explosionRNG.nextInt(3) == 0)
-	                {
-	                    this.worldObj.setBlock(i, j, k, Blocks.fire);
-	                }
-	            }
-	        }
+	
 	    }
 
 
@@ -126,7 +134,7 @@ public class ModExplosion extends Explosion {
 				
 		if (block ==ModBlocks.machineexplosivepackeddrilledstone){
 			// do the explosion!  if it's blasted stone so we can propigate the explosion on to the next block !
-			block.onBlockExploded(this.worldObj, x, y,z, this);
+			block.onBlockExploded(this.worldObj, new BlockPos(x, y,z), this);
 		}else {
 			
 			  if (!this.worldObj.isRemote)
@@ -142,8 +150,7 @@ public class ModExplosion extends Explosion {
     
   //              	 this.worldObj.setBlockToAir(x,y,z); 
 
-                 this.worldObj.setBlock(x,y,z, ModBlocks.machinemodblastesStone,0,3); // may need 3 if still problems
-                  
+                 this.worldObj.setBlockState(new BlockPos(x, y,z), ModBlocks.machinemodblastedstone.getDefaultState()); 
                   
               }
 			  
