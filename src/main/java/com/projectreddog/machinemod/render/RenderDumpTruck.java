@@ -1,16 +1,13 @@
 package com.projectreddog.machinemod.render;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.state.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -25,7 +22,7 @@ public class RenderDumpTruck extends Render {
 
 	protected ModelBase  modelDumpTruck ;
 
-
+private RenderItem itemRenderer;
 
 	public RenderDumpTruck(RenderManager renderManager)
 	{
@@ -35,7 +32,8 @@ public class RenderDumpTruck extends Render {
 		LogHelper.info("in RenderDumpTruck constructor");
 		shadowSize = 1F;
 		this.modelDumpTruck = new ModelDumpTruck();
-
+		 itemRenderer = Minecraft.getMinecraft().getRenderItem();
+		 
 	}
 
 
@@ -73,8 +71,7 @@ public class RenderDumpTruck extends Render {
 		for (int i =0; i< edt.getSizeInventory() ; i++){
 			if (edt.getStackInSlot(i)!= null  ){
 				//TODO TS- ADD RENDERING Of items in dumptruck
-
-
+				
 
 			}
 		}
