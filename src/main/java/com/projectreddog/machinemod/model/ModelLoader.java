@@ -22,6 +22,7 @@ public class ModelLoader  extends ModelBase
 			 //LogHelper.info("LOADING dump truck MODEL!");
 			 myModel = AdvancedModelLoader.loadModel(new ResourceLocation(  Reference.MOD_ID.toLowerCase(), "models/loader.obj"));
 	     // casinoTexture = new ResourceLocation("modid", "textures/casinoTexture.png");
+			 
 	      
 	  }
 	  
@@ -35,6 +36,7 @@ public class ModelLoader  extends ModelBase
 	  
 	  public void renderGroupObject(String groupName){
 		  myModel.renderPart(groupName);
+		  
 	  }
 	  
 	  private void setRotation(ModelRenderer model, float x, float y, float z)

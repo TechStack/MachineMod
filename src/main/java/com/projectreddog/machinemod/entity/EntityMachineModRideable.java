@@ -145,9 +145,9 @@ public class EntityMachineModRideable extends Entity {
 		
 		}
 		if ( isPlayerPushingJumpButton ){
-			Attribute1=Attribute1 + 1;
+			Attribute1-=  1;
 		}else if (isPlayerPushingSprintButton){
-			Attribute1=Attribute1 - 1;
+			Attribute1+=  1;
 		}
 		
 		//end take user input
