@@ -1,0 +1,121 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 1/4/15 11:16 AM
+Description: Rendering entity in world
+
+java.lang.ClassCastException: com.projectreddog.machinemod.model.ModelDumpTruck cannot be cast to com.projectreddog.machinemod.model.ModelLoader
+	at com.projectreddog.machinemod.render.RenderDumpTruck.doRender(RenderDumpTruck.java:69)
+	at net.minecraft.client.renderer.entity.RenderManager.doRenderEntity(RenderManager.java:376)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:333)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntitySimple(RenderManager.java:300)
+	at net.minecraft.client.renderer.RenderGlobal.func_180446_a(RenderGlobal.java:653)
+	at net.minecraft.client.renderer.EntityRenderer.func_175068_a(EntityRenderer.java:1347)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1260)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1085)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1106)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:375)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78)
+	at GradleStart.main(GradleStart.java:45)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.projectreddog.machinemod.render.RenderDumpTruck.doRender(RenderDumpTruck.java:69)
+
+-- Entity being rendered --
+Details:
+	Entity Type: machinemod.dumptruck (com.projectreddog.machinemod.entity.EntityDumpTruck)
+	Entity ID: 127
+	Entity Name: entity.machinemod.dumptruck.name
+	Entity's Exact location: -1127.76, 3.98, -396.40
+	Entity's Block location: -1128.00,3.00,-397.00 - World: (-1128,3,-397), Chunk: (at 8,0,3 in -71,-25; contains blocks -1136,0,-400 to -1121,255,-385), Region: (-3,-1; contains chunks -96,-32 to -65,-1, blocks -1536,0,-512 to -1025,255,-1)
+	Entity's Momentum: 0.00, -0.04, 0.00
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+
+-- Renderer details --
+Details:
+	Assigned renderer: com.projectreddog.machinemod.render.RenderDumpTruck@61f0a85d
+	Location: -22.30,-0.32,0.92 - World: (-23,-1,0), Chunk: (at 9,-1,0 in -2,0; contains blocks -32,0,0 to -17,255,15), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Rotation: 0.0
+	Delta: 0.6342848
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderManager.doRenderEntity(RenderManager.java:376)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:333)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntitySimple(RenderManager.java:300)
+	at net.minecraft.client.renderer.RenderGlobal.func_180446_a(RenderGlobal.java:653)
+	at net.minecraft.client.renderer.EntityRenderer.func_175068_a(EntityRenderer.java:1347)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1260)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player105'/277, l='MpServer', x=-1105.46, y=4.31, z=-397.31]]
+	Chunk stats: MultiplayerChunkCache: 750, 750
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: -1122.00,4.00,-385.00 - World: (-1122,4,-385), Chunk: (at 14,0,15 in -71,-25; contains blocks -1136,0,-400 to -1121,255,-385), Region: (-3,-1; contains chunks -96,-32 to -65,-1, blocks -1536,0,-512 to -1025,255,-1)
+	Level time: 665324 game time, 4703 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 105 total; [EntityLoader['entity.machinemod.loader.name'/278, l='MpServer', x=-1105.46, y=3.96, z=-397.31], EntitySheep['Sheep'/72, l='MpServer', x=-1185.91, y=4.00, z=-370.03], EntityPig['Pig'/85, l='MpServer', x=-1167.25, y=4.00, z=-425.94], EntityCow['Cow'/84, l='MpServer', x=-1181.38, y=4.00, z=-425.72], EntitySheep['Sheep'/87, l='MpServer', x=-1175.47, y=3.14, z=-384.21], EntityCow['Cow'/86, l='MpServer', x=-1182.03, y=4.00, z=-411.06], EntityPig['Pig'/81, l='MpServer', x=-1183.31, y=4.00, z=-438.19], EntityPig['Pig'/83, l='MpServer', x=-1183.03, y=4.00, z=-420.91], EntityCow['Cow'/82, l='MpServer', x=-1174.22, y=4.00, z=-445.31], EntityPig['Pig'/92, l='MpServer', x=-1181.03, y=4.00, z=-326.03], EntityPig['Pig'/89, l='MpServer', x=-1180.88, y=4.00, z=-354.06], EntitySheep['Sheep'/88, l='MpServer', x=-1174.25, y=4.00, z=-365.88], EntitySheep['Sheep'/91, l='MpServer', x=-1174.09, y=4.00, z=-325.00], EntityPig['Pig'/90, l='MpServer', x=-1181.97, y=4.00, z=-362.94], EntitySheep['Sheep'/102, l='MpServer', x=-1159.78, y=4.00, z=-421.72], EntityPig['Pig'/103, l='MpServer', x=-1165.72, y=4.00, z=-429.84], EntityChicken['Chicken'/100, l='MpServer', x=-1154.56, y=4.00, z=-475.28], EntitySheep['Sheep'/101, l='MpServer', x=-1164.72, y=4.00, z=-450.22], EntitySheep['Sheep'/99, l='MpServer', x=-1163.56, y=4.00, z=-464.34], EntityPig['Pig'/108, l='MpServer', x=-1157.63, y=4.00, z=-363.91], EntityPlayerSP['Player105'/277, l='MpServer', x=-1105.46, y=4.31, z=-397.31], EntityItem['item.item.egg'/106, l='MpServer', x=-1159.97, y=4.00, z=-379.72], EntityCow['Cow'/107, l='MpServer', x=-1156.44, y=4.00, z=-377.47], EntityChicken['Chicken'/104, l='MpServer', x=-1162.50, y=4.00, z=-384.25], EntityPig['Pig'/105, l='MpServer', x=-1157.44, y=4.00, z=-379.09], EntityChicken['Chicken'/117, l='MpServer', x=-1149.38, y=4.00, z=-324.72], EntityPig['Pig'/116, l='MpServer', x=-1144.00, y=4.00, z=-327.09], EntityPig['Pig'/115, l='MpServer', x=-1143.13, y=4.00, z=-323.94], EntitySheep['Sheep'/114, l='MpServer', x=-1142.06, y=4.00, z=-338.97], EntityItem['item.item.egg'/113, l='MpServer', x=-1147.69, y=4.00, z=-342.91], EntityCow['Cow'/112, l='MpServer', x=-1139.91, y=4.00, z=-376.16], EntityDumpTruck['entity.machinemod.dumptruck.name'/127, l='MpServer', x=-1127.76, y=3.98, z=-396.40], EntityCow['Cow'/126, l='MpServer', x=-1132.75, y=4.00, z=-438.72], EntityCow['Cow'/125, l='MpServer', x=-1134.22, y=4.00, z=-460.69], EntityChicken['Chicken'/143, l='MpServer', x=-1107.31, y=4.00, z=-433.53], EntityPig['Pig'/142, l='MpServer', x=-1110.25, y=4.00, z=-460.97], EntityCow['Cow'/129, l='MpServer', x=-1122.88, y=4.00, z=-389.81], EntityPig['Pig'/128, l='MpServer', x=-1131.34, y=4.00, z=-393.47], EntityPig['Pig'/131, l='MpServer', x=-1120.41, y=4.00, z=-341.13], EntityChicken['Chicken'/130, l='MpServer', x=-1121.34, y=4.00, z=-336.47], EntityChicken['Chicken'/153, l='MpServer', x=-1088.41, y=4.00, z=-473.53], EntityChicken['Chicken'/154, l='MpServer', x=-1090.41, y=4.00, z=-467.59], EntityBulldozer['entity.machinemod.bulldozer.name'/156, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/157, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/158, l='MpServer', x=-1092.50, y=11.96, z=-381.50], EntityBulldozer['entity.machinemod.bulldozer.name'/159, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityItem['item.item.egg'/144, l='MpServer', x=-1107.78, y=4.00, z=-433.28], EntityPig['Pig'/145, l='MpServer', x=-1108.38, y=4.00, z=-410.13], EntityDumpTruck['entity.machinemod.dumptruck.name'/146, l='MpServer', x=-1116.50, y=4.00, z=-405.50], EntityCow['Cow'/147, l='MpServer', x=-1113.06, y=4.00, z=-353.00], EntityPig['Pig'/148, l='MpServer', x=-1119.06, y=4.00, z=-336.00], EntityBulldozer['entity.machinemod.bulldozer.name'/171, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/170, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/169, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/168, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/175, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/174, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/173, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/172, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/163, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/162, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/161, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/160, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/167, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/166, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/165, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/164, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityPig['Pig'/186, l='MpServer', x=-1094.09, y=4.00, z=-339.00], EntitySheep['Sheep'/187, l='MpServer', x=-1097.44, y=4.00, z=-322.25], EntityItem['item.item.egg'/184, l='MpServer', x=-1100.00, y=4.00, z=-337.44], EntitySheep['Sheep'/185, l='MpServer', x=-1100.44, y=4.00, z=-337.22], EntityCow['Cow'/188, l='MpServer', x=-1090.97, y=4.00, z=-332.81], EntityPig['Pig'/189, l='MpServer', x=-1100.19, y=4.00, z=-318.34], EntityBulldozer['entity.machinemod.bulldozer.name'/178, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/179, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/176, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/177, l='MpServer', x=-1095.50, y=3.96, z=-382.50], EntityBulldozer['entity.machinemod.bulldozer.name'/182, l='MpServer', x=-1089.50, y=4.00, z=-375.50], EntityChicken['Chicken'/183, l='MpServer', x=-1098.63, y=4.00, z=-358.53], EntityBulldozer['entity.machinemod.bulldozer.name'/180, l='MpServer', x=-1088.50, y=4.00, z=-375.50], EntityBulldozer['entity.machinemod.bulldozer.name'/181, l='MpServer', x=-1092.50, y=11.96, z=-381.50], EntityDumpTruck['entity.machinemod.dumptruck.name'/205, l='MpServer', x=-1075.50, y=3.96, z=-329.50], EntityDumpTruck['entity.machinemod.dumptruck.name'/204, l='MpServer', x=-1086.50, y=4.00, z=-327.50], EntityCow['Cow'/201, l='MpServer', x=-1085.13, y=4.00, z=-342.06], EntityChicken['Chicken'/200, l='MpServer', x=-1085.38, y=4.00, z=-336.09], EntityPig['Pig'/203, l='MpServer', x=-1087.03, y=4.00, z=-327.09], EntityDrillingRig['entity.machinemod.drillingrig.name'/202, l='MpServer', x=-1076.50, y=4.00, z=-325.50], EntityDumpTruck['entity.machinemod.dumptruck.name'/197, l='MpServer', x=-1081.64, y=3.96, z=-402.04], EntitySheep['Sheep'/199, l='MpServer', x=-1081.00, y=4.00, z=-342.06], EntityPig['Pig'/198, l='MpServer', x=-1086.00, y=4.00, z=-356.84], EntityPig['Pig'/195, l='MpServer', x=-1085.94, y=4.00, z=-475.81], EntityHorse['Horse'/221, l='MpServer', x=-1040.38, y=4.00, z=-359.84], EntityChicken['Chicken'/222, l='MpServer', x=-1046.59, y=4.00, z=-345.38], EntityItem['item.item.egg'/223, l='MpServer', x=-1050.91, y=4.00, z=-336.47], EntityCow['Cow'/212, l='MpServer', x=-1058.25, y=4.00, z=-341.72], EntityItem['item.item.egg'/209, l='MpServer', x=-1060.63, y=4.00, z=-446.66], EntityChicken['Chicken'/210, l='MpServer', x=-1071.41, y=4.00, z=-446.50], EntitySheep['Sheep'/211, l='MpServer', x=-1060.78, y=4.00, z=-397.69], EntityHorse['Horse'/238, l='MpServer', x=-1027.41, y=4.00, z=-369.75], EntityCow['Cow'/237, l='MpServer', x=-1031.28, y=4.00, z=-429.34], EntityPig['Pig'/236, l='MpServer', x=-1038.13, y=4.00, z=-448.88], EntityPig['Pig'/235, l='MpServer', x=-1038.16, y=4.00, z=-442.72], EntityPig['Pig'/233, l='MpServer', x=-1026.06, y=4.00, z=-457.00], EntityChicken['Chicken'/232, l='MpServer', x=-1027.75, y=4.00, z=-465.44], EntitySheep['Sheep'/224, l='MpServer', x=-1054.03, y=4.00, z=-336.06]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:391)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2599)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:397)
+	at net.minecraft.client.main.Main.main(Main.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78)
+	at GradleStart.main(GradleStart.java:45)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_71, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 650279896 bytes (620 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.10 FML v8.0.14.1281 Minecraft Forge 11.14.0.1281 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{8.0.14.1281} [Forge Mod Loader] (forgeSrc-1.8-11.14.0.1281-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{11.14.0.1281} [Minecraft Forge] (forgeSrc-1.8-11.14.0.1281-1.8.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	machinemod{1.7.10-1.0-Pre-ALPHA} [MachineMod] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.8
+	LWJGL: 2.9.1
+	OpenGL: GeForce GTX 460M/PCIe/SSE2 GL version 4.3.0, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)

@@ -39,7 +39,6 @@
 <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.container.ContainerDumpTruck"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.client.gui.GuiDumpTruck"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.NetworkRegistry"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.MachineMod"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustom"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityLoader"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModRideable"/>
 </qualifiedTypeNameHistroy>

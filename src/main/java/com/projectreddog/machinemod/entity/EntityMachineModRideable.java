@@ -146,8 +146,16 @@ public class EntityMachineModRideable extends Entity {
 		}
 		if ( isPlayerPushingJumpButton ){
 			Attribute1-=  1;
+			if (Attribute1 < getMinAngle())
+			{
+				Attribute1 = getMinAngle();
+			}
 		}else if (isPlayerPushingSprintButton){
 			Attribute1+=  1;
+			if (Attribute1 > getMaxAngle())
+			{
+				Attribute1 = getMaxAngle();
+			}
 		}
 		
 		//end take user input
@@ -277,7 +285,7 @@ public class EntityMachineModRideable extends Entity {
 		{
 			double d0 = Math.cos((double)this.rotationYaw * Math.PI / 180.0D) * this.velocity;
 			double d1 = Math.sin((double)this.rotationYaw * Math.PI / 180.0D) * this.velocity;
-			this.riddenByEntity.setPosition(this.posX + d0, this.posY + this.getMountedYOffset() + this.riddenByEntity.getYOffset(), this.posZ + d1);
+			this.riddenByEntity.setPosition(this.posX + d0 , this.posY + this.getMountedYOffset() + this.riddenByEntity.getYOffset(), this.posZ + d1);
 			//this.riddenByEntity.setRotationYawHead(this.yaw);
 		}
 	}
@@ -298,5 +306,14 @@ public class EntityMachineModRideable extends Entity {
 	protected void writeEntityToNBT(NBTTagCompound p_70014_1_) {
 		// TODO Auto-generated method stub
 
+	}
+	
+	public float getMaxAngle() {
+		return 0;
+	}
+	
+
+	public float getMinAngle() {
+		return 0;
 	}
 }

@@ -1,25 +1,41 @@
 package com.projectreddog.machinemod.render;
 
+import java.util.Iterator;
+import java.util.List;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.renderer.EntityRenderer;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.WorldRenderer;
+import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.texture.TextureUtil;
+import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.client.resources.model.IBakedModel;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.Vec3i;
 
 import org.lwjgl.opengl.GL11;
 
+import com.projectreddog.machinemod.entity.EntityDumpTruck;
 import com.projectreddog.machinemod.model.ModelDumpTruck;
 import com.projectreddog.machinemod.reference.Reference;
-import com.projectreddog.machinemod.utility.LogHelper;
 
 public class RenderDumpTruck extends Render {
 
 
 	protected ModelBase  modelDumpTruck ;
 
-private RenderItem itemRenderer;
+	private RenderItem itemRenderer;
 
 
 	public RenderDumpTruck(RenderManager renderManager)
@@ -30,7 +46,7 @@ private RenderItem itemRenderer;
 		//LogHelper.info("in RenderDumpTruck constructor");
 		shadowSize = 1F;
 		this.modelDumpTruck = new ModelDumpTruck();
-		 itemRenderer = Minecraft.getMinecraft().getRenderItem();
+		itemRenderer = Minecraft.getMinecraft().getRenderItem();
 
 	}
 
@@ -62,24 +78,97 @@ private RenderItem itemRenderer;
 		GL11.glScalef(1.0F / f4, 1.0F / f4, 1.0F / f4);
 		this.bindEntityTexture(entity);
 		GL11.glScalef(-1.0F, -1.0F, 1.0F);
-		this.modelDumpTruck.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-//		EntityDumpTruck edt =((EntityDumpTruck) entity);
-//		Item item;
-//		Minecraft minecraft = Minecraft.getMinecraft();
-//		
+	//	this.modelDumpTruck.render(entity, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+
+
+
+	//	((ModelDumpTruck) this.modelDumpTruck).renderGroupObject("Truck_Base_Cube.002");
+		GL11.glTranslatef(0f, -1.1f, 2.8f);
+		GL11.glRotatef(((EntityDumpTruck) entity).Attribute1, 1,0, 0);
+	//	((ModelDumpTruck) this.modelDumpTruck).renderGroupObject("Bed_Cube.000");
+
 		
-		
-//		
-//		for (int i =0; i< edt.getSizeInventory() ; i++){
-//			if (edt.getStackInSlot(i)!= null  ){
-//				//TODO TS- ADD RENDERING Of items in dumptruck
-//				
-//
-//			}
-//		}
+		// attempt to render the items in inventory
+		EntityDumpTruck eDT = ((EntityDumpTruck) entity);
+		for (int i=0 ; i < eDT.getSizeInventory(); i++){
+			ItemStack is = eDT.getStackInSlot(i);
+			if (is != null){
+//				EntityItem customitem = new EntityItem(eDT.worldObj);
+//				customitem.hoverStart = 0f;
+//				customitem.setEntityItemStack(is);
+				IBakedModel ibakedmodel = itemRenderer.getItemModelMesher().getItemModel(is);
+
+
+				if (ibakedmodel.isBuiltInRenderer())
+				{
+
+					GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
+					GlStateManager.translate(-0.5F, -0.5F, -0.5F);
+					GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+					GlStateManager.enableRescaleNormal();
+					TileEntityItemStackRenderer.instance.renderByItem(is);
+
+				}else {
+					 Tessellator tessellator = Tessellator.getInstance();
+				        WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+				        worldrenderer.startDrawingQuads();
+				        worldrenderer.setVertexFormat(DefaultVertexFormats.field_176599_b);
+				        EnumFacing[] aenumfacing = EnumFacing.values();
+				        int j = aenumfacing.length;
+
+				        for (int k = 0; k < j; ++k)
+				        {
+				            EnumFacing enumfacing = aenumfacing[k];
+				            this.RenderHelper_a(worldrenderer, ibakedmodel.func_177551_a(enumfacing), -1, is);
+				        }
+
+				        this.RenderHelper_a(worldrenderer, ibakedmodel.func_177550_a(),-1,is);
+				        tessellator.draw();
+				}
+			}
+		}	
+
 		GL11.glPopMatrix();
 	}
+	
+	
+	   private void RenderHelper_B(WorldRenderer p_175033_1_, BakedQuad p_175033_2_, int p_175033_3_)
+	    {
+	        p_175033_1_.func_178981_a(p_175033_2_.func_178209_a());
+	        p_175033_1_.func_178968_d(p_175033_3_);
+	        this.RenderHelper_C(p_175033_1_, p_175033_2_);
+	    }
+	   
+	   private void RenderHelper_C(WorldRenderer p_175038_1_, BakedQuad p_175038_2_)
+	    {
+	        Vec3i vec3i = p_175038_2_.getFace().getDirectionVec();
+	        p_175038_1_.func_178975_e((float)vec3i.getX(), (float)vec3i.getY(), (float)vec3i.getZ());
+	    }
 
+	  private void RenderHelper_a(WorldRenderer p_175032_1_, List p_175032_2_, int p_175032_3_, ItemStack p_175032_4_)
+	    {
+	        boolean flag = p_175032_3_ == -1 && p_175032_4_ != null;
+	        BakedQuad bakedquad;
+	        int j;
+
+	        for (Iterator iterator = p_175032_2_.iterator(); iterator.hasNext(); this.RenderHelper_B(p_175032_1_, bakedquad, j))
+	        {
+	            bakedquad = (BakedQuad)iterator.next();
+	            j = p_175032_3_;
+
+	            if (flag && bakedquad.func_178212_b())
+	            {
+	                j = p_175032_4_.getItem().getColorFromItemStack(p_175032_4_, bakedquad.func_178211_c());
+
+	                if (EntityRenderer.anaglyphEnable)
+	                {
+	                    j = TextureUtil.func_177054_c(j);
+	                }
+
+	                j |= -16777216;
+	            }
+	        }
+	    }
 	@Override
 	protected ResourceLocation getEntityTexture(Entity entity)
 	{

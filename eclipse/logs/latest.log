@@ -1,12 +1,12 @@
-[20:31:48] [Client thread/INFO]: Setting user: Player897
-[20:31:50] [Client thread/INFO]: LWJGL Version: 2.9.1
-[20:31:54] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[20:31:54] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[20:31:55] [Thread-7/INFO]: Initializing LWJGL OpenAL
-[20:31:55] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[20:31:55] [Thread-7/INFO]: OpenAL initialized.
-[20:31:55] [Sound Library Loader/INFO]: Sound engine started
-[20:31:56] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
+[13:19:06] [Client thread/INFO]: Setting user: Player582
+[13:19:08] [Client thread/INFO]: LWJGL Version: 2.9.1
+[13:19:12] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[13:19:12] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[13:19:12] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[13:19:12] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[13:19:12] [Thread-7/INFO]: OpenAL initialized.
+[13:19:13] [Sound Library Loader/INFO]: Sound engine started
+[13:19:14] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
 java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -27,7 +27,7 @@ java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[20:31:56] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
+[13:19:14] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
 java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -48,18 +48,18 @@ java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[20:31:57] [Client thread/INFO]: Created: 512x512 textures-atlas
-[20:31:57] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
-[20:31:57] [Client thread/WARN]: Missing model for: machinemod:item/loader
-[20:31:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[20:31:59] [Client thread/INFO]: SoundSystem shutting down...
-[20:31:59] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[20:31:59] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[20:31:59] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[20:31:59] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[20:31:59] [Thread-9/INFO]: OpenAL initialized.
-[20:32:00] [Sound Library Loader/INFO]: Sound engine started
-[20:32:00] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
+[13:19:15] [Client thread/INFO]: Created: 512x512 textures-atlas
+[13:19:15] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
+[13:19:15] [Client thread/WARN]: Missing model for: machinemod:item/loader
+[13:19:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[13:19:16] [Client thread/INFO]: SoundSystem shutting down...
+[13:19:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[13:19:16] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[13:19:17] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[13:19:17] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[13:19:17] [Thread-9/INFO]: OpenAL initialized.
+[13:19:17] [Sound Library Loader/INFO]: Sound engine started
+[13:19:18] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
 java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -83,7 +83,7 @@ java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[20:32:00] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
+[13:19:18] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
 java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -107,27 +107,25 @@ java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[20:32:01] [Client thread/INFO]: Created: 512x512 textures-atlas
-[20:32:01] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
-[20:32:01] [Client thread/WARN]: Missing model for: machinemod:item/loader
-[20:32:04] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[20:32:04] [Server thread/INFO]: Generating keypair
-[20:32:04] [Server thread/INFO]: Preparing start region for level 0
-[20:32:05] [Server thread/INFO]: Changing view distance to 16, from 10
-[20:32:05] [Server thread/INFO]: Player897[local:E:d9a1448d] logged in with entity id 278 at (-1130.5, 18.310000000894068, -392.5)
-[20:32:05] [Server thread/INFO]: Player897 joined the game
-[20:32:22] [Server thread/INFO]: [Player897: Set the time to 0]
-[20:32:22] [Client thread/INFO]: [CHAT] Set the time to 0
-[20:35:34] [Server thread/INFO]: Saving and pausing game...
-[20:35:34] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:35:34] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:35:34] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:35:35] [Server thread/INFO]: Stopping server
-[20:35:35] [Server thread/INFO]: Saving players
-[20:35:35] [Server thread/INFO]: Saving worlds
-[20:35:35] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[20:35:35] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[20:35:35] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[20:35:36] [Client thread/INFO]: Stopping!
-[20:35:36] [Client thread/INFO]: SoundSystem shutting down...
-[20:35:36] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[13:19:18] [Client thread/INFO]: Created: 512x512 textures-atlas
+[13:19:18] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
+[13:19:18] [Client thread/WARN]: Missing model for: machinemod:item/loader
+[13:19:21] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[13:19:21] [Server thread/INFO]: Generating keypair
+[13:19:22] [Server thread/INFO]: Preparing start region for level 0
+[13:19:23] [Server thread/INFO]: Changing view distance to 16, from 10
+[13:19:23] [Server thread/INFO]: Player582[local:E:4fd45bfa] logged in with entity id 272 at (-1127.6472180612707, 4.0, -406.9540750657511)
+[13:19:23] [Server thread/INFO]: Player582 joined the game
+[13:20:22] [Server thread/INFO]: Saving and pausing game...
+[13:20:22] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:20:22] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:20:22] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:23:19] [Server thread/INFO]: Stopping server
+[13:23:19] [Server thread/INFO]: Saving players
+[13:23:19] [Server thread/INFO]: Saving worlds
+[13:23:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:23:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:23:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:23:22] [Client thread/INFO]: Stopping!
+[13:23:22] [Client thread/INFO]: SoundSystem shutting down...
+[13:23:22] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

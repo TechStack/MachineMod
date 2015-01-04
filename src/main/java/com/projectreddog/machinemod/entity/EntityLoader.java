@@ -303,7 +303,16 @@ public class EntityLoader extends EntityMachineModRideable implements IInventory
 			inventory[i] = null;
 		}
 	}
-
+	
+	@Override
+	public float getMaxAngle() {
+		return 0;
+	}
+	
+	@Override
+	public float getMinAngle() {
+		return -90;
+	}
 
 }
 

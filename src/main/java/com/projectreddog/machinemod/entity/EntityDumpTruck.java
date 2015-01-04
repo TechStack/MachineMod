@@ -303,7 +303,15 @@ public class EntityDumpTruck extends EntityMachineModRideable implements IInvent
 			inventory[i] = null;
 		}
 	}
-
+	@Override
+	public float getMaxAngle() {
+		return 0;
+	}
+	
+	@Override
+	public float getMinAngle() {
+		return -60;
+	}
 
 }
 
