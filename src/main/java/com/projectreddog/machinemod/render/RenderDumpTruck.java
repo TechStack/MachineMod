@@ -88,23 +88,35 @@ public class RenderDumpTruck extends Render {
 		GL11.glRotatef(((EntityDumpTruck) entity).Attribute1, 1,0, 0);
 		((ModelDumpTruck) this.modelDumpTruck).renderGroupObject("Bed_Cube.000");
 
-		GlStateManager.translate(0F, 1.0F, 0F);
-		//GlStateManager.rotate(45F, 0.0F, 1.0F, 1.0F);
-
+		GlStateManager.translate(-1.1f, -1.0F, -2.9F);
+		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+		GL11.glScalef(.5f,.5f,.5f);
 		// attempt to render the items in inventory
 		EntityDumpTruck eDT = ((EntityDumpTruck) entity);
-		for (int i=0 ; i < eDT.getSizeInventory(); i++){
+		
+		
+		boolean even = true;
+		int count =0;
+		for (int i=0 ; i < eDT.getSizeInventory() ; i++){
 			ItemStack is = eDT.getStackInSlot(i);
 			if (is != null){
 //				EntityItem customitem = new EntityItem(eDT.worldObj);
 //				customitem.hoverStart = 0f;
 //				customitem.setEntityItemStack(is);
 				IBakedModel ibakedmodel = itemRenderer.getItemModelMesher().getItemModel(is);
+				
+				if (count >4){
+					count=0;
+					GlStateManager.translate(-2.5f, 0.0F, 0F);
+					GlStateManager.translate(0, 0.0F, .5F);
 
-
-				GlStateManager.translate(0F, -1.0F, .5F);
-
-				GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+				}
+					GlStateManager.translate(.5F, 0.0F, 0F);
+					count+=1;
+				
+				GL11.glRotatef(45, 1,1, 0);
+				
+				
 				GlStateManager.enableRescaleNormal();
 				
 				if (ibakedmodel.isBuiltInRenderer())
@@ -130,6 +142,8 @@ public class RenderDumpTruck extends Render {
 				        this.RenderHelper_a(worldrenderer, ibakedmodel.func_177550_a(),-1,is);
 				        tessellator.draw();
 				}
+				GL11.glRotatef(-45, 1,1, 0);
+				even=!even;
 			}
 		}	
 
