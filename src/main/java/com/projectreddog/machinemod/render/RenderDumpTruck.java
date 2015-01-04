@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
@@ -82,12 +83,14 @@ public class RenderDumpTruck extends Render {
 
 
 
-	//	((ModelDumpTruck) this.modelDumpTruck).renderGroupObject("Truck_Base_Cube.002");
+		((ModelDumpTruck) this.modelDumpTruck).renderGroupObject("Truck_Base_Cube.002");
 		GL11.glTranslatef(0f, -1.1f, 2.8f);
 		GL11.glRotatef(((EntityDumpTruck) entity).Attribute1, 1,0, 0);
-	//	((ModelDumpTruck) this.modelDumpTruck).renderGroupObject("Bed_Cube.000");
+		((ModelDumpTruck) this.modelDumpTruck).renderGroupObject("Bed_Cube.000");
 
-		
+		GlStateManager.translate(0F, 1.0F, 0F);
+		//GlStateManager.rotate(45F, 0.0F, 1.0F, 1.0F);
+
 		// attempt to render the items in inventory
 		EntityDumpTruck eDT = ((EntityDumpTruck) entity);
 		for (int i=0 ; i < eDT.getSizeInventory(); i++){
@@ -99,13 +102,14 @@ public class RenderDumpTruck extends Render {
 				IBakedModel ibakedmodel = itemRenderer.getItemModelMesher().getItemModel(is);
 
 
+				GlStateManager.translate(0F, -1.0F, .5F);
+
+				GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+				GlStateManager.enableRescaleNormal();
+				
 				if (ibakedmodel.isBuiltInRenderer())
 				{
 
-					GlStateManager.rotate(180.0F, 0.0F, 1.0F, 0.0F);
-					GlStateManager.translate(-0.5F, -0.5F, -0.5F);
-					GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-					GlStateManager.enableRescaleNormal();
 					TileEntityItemStackRenderer.instance.renderByItem(is);
 
 				}else {
@@ -113,6 +117,7 @@ public class RenderDumpTruck extends Render {
 				        WorldRenderer worldrenderer = tessellator.getWorldRenderer();
 				        worldrenderer.startDrawingQuads();
 				        worldrenderer.setVertexFormat(DefaultVertexFormats.field_176599_b);
+				        this.renderManager.renderEngine.bindTexture(TextureMap.locationBlocksTexture);
 				        EnumFacing[] aenumfacing = EnumFacing.values();
 				        int j = aenumfacing.length;
 
