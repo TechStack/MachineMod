@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "machinemod:machineassemblytable" }
+        "normal": { "model": "machinemod:machinedrillingrig" }
     }
 }
