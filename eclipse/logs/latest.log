@@ -1,12 +1,12 @@
-[17:06:08] [Client thread/INFO]: Setting user: Player579
-[17:06:10] [Client thread/INFO]: LWJGL Version: 2.9.1
-[17:06:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[17:06:15] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:06:15] [Thread-7/INFO]: Initializing LWJGL OpenAL
-[17:06:15] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:06:15] [Thread-7/INFO]: OpenAL initialized.
-[17:06:15] [Sound Library Loader/INFO]: Sound engine started
-[17:06:17] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
+[19:11:08] [Client thread/INFO]: Setting user: Player613
+[19:11:10] [Client thread/INFO]: LWJGL Version: 2.9.1
+[19:11:15] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[19:11:15] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[19:11:16] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[19:11:16] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:11:16] [Thread-7/INFO]: OpenAL initialized.
+[19:11:16] [Sound Library Loader/INFO]: Sound engine started
+[19:11:19] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
 java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -27,7 +27,7 @@ java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[17:06:17] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
+[19:11:19] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
 java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -48,18 +48,18 @@ java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[17:06:17] [Client thread/INFO]: Created: 512x512 textures-atlas
-[17:06:18] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
-[17:06:18] [Client thread/WARN]: Missing model for: machinemod:item/loader
-[17:06:18] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
-[17:06:18] [Client thread/INFO]: SoundSystem shutting down...
-[17:06:19] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[17:06:19] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:06:19] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[17:06:19] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:06:19] [Thread-9/INFO]: OpenAL initialized.
-[17:06:19] [Sound Library Loader/INFO]: Sound engine started
-[17:06:20] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
+[19:11:20] [Client thread/INFO]: Created: 512x512 textures-atlas
+[19:11:20] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
+[19:11:20] [Client thread/WARN]: Missing model for: machinemod:item/loader
+[19:11:21] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MachineMod
+[19:11:21] [Client thread/INFO]: SoundSystem shutting down...
+[19:11:21] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[19:11:21] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[19:11:22] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[19:11:22] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:11:22] [Thread-9/INFO]: OpenAL initialized.
+[19:11:22] [Sound Library Loader/INFO]: Sound engine started
+[19:11:23] [Client thread/WARN]: Unable to load item model: 'machinemod:item/dumptruck' for item: 'machinemod:dumptruck'
 java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -83,7 +83,7 @@ java.io.FileNotFoundException: machinemod:models/item/dumptruck.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[17:06:20] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
+[19:11:23] [Client thread/WARN]: Unable to load item model: 'machinemod:item/loader' for item: 'machinemod:loader'
 java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:70) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -107,35 +107,85 @@ java.io.FileNotFoundException: machinemod:models/item/loader.json
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78) [start/:?]
 	at GradleStart.main(GradleStart.java:45) [start/:?]
-[17:06:20] [Client thread/INFO]: Created: 512x512 textures-atlas
-[17:06:21] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
-[17:06:21] [Client thread/WARN]: Missing model for: machinemod:item/loader
-[17:06:25] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[17:06:25] [Server thread/INFO]: Generating keypair
-[17:06:25] [Server thread/INFO]: Preparing start region for level 0
-[17:06:26] [Server thread/INFO]: Changing view distance to 16, from 10
-[17:06:27] [Server thread/INFO]: Player579[local:E:e8421d33] logged in with entity id 275 at (-1117.2816440384172, 6.422654867507001, -350.7483069735246)
-[17:06:27] [Server thread/INFO]: Player579 joined the game
-[17:46:27] [Server thread/INFO]: Player579 has just earned the achievement [Taking Inventory]
-[17:46:27] [Client thread/INFO]: [CHAT] Player579 has just earned the achievement [Taking Inventory]
-[17:46:53] [Client thread/ERROR]: Item entity 15162002 has no item?!
-[17:46:53] [Client thread/ERROR]: Item entity 15162002 has no item?!
-[17:47:00] [Client thread/ERROR]: Item entity 15206632 has no item?!
-[17:47:00] [Client thread/ERROR]: Item entity 15206632 has no item?!
-[17:47:00] [Client thread/ERROR]: Item entity 15206632 has no item?!
-[17:47:00] [Client thread/ERROR]: Item entity 15206632 has no item?!
-[17:47:06] [Client thread/ERROR]: Item entity 15246189 has no item?!
-[17:47:06] [Client thread/ERROR]: Item entity 15246189 has no item?!
-[17:49:02] [Server thread/INFO]: Saving and pausing game...
-[17:49:02] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[17:49:02] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[17:49:02] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[17:49:03] [Server thread/INFO]: Stopping server
-[17:49:03] [Server thread/INFO]: Saving players
-[17:49:03] [Server thread/INFO]: Saving worlds
-[17:49:03] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[17:49:03] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[17:49:03] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[17:49:04] [Client thread/INFO]: Stopping!
-[17:49:04] [Client thread/INFO]: SoundSystem shutting down...
-[17:49:04] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[19:11:23] [Client thread/INFO]: Created: 512x512 textures-atlas
+[19:11:23] [Client thread/WARN]: Missing model for: machinemod:item/dumptruck
+[19:11:23] [Client thread/WARN]: Missing model for: machinemod:item/loader
+[19:11:31] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[19:11:31] [Server thread/INFO]: Generating keypair
+[19:11:32] [Server thread/INFO]: Preparing start region for level 0
+[19:11:33] [Server thread/INFO]: Changing view distance to 16, from 10
+[19:11:33] [Server thread/INFO]: Player613[local:E:8671ec7d] logged in with entity id 277 at (-1127.7389566548684, 6.8510707140702305, -335.43638473432713)
+[19:11:33] [Server thread/INFO]: Player613 joined the game
+[19:11:54] [Server thread/INFO]: Player613 has just earned the achievement [Taking Inventory]
+[19:11:54] [Client thread/INFO]: [CHAT] Player613 has just earned the achievement [Taking Inventory]
+[19:13:38] [Server thread/INFO]: Saving and pausing game...
+[19:13:38] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:13:38] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:13:38] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:13:49] [Client thread/INFO]: [CHAT] Saved screenshot as 2015-01-05_19.13.49.png
+[19:14:18] [Server thread/INFO]: [Player613: Set the time to 0]
+[19:14:18] [Client thread/INFO]: [CHAT] Set the time to 0
+[19:14:22] [Server thread/INFO]: Saving and pausing game...
+[19:14:22] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:14:22] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:14:22] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:16:07] [Client thread/INFO]: [CHAT] Saved screenshot as 2015-01-05_19.16.07.png
+[19:16:20] [Server thread/INFO]: [Player613: Set the time to 0]
+[19:16:20] [Client thread/INFO]: [CHAT] Set the time to 0
+[19:16:23] [Server thread/INFO]: [Player613: Set the time to 0]
+[19:16:23] [Client thread/INFO]: [CHAT] Set the time to 0
+[19:16:25] [Server thread/INFO]: [Player613: Set the time to 123123]
+[19:16:25] [Client thread/INFO]: [CHAT] Set the time to 123123
+[19:16:31] [Server thread/INFO]: [Player613: Set the time to 18000]
+[19:16:31] [Client thread/INFO]: [CHAT] Set the time to 18000
+[19:16:34] [Server thread/INFO]: [Player613: Set the time to 0]
+[19:16:34] [Client thread/INFO]: [CHAT] Set the time to 0
+[19:23:47] [Server thread/INFO]: Saving and pausing game...
+[19:23:47] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:23:47] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:23:47] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:23:48] [Server thread/INFO]: Stopping server
+[19:23:48] [Server thread/INFO]: Saving players
+[19:23:48] [Server thread/INFO]: Saving worlds
+[19:23:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:23:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:23:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:23:52] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[19:23:52] [Server thread/INFO]: Generating keypair
+[19:23:52] [Server thread/INFO]: Preparing start region for level 0
+[19:23:52] [Server thread/INFO]: Changing view distance to 16, from 10
+[19:23:52] [Server thread/INFO]: Player613[local:E:5e2d1b68] logged in with entity id 4505097 at (-1139.5999828213805, 6.90414915409588, -360.04403551262914)
+[19:23:52] [Server thread/INFO]: Player613 joined the game
+[19:25:58] [Server thread/INFO]: Saving and pausing game...
+[19:25:58] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:25:58] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:25:58] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:30:28] [Server thread/INFO]: Saving and pausing game...
+[19:30:28] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:30:28] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:30:28] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:35:24] [Server thread/INFO]: Saving and pausing game...
+[19:35:24] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:35:24] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:35:24] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:35:49] [Server thread/INFO]: Saving and pausing game...
+[19:35:49] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:35:49] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:35:49] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:36:11] [Server thread/INFO]: Saving and pausing game...
+[19:36:11] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:36:11] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:36:11] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:39:15] [Server thread/INFO]: Saving and pausing game...
+[19:39:15] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:39:16] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:39:16] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:39:17] [Server thread/INFO]: Stopping server
+[19:39:17] [Server thread/INFO]: Saving players
+[19:39:17] [Server thread/INFO]: Saving worlds
+[19:39:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:39:17] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:39:17] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:39:18] [Client thread/INFO]: Stopping!
+[19:39:18] [Client thread/INFO]: SoundSystem shutting down...
+[19:39:18] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

@@ -1,3 +1,3 @@
 eclipse.preferences.version=1
-org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=false
+org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true
 prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="this.worldObj.getBlock(i, j, k)"/>\r\n<expression enabled\="true" text\="worldObj.isAirBlock((int) (posX), (int) posY -1, (int)(posZ ))"/>\r\n<expression enabled\="true" text\="worldObj.getBlock((int)posX,(int)posY,(int)posZ);"/>\r\n<expression enabled\="true" text\="eDT.getSizeInventory()"/>\r\n<expression enabled\="true" text\="ibakedmodel.isBuiltInRenderer()"/>\r\n</watchExpressions>\r\n
