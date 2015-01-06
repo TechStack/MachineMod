@@ -1,10 +1,11 @@
 package com.projectreddog.machinemod.tileentities;
 
-import com.projectreddog.machinemod.utility.LogHelper;
-
+import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityDrilingRig extends TileEntity {
+import com.projectreddog.machinemod.utility.LogHelper;
+
+public class TileEntityDrilingRig extends TileEntity  implements IUpdatePlayerListBox{
 
 	private int current_drilling_level =0;
 	private int EnergyLevel =0;
@@ -17,7 +18,9 @@ public class TileEntityDrilingRig extends TileEntity {
 		this.current_drilling_level = currentDrillingLevel;
 	}
 	
-	public void update(){
+	@Override
+    public void update(){
+
 		LogHelper.info("TE update entity called");
 	}
 	
