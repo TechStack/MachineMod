@@ -32,7 +32,7 @@ public class EntityLoader extends EntityMachineModRideable implements IInventory
 	public EntityLoader(World world){
 		super(world);
 
-		setSize(6, 2);
+		setSize(2.5f, 2);
 		inventory = new ItemStack[54];
 	}
 

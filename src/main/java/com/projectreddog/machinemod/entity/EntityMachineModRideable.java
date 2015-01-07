@@ -37,6 +37,7 @@ public class EntityMachineModRideable extends Entity {
 	public EntityMachineModRideable(World world){
 		super(world);
 		setSize (1.5F , 0.6F); // should be overridden in Extened version.
+		this.stepHeight=1;
 
 	}
 
@@ -194,8 +195,8 @@ public class EntityMachineModRideable extends Entity {
 		
 		
 //		motionY= speedY;
-		setPosition( posX+speedX,posY+motionY, posZ+speedZ);
-		//moveEntity( motionX,motionY,  motionZ);
+		//setPosition( posX+speedX,posY+motionY, posZ+speedZ);
+		moveEntity( motionX,motionY,  motionZ);
 		
 		
 

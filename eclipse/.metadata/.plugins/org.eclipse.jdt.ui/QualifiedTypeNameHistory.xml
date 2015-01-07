@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.minecraft.entity.item.EntityFallingBlock"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.common.SidedProxy"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.entity.EntityMachineModFallingEntity"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderFallingBlock"/>
 <fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.item.ItemDumpTruck"/>
-<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModBlocks"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.obj.ObjModelLoader"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustomLoader"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.ModelFormatException"/>
@@ -34,7 +30,6 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.container.ContainerDumpTruck"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.client.gui.GuiDumpTruck"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.network.NetworkRegistry"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.MachineMod"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.client.gui.GuiHandler"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.Entity"/>
@@ -56,8 +51,13 @@
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.block.BlockMachineModDrillingRig"/>
-<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fml.common.registry.GameRegistry"/>
-<fullyQualifiedTypeName name="com.projectreddog.machinemod.tileentities.TileEntityDrilingRig"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.reference.Reference"/>
+<fullyQualifiedTypeName name="net.minecraft.util.EnumFacing"/>
+<fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.MachineMod"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.init.ModBlocks"/>
+<fullyQualifiedTypeName name="com.projectreddog.machinemod.tileentities.TileEntityDrilingRig"/>
+<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 </qualifiedTypeNameHistroy>
