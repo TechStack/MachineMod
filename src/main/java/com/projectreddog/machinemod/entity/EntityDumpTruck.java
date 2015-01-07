@@ -32,7 +32,7 @@ public class EntityDumpTruck extends EntityMachineModRideable implements IInvent
 	public EntityDumpTruck(World world){
 		super(world);
 
-		setSize(6, 2);
+		setSize(3, 2);
 		inventory = new ItemStack[54];
 	}
 

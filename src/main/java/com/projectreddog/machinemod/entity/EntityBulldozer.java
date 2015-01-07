@@ -14,7 +14,7 @@ public class EntityBulldozer extends EntityMachineModRideable {
 	
 	public EntityBulldozer(World world){
 		super(world);
-		
+		setSize (1.5F , 2F); 
 	}
 	 
    @Override
