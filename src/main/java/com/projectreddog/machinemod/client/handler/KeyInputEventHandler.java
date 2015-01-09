@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.gameevent.InputEvent;
 import com.projectreddog.machinemod.entity.EntityMachineModRideable;
 import com.projectreddog.machinemod.init.ModNetwork;
 import com.projectreddog.machinemod.network.MachineModMessageInputToServer;
+import com.projectreddog.machinemod.network.MachineModMessageInputToServerOpenGui;
 import com.projectreddog.machinemod.utility.LogHelper;
 
 public class KeyInputEventHandler {
@@ -76,7 +77,10 @@ public class KeyInputEventHandler {
 
 			}
 			
-			
+			if (Minecraft.getMinecraft().gameSettings.keyBindInventory.isPressed()){
+				ModNetwork.simpleNetworkWrapper.sendToServer(new MachineModMessageInputToServerOpenGui(e.getEntityId(), true));
+				
+			}
 			
 			
 			if (sendPacket){

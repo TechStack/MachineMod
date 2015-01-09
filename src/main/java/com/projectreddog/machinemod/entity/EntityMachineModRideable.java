@@ -317,4 +317,11 @@ public class EntityMachineModRideable extends Entity {
 	public float getMinAngle() {
 		return 0;
 	}
+	public double calcOffsetX(double distance){
+		return(distance * MathHelper.cos((float) ((yaw+90) * Math.PI / 180.0D)));
+	}
+	public double calcOffsetZ(double distance){
+		return (distance * MathHelper.sin((float) ((yaw+90)* Math.PI / 180.0D))); 
+
+	}
 }

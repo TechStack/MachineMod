@@ -44,6 +44,37 @@ public class EntityDumpTruck extends EntityMachineModRideable implements IInvent
 		if (!worldObj.isRemote){
 			List list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.getEntityBoundingBox());
 			collidedEntitiesInList(list); 
+			if (this.Attribute1 == getMinAngle()){
+				// need
+				for (int i = 0; i < this.getSizeInventory(); i++) {
+					ItemStack item = this.getStackInSlot(i);
+
+					if (item != null && item.stackSize > 0) {
+					;
+
+						EntityItem entityItem = new EntityItem(worldObj,
+								posX + calcOffsetX(-3.5), posY -.1f, posZ + calcOffsetZ(-3.5),
+								item);
+
+						if (item.hasTagCompound()) {
+							entityItem.getEntityItem().setTagCompound((NBTTagCompound) item.getTagCompound().copy());
+						}
+
+						float factor = 0.05F;
+						//entityItem.motionX = rand.nextGaussian() * factor;
+						entityItem.motionY = 0;
+						//entityItem.motionZ = rand.nextGaussian() * factor;
+						entityItem.forceSpawn=true;
+					LogHelper.info(	worldObj.spawnEntityInWorld(entityItem));
+						//item.stackSize = 0;
+					this.setInventorySlotContents(i, null);
+					}
+				}
+				
+				
+				
+				
+			}
 		}
 
 
@@ -134,7 +165,8 @@ public class EntityDumpTruck extends EntityMachineModRideable implements IInvent
 
 		super.interactFirst(player);
 		//LogHelper.info("TEST");
-		player.openGui(MachineMod.instance, Reference.GUI_DUMP_TRUCK, worldObj, (int) this.getEntityId(), (int) 0,(int) 0);
+		// moved open gui call to the networkhandler
+				//		player.openGui(MachineMod.instance, Reference.GUI_DUMP_TRUCK, worldObj, (int) this.getEntityId(), (int) 0,(int) 0);
 		return true;
 	}
 
