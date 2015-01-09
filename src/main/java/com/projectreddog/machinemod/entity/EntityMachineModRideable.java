@@ -99,7 +99,15 @@ public class EntityMachineModRideable extends Entity {
 		return -0.15;
 	}
 	
+	public double getMountedXOffset(){
+		// should be overriden in exteneded class if not default;
+		return 0;
+	}
 	
+	public double getMountedZOffset(){
+		// should be overriden in exteneded class if not default;
+		return 0;
+	}
 	
 	public void updateServer() {
 		
@@ -286,7 +294,7 @@ public class EntityMachineModRideable extends Entity {
 		{
 			double d0 = Math.cos((double)this.rotationYaw * Math.PI / 180.0D) * this.velocity;
 			double d1 = Math.sin((double)this.rotationYaw * Math.PI / 180.0D) * this.velocity;
-			this.riddenByEntity.setPosition(this.posX + d0 , this.posY + this.getMountedYOffset() + this.riddenByEntity.getYOffset(), this.posZ + d1);
+			this.riddenByEntity.setPosition(this.posX + d0 +this.getMountedXOffset(), this.posY + this.getMountedYOffset() + this.riddenByEntity.getYOffset(), this.posZ + d1+this.getMountedZOffset());
 			//this.riddenByEntity.setRotationYawHead(this.yaw);
 		}
 	}
@@ -318,10 +326,10 @@ public class EntityMachineModRideable extends Entity {
 		return 0;
 	}
 	public double calcOffsetX(double distance){
-		return(distance * MathHelper.cos((float) ((yaw+90) * Math.PI / 180.0D)));
+		return(distance * MathHelper.cos((float) ((this.yaw+90) * Math.PI / 180.0D)));
 	}
 	public double calcOffsetZ(double distance){
-		return (distance * MathHelper.sin((float) ((yaw+90)* Math.PI / 180.0D))); 
+		return (distance * MathHelper.sin((float) ((this.yaw+90)* Math.PI / 180.0D))); 
 
 	}
 }

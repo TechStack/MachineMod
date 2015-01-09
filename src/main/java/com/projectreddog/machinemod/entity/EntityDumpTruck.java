@@ -157,8 +157,19 @@ public class EntityDumpTruck extends EntityMachineModRideable implements IInvent
 	{
 		return (double)this.height * 0.35D;
 	}
-
-
+    
+	@Override
+	public double getMountedXOffset()
+	{
+		return calcOffsetX(1.5d);
+	}
+	@Override
+	public double getMountedZOffset()
+	{
+		return calcOffsetZ(1.5d);
+	}
+	
+	
 	@Override
 	public boolean interactFirst(EntityPlayer player) // should be proper class
 	{
