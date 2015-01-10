@@ -211,7 +211,9 @@ public class EntityDumpTruck extends EntityMachineModRideable implements IInvent
 				entityItem.motionY = rand.nextGaussian() * factor + 0.2F;
 				entityItem.motionZ = rand.nextGaussian() * factor;
 				worldObj.spawnEntityInWorld(entityItem);
-				item.stackSize = 0;
+				//item.stackSize = 0;
+				this.setInventorySlotContents(i, null);
+
 			}
 		}
 

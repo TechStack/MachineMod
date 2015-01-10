@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.item.ItemDumpTruck"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.obj.ObjModelLoader"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.model.advanced.IModelCustomLoader"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessageInputToServerOpenGui"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.network.MachineModMessageInputToServerOpenGuiHandler"/>
 <fullyQualifiedTypeName name="com.projectreddog.machinemod.utility.LogHelper"/>
+<fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>

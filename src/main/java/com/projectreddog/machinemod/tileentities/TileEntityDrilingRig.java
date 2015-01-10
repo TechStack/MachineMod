@@ -13,31 +13,37 @@ import com.projectreddog.machinemod.utility.LogHelper;
 
 public class TileEntityDrilingRig extends TileEntity  implements IUpdatePlayerListBox{
 
-	private int current_drilling_level =1;
+	private int currentDrillingLevel =1;
 	private int EnergyLevel =0;
-	
+	private int startingLevel=0;
+
 	public TileEntityDrilingRig(){
-		
+
 	}
-	
+
 	public TileEntityDrilingRig(int currentDrillingLevel){
-		this.current_drilling_level = currentDrillingLevel;
+		this.currentDrillingLevel = currentDrillingLevel;
+		startingLevel=currentDrillingLevel;
 	}
-	
+
 	@Override
-    public void update(){
+	public void update(){
 
 		LogHelper.info("TE update entity called");
-		
-		 if (worldObj.getBlockState(this.getPos().offset(EnumFacing.DOWN, this.current_drilling_level)).getBlock() ==Blocks.stone
-				 )
-		 {
-			 
-			 worldObj.setBlockState(this.getPos().offset(EnumFacing.DOWN, this.current_drilling_level),ModBlocks.machinedrilledstone.getDefaultState());
-			 
-			 			 
-		 }
-		 current_drilling_level=current_drilling_level+1;
+
+		if (currentDrillingLevel < startingLevel +16){
+			if (worldObj.getBlockState(this.getPos().offset(EnumFacing.DOWN, this.currentDrillingLevel)).getBlock() ==Blocks.stone
+					)
+			{
+
+				//worldObj.setBlockState(this.getPos().offset(EnumFacing.DOWN, this.current_drilling_level),ModBlocks.machinedrilledstone.getDefaultState());
+
+				worldObj.setBlockState(this.getPos().offset(EnumFacing.DOWN, this.currentDrillingLevel),ModBlocks.machineexplosivepackeddrilledstone.getDefaultState());
+
+
+			}
+			currentDrillingLevel=currentDrillingLevel+1;
+		}
 	}
-	
+
 }

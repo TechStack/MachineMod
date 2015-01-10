@@ -26,6 +26,11 @@ public class BlockMachineModFalling  extends BlockMachineMod {
 
 	}
 	
+	public int getRandomizedUpdateTime(World world){
+		// the following line may be needed ( config option perhaps) to slow the update of the falling blocks
+		//return  this.tickRate(world)*5 +   (1 + (int)(Math.random()*10));
+		return  this.tickRate(world);
+	}
 	
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
@@ -35,7 +40,7 @@ public class BlockMachineModFalling  extends BlockMachineMod {
     /// my 1.7 version 
 	public void onBlockAdded(World world, int x, int y, int z)
 	{
-		world.scheduleUpdate(new BlockPos( x, y, z), this, this.tickRate(world));
+		world.scheduleUpdate(new BlockPos( x, y, z), this,getRandomizedUpdateTime(world) );
 		
 	}
 	/**
@@ -51,12 +56,12 @@ public class BlockMachineModFalling  extends BlockMachineMod {
     /// my 1.7 version     
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
 	{
-		world.scheduleUpdate(new BlockPos( x, y, z), this, this.tickRate(world));
+		world.scheduleUpdate(new BlockPos( x, y, z), this,getRandomizedUpdateTime(world));
 		
 		
 		
 		if (world.getBlockState(new BlockPos( x, y+1, z)).getBlock()== ModBlocks.machinemodblastedstone){
-			world.scheduleUpdate(new BlockPos( x, y+1, z), this, this.tickRate(world));
+			world.scheduleUpdate(new BlockPos( x, y+1, z), this,getRandomizedUpdateTime(world));
 		}
 	}
 
