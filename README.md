@@ -1,3 +1,6 @@
+ NOTICE: This project has been moved to : https://github.com/TechStack/TechStack-s-HeavyMachineryMod
+
+
 Heavy Machinery Mod
 ==========
 
